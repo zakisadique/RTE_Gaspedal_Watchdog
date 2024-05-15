@@ -1,0 +1,470 @@
+﻿
+<head>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+.auto-style2 {
+	background-color: #FFFF00;
+}
+</style>
+</head>
+
+<h1>RTEGen light - Help</h1>
+<p>version 1.0 - Last update 0.1.2021 (P. Fromm)</p>
+
+<p>This help documents describes the setup and use of the RTEGen Light System. 
+Structure of the Help document:</p>
+<ul>
+	<li>For the initial installation, please check the chapter
+	<a href="#Prerequisites_and_first_installation">Prerequisites and First 
+	Installation</a>.</li>
+	<li>In order to understand the tool, a tutorial has been provided, based on 
+	a <a href="#Example_Use_Case_RemoteControl">Remote Control Use Case</a>. 
+	Please first go through the use case and understand the intended behaviour, 
+	before starting to use the tool.</li>
+	<li>Based on this use case, the individual tabs of the tool are described in 
+	the chapter <a href="#RTE_GUI">RTE GUI.</a> YOu can use this chapter as a 
+	tutorial for setting up your own project. Furthermore, the full source code 
+	is provided for this example as well.</li>
+	<li>The chapter <a href="#Code_Generator">Code Generation</a> describes the 
+	application of the code generator </li>
+	<li>And the final chapter <a href="#System_Maintenance">System Maintenance</a> aims at users who want to create own 
+	templates and to extend the system.</li>
+</ul>
+<h2><a name="Prerequisites_and_first_installation">Prerequisites and first installation</a></h2>
+<h3>Python Installation</h3>
+<p>RTEGen is a Python application, which means you must install Python v3.7 or 
+higher on your computer and add the installation location to your path variable.</p>
+<ol>
+	<li>Download Python from <a href="https://www.python.org/">
+	https://www.python.org/</a> </li>
+	<li>Add &lt;Your Installation Directory&gt;\bin to your environment variable. 
+	Note: As you might have other Python installations on your computer, we 
+	recommend to place Python on one of the first positions.Alternatively you 
+	can of course also call the Python binary using an explicite path.</li>
+</ol>
+<p>Open a CMD or Powershell window and start python (simply type python and hit 
+enter). Check theat the correct version is opened. Leave the Python console by 
+hitting CTRL-Z.</p>
+<h3>Additional Python Packages</h3>
+<p>In the next step, the additional packages for the GUI and the generator need 
+to be installed.</p>
+<ol>
+	<li>Open a powershell box in the gui folder (containing the file 
+	requirements.txt)</li>
+	<li>Run &quot;python -m pip install -r requirements.txt&quot;</li>
+	<li>Repeat the same in the folder gen_jinja2</li>
+</ol>
+<h3>Starting the Application</h3>
+<p>Now it's time for a first test run. Execute the file run.bat in the folder 
+gui and the GUI program should open.</p>
+<p class="auto-style1"><img alt="GUI opening Screen" src="gui_01.PNG"></p>
+<h2><a name="Example_Use_Case_RemoteControl">Example Use Case RemoteControl</a></h2>
+<p>In order to understand the program, we will create a simple application in 
+this tutorial, which will guide you step by step through the process. The sample
+<a href="remote/remote.xml" target="_blank">project file</a> used for this 
+tutorial as well as the<a href="remote/out" target="_blank"> generated sources</a> 
+are stored in the help folder under <a href="remote" target="_blank">remote</a>. The complete project code can 
+be found as PSOC project in the folder <a href="remote/project" target="_blank">
+project</a>.</p>
+<p>In our sample application, we are creating an embedded remote control. The 
+remote control will read data from different ports and translate this data into 
+a UART protocol, which is send out via a Zigbee module. In addition, incoming 
+protocols are being parsed and the payload is translated into events for a state 
+machine implementation. And last but not least certain data is shown on a small 
+TFT display.</p>
+<p class="auto-style1">
+<img alt="Remote Control" height="470" src="remote.png" width="275"></p>
+<h3>Understanding the intended system behaviour</h3>
+<p>The high level design of the system is shown in the diagram below. We have 3 
+software components:</p>
+<ul>
+	<li>SWC_remote will contain the code for the communication over Zigbee</li>
+	<li>SWC_control will be the main component, providing the code for reading 
+	in data from the joysticks and buttons as well as from the Zigbee. In 
+	addition, the outgoing protocols are assembled here</li>
+	<li>SWC_tft will contain the code to display certain data on the TFT</li>
+</ul>
+<p>Please note the signals between the components.</p>
+<ul>
+	<li>so_event_rx contains the payload of the received Zigbee protocol in a 
+	abstracted way. This allows us to limit protocol changes to the component 
+	SWC_remote</li>
+	<li>so_event_tx contains data to be sent out from the remote control. Again, 
+	this signal is a rather abstract representation, the translation into a 
+	transmission protocol is handdled by SWC_remote</li>
+	<li>so_display finally is a collection of data which shall be shown on the 
+	display</li>
+</ul>
+<p class="auto-style1">
+<img alt="High Level Model" height="275" src="model_1.PNG" width="1060"></p>
+<p>Zooming into the component SWC_remote, we wamt to implement the following 
+signal flow:</p>
+<p class="auto-style1">
+<img alt="SWC_remote detailled view" height="573" src="model_2.PNG" width="1183"></p>
+<ul>
+	<li>the signal so_protocol_rx, containing the protocol data coming from the 
+	Zigbee, will be read by the runnable REMOTE_readPrrotocol_run (correct 
+	protocol data) or REMOTE_readProtocolError_run (incorrect protocol data, 
+	e.g. wrong CRC, miising byte,...).</li>
+	<li>The runnable readProtocol_run will be triggered by a user event which 
+	will be fired from the receiving interrupt service rooutine isr_rx once an 
+	end-of-protocol character is received</li>
+	<li>In case of a correct protocol, the protocol payload will be translated 
+	into a more abstract signal so_event_rx</li>
+	<li>For the transmission side, reverse signals are being defined</li>
+</ul>
+<p>Looking at the more complex SWC_control structure, we find 2 runnables</p>
+<ul>
+	<li>CONTROL_readButtonJoystick_run will be triggered every 10ms and will 
+	read and provide joystick values and button states.</li>
+	<li>The joystick signal is translated as so_joystick, whereas the buttons 
+	are translated into an event signal so_event_rx.</li>
+	<li>The rationale behind the abstraction of the button signal: Both the 
+	protocols being received from the Zigbee as well as the button press 
+	operations act as input signals for the state machine implementation in 
+	CONTROL_processState_run.</li>
+	<li>I.e. this runnable will be activated if either a received protocol 
+	requires an action, or a button press.</li>
+</ul>
+<p class="auto-style1">
+<img alt="SWC_control detailled view" height="555" src="model_3.PNG" width="1229"></p>
+<p>The final runnable SWC_tft again is pretty simple - the signal received from 
+the central state machine will be shown on the display, whenever this signal is 
+being updated.</p>
+<p class="auto-style1">
+<img alt="SWC_tft detailled view" height="405" src="model_4.PNG" width="890"></p>
+<h2><a name="RTE_GUI">RTE GUI</a></h2>
+<h3>Menu</h3>
+<p>The file menu allows you to load and save your project file. Furthermore the 
+generator is started from this menu. The Help menu opens this help document.</p>
+<h3>Creating a model in the RTEgen light tool</h3>
+<p>For entering the data into the tool, you more or less fowllow the tabs from 
+left to right. On the configuration tab, you typically will only modify the 
+output path, if required.</p>
+<p class="auto-style1">
+<img alt="Configuration Tab" height="443" src="gui_02.PNG" width="897"></p>
+<p>The same is true for the naming convention tab. The following naming 
+conventions have proven to be a good choice when it comes to code readability.</p>
+<p class="auto-style1">
+<img alt="Naming Convention Tab" height="1071" src="gui_03.PNG" width="897"></p>
+<p>&nbsp;</p>
+<p>The first project related and more interesting tab is the signal pool. 
+Signals pools can be used to map signals into specific regions, which are 
+protected by the MPU. A typical use case would be the implementation of 2 or 
+more safety functions, using different signals. To ensure freedom from 
+interferance, these signals can be placed into separate pools, which are 
+protected by the MPU. Depending on the OS capabilities, the runnables using the 
+signals also must be placed in different tasks.</p>
+<p>As the PSOC does not have a MPU, we only have one signal pool sp_common, 
+containing all signals.</p>
+<p class="auto-style1">
+<img alt="SignalPool Tab" height="1071" src="gui_04.PNG" width="897"></p>
+<p>In the tab tasks, the tasks which will be used to execute the runnables will 
+be defined.</p>
+<p class="auto-style1">
+<img alt="Task Tab" height="1071" src="gui_05.PNG" width="897"></p>
+<ul>
+	<li>The shortname should be a descriptive name. In our exable, com 
+	reporesents a communication task</li>
+	<li>The name is autimatically generated by adding the prefix and postfix 
+	entry from the naming convention tab to the shortname. This will be the name 
+	used in the code.</li>
+	<li>The description should explain the job of the task. This text will be 
+	exported as comment.</li>
+	<li>The timertick period defines the ticktime of the task, in case cyclic 
+	runnables are being called. The value is application specific and must be a 
+	common divider of all runnable times. If e.g. run_1 is executed every 10ms 
+	and run_2 is executed every 25ms, a good value would be 5ms.Depending in the 
+	RTOS, the ticktime and corresponding event must be configured manually in 
+	the RTOS and kept in sync.</li>
+	<li>The tickevent represent the event used for the task tick.</li>
+	<li>The mode describes, how the runnables are triggered. Only cyclically, 
+	only by event or both. Depending on this setting, different templates for 
+	the task creation will be used. </li>
+	<li>SignalpoolRO: Will contain all signal pools, to which the task will get 
+	readonly access</li>
+	<li>SignalpoolRW: Will contain all signal pools, to which the task will get 
+	readwrite access</li>
+	<li>Events: Here all events must be ticked, which are required IN ADDITION 
+	to the onData and tick events. In this case, only the user event being fired 
+	from the ISR after receiving a full protocol must be added. All other 
+	events, which are linked to signals, are automatically considered.</li>
+</ul>
+<p>For Erika tasks, please consider the following:</p>
+<ul>
+	<li>Event based tasks are Extended Tasks and typically only called by onData 
+	and onError events from the signals</li>
+	<li>Cyclic tasks are Basic Tasks activated by an alarm</li>
+	<li>Cyclic and Event based tasks are implemented as Extended Task. For the 
+	Cyclic Event, you must define an additional event in the RTELight (Section 
+	events) and activate this by an Alarm in Erika. Of course the time bases 
+	must be kept in sync.</li>
+</ul>
+<p>&nbsp;</p>
+<p>In the tab signal classes, the interfaces of the ports / data types required 
+for signal objects are being defined. Please note, that the generator will 
+create an empty structure / enum / typedef for every class. The content is added 
+and maintained in the generated file directly.</p>
+<p class="auto-style1">
+<img alt="Signal Class Tab" height="1071" src="gui_06.PNG" width="897"></p>
+<p>In the tab signal objects, we create the individual data objects and 
+configure the system behaviour in case of data changes.</p>
+<ul>
+	<li>The shortname should be a descriptive name of the signal content. Please 
+	note, that the type and object should have different names, typically the 
+	object is a bit more specific. E.g. so_protocolRx and so_protocolTx are both 
+	signal object of the class sc_Protocol.</li>
+	<li>The name is created by adding the pre- and postfixes defined in the tab 
+	Naming conventions</li>
+	<li>The description should be a good description of the signal task. The 
+	description will be created as comment in the code.</li>
+	<li>The signal class defines the type of the signal</li>
+	<li>The indriver and outdriver define driver functions, which may be called 
+	by the signal<ul>
+		<li>0: no driver function is being called</li>
+		<li>default: A driver stub is generated, which calls the MCAL driver - 
+		typically this option will be used, as the API of driver functions often 
+		do not comply with the RTE conventions</li>
+		<li>specific function name: In case an existing function shall be 
+		called.</li>
+	</ul>
+	</li>
+	<li>The signal pool: Here, the memory region in which the signal will be 
+	linked, is selected</li>
+	<li>The ressource field allows the definition of a ressource, which will 
+	protect the set and get methods in case the signal is used in more than one 
+	task context. Use the button "New ressource" in case you want to add a new 
+	ressource to the system.</li>
+	<li>The onDataUpdate and onDataError events are fired to the receiver 
+	runnables in case the data is changed or in case the signal is set invalid 
+	(either from the user or by a driver call). Use the button "New event" in 
+	case you want to add a new event to the system.</li>
+</ul>
+<p class="auto-style1">
+<img alt="Signal Objects" height="1071" src="gui_07.PNG" width="897">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>In the tab SWC's, we define the static structure of the system.</p>
+<ul>
+	<li>For every software component, a .c and .h file is created, containing 
+	the component's runnables as functions.</li>
+</ul>
+<p class="auto-style1">
+<img alt="Software Components" height="1071" src="gui_08.PNG" width="897">&nbsp;</p>
+<p>The static structure then is refined on the Runnable level.</p>
+<ul>
+	<li>The shortname, name and description follow the same convention as in the 
+	other tabs.</li>
+	<li>Every runnable belongs to a software component.</li>
+	<li>And is executed in the context of a task.</li>
+	<li>For cyclic runnables, a cycle time must be set, which must be a multiple 
+	of the task tick time (set in the task tab)</li>
+	<li>The signalIN and signalOut lists contain the signals which are being 
+	used (either as input and/or output by the runnable.</li>
+	<li>The events contain the events which activate the runnable (in addition 
+	to the cycletime, if set)</li>
+</ul>
+<p class="auto-style1">
+<img alt="Runnable Tab" height="1071" src="gui_09.PNG" width="897"></p>
+<p>The event tab contains the list of events.</p>
+<ul>
+	<li>Most events have been created by pressing the "New Event" button in the 
+	signal object tab</li>
+	<li>Additional application events may be created here, in case they are 
+	needed, e.g. ev_isr_protocolBufferComplete, which is fired by a SetEvent 
+	call in the UART isr.</li>
+</ul>
+<p class="auto-style1">
+<img alt="Event tab" height="1071" src="gui_10.PNG" width="897"></p>
+<p>Like the events, the ressources typically are created by pressing the button 
+"New Ressource" in the signal object tab.</p>
+<p class="auto-style2">Please note: For the ressources, we have to add a stub in 
+the file rte_types.h.</p>
+<p>If ressources are required:</p>
+<pre>/**
+* In case no ressources are required in the OS, the Resource Type Definition is missing.
+* So we create a stub here. Must be commented out if we have real resources.
+**/
+
+// typedef uint32_t ResourceType;</pre>
+<p>If no ressources are required, we have to uncomment the type definition:</p>
+<pre>/**
+* In case no ressources are required in the OS, the Resource Type Definition is missing.
+* So we create a stub here. Must be commented out if we have real resources.
+**/
+
+   typedef uint32_t ResourceType;</pre>
+<p class="auto-style1">
+<img alt="Ressource tab" height="1071" src="gui_11.PNG" width="897"></p>
+<h2><a name="Code_Generator">Code Generator</a></h2>
+<p>The generator is an own tool, which can be invoked via the file menu of the 
+GUI.</p>
+<ul>
+	<li>Select save and generate</li>
+	<li>Upon calling the generator the first time, you will have to navigate to 
+	the folder containing the generator ..\gen_jinja2\RteGen\__init__.py</li>
+</ul>
+<p>After running the generator, a command window should show up.</p>
+<p class="auto-style1">
+<img alt="Generator Window" height="433" src="Generator_01.PNG" width="764">&nbsp;</p>
+<h3>Generated output</h3>
+<p>The output location has been set in the configuration tab of the GUI. The recommended structure inside a code workspace 
+looks as follows:</p>
+<pre>source\
+source\asw      (application software modules, tasks, SWC's)
+source\bsw      (application software basic driver modules)
+source\rte      (source code for the runtime environment, signals)</pre>
+<p>Especially if you use the generator for the first time, you might want to 
+generate the code not directly into the code workspace, but into another 
+location (in the example below the folder model) to avoid uncontrolled 
+overwriting of your code</p>
+<pre>model\          (location of the generator XML file)
+model\out       (location for the generated code, rte.h, rte.c, rte_types.h)
+model\out\asw   (generated software components and tasks)
+model\out\rte   (generated signals)</pre>
+<p>The subfolder names (asw, rte,..) are defined in the code generation 
+templates. Use a tool like BeyondCompare to merge the generated code with your own code. 
+Alternatively you may of course generate the code directly into you real code 
+folder.</p>
+<p>Please note:</p>
+<ul>
+	<li>Every generated source file contains User Code Sections. Code written in 
+	these sections will not be overwritten. In other words - do not add any code 
+	outside of these sections.</li>
+	<li>The file rte.h, rte.c and rte_types.h need to be copied manually into 
+	your source rte folder (only once)</li>
+	<li>When using OSEK resources, the file rte_types.h needs to be modified. 
+	Please check the comments inside.</li>
+</ul>
+<p>User Code sections look like this:</p>
+<pre>/* USER CODE START TASK_TFT_USERDEFINITIONS */
+
+/* USER CODE END TASK_TFT_USERDEFINITIONS */</pre>
+<h3>Preparation of the generated code</h3>
+<ol>
+	<li>Copy the generated code into your code workspace.&nbsp;</li>
+	<li>On the top level folder, you will find the following files, which should 
+	be moved into the rte subfolder manually.<ul>
+		<li>info.txt</li>
+		<li>rte.c</li>
+		<li>rte.h</li>
+		<li>rte_types.h</li>
+	</ul>
+	</li>
+	<li>Make sure to add the folders to your make environment</li>
+	<li>Compile the project</li>
+</ol>
+<p>The first compilation will create lot's of compiler errors. The reason is, 
+that the internal structure&nbsp;of the signals as well as driver calls have to be 
+added to your code. This needs to be done in the _type.x|.h files.</p>
+<p>The _type.h files contain the definition of your class data type. The most 
+relevant part is the following section:</p>
+<pre>typedef 
+/* USER CODE START SC_BUTTON_SIGNALDATADEFINITION */
+struct
+{
+#error "Provide your data structure"
+} 
+/* USER CODE END SC_BUTTON_SIGNALDATADEFINITION */
+SC_BUTTON_data_t;
+
+/* USER CODE START InitSC_BUTTON */
+#error "Provide a sensible init value"
+#define SC_BUTTON_INIT_DATA ((SC_BUTTON_data_t){})
+/* USER CODE END InitSC_BUTTON */</pre>
+<p>Check the section containing #error directives. Here, you must add yopur 
+code. You may use structs, enums or simple typedefs to in-built types to define 
+the signal structure.</p>
+<p>In case a in- or outdriver is defined, an additional _type.c file is created. 
+In this function, you will call the peripheral driver and check for a valid 
+value. </p>
+<pre>/**
+* Default IN driver API
+*/
+inline RC_t SC_BUTTON_driverIn(SC_BUTTON_data_t *const data)
+{
+/* USER CODE START driverInSC_BUTTON */
+#error "Add your code here"
+
+//Read data from the MCAL driver
+
+//Scale it to the application type
+
+return RC_SUCCESS;
+/* USER CODE END driverInSC_BUTTON */
+}</pre>
+<p>Especially the scaler section provides lot's of flexibility and it is up to 
+you to decide, if you want to place application code in this section or inside 
+the runnable itself. As a rule of thumb, any application code related to the 
+validity of the signal should be placed here, wereas "logical" code working with 
+the signal belongs in the runnable.</p>
+<p>Inside the runnables, use the provided API's of the signals to access the 
+data. Typically you will use </p>
+<ul>
+	<li>getters and pullport at the beginning of your runnable </li>
+	<li>and setters and pushport at the end. </li>
+</ul>
+<p>Check the file &nbsp;sp_&lt;your signalpool&gt; for declarations of the signals objects. 
+All API's follow an object oriented approach, i.e. the signal object is passed 
+as a first parameter.</p>
+<pre>/*
+* component: swc_Remote
+* cycletime: 100
+* description: Send protocol trhough XBEE
+* events: ev_event_tx_onData
+* name: REMOTE_sendProtocol_run
+* shortname: sendProtocol
+* signalIN: so_connectionstate|so_event_tx
+* signalOUT: so_protocolTx
+* task: tsk_com
+*/
+void REMOTE_sendProtocol_run(RTE_event ev){
+
+/* USER CODE START REMOTE_sendProtocol_run */
+
+//Read in internal message
+SC_EVENT_data_t event = SC_EVENT_INIT_DATA;
+event = RTE_SC_EVENT_get(&amp;SO_EVENT_TX_signal);
+
+//We need the state for special receiver id treatment in case of present protocol
+SC_CONNECTIONSTATE_data_t state = SC_CONNECTIONSTATE_INIT_DATA;
+state = RTE_SC_CONNECTIONSTATE_get(&amp;SO_CONNECTIONSTATE_signal);
+
+//Do something with the data
+
+RTE_SC_PROTOCOL_set(&amp;SO_PROTOCOLTX_signal, prot);
+RTE_SC_PROTOCOL_pushPort(&amp;SO_PROTOCOLTX_signal);
+
+/* USER CODE END REMOTE_sendProtocol_run */
+}</pre>
+<h3>Configuration of the OS</h3>
+<p>Last but not least you will have to configure your RTOS by declaring all 
+required tasks, alarms, events and ressources. It is recommended to copy and 
+paste the names from the GUI into the RTOS configuration.</p>
+<h2><a name="System_Maintenance">System Maintenance</a></h2>
+<h3>Template Technology</h3>
+<p>The template generator is based on the Jinja2 generator framework and&nbsp; 
+beautifulsoup4. Check the following links for additional information:</p>
+<ul>
+	<li><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/#">
+	https://jinja.palletsprojects.com/en/2.11.x/templates/#</a> </li>
+	<li><a href="https://pypi.org/project/beautifulsoup4/">
+	https://pypi.org/project/beautifulsoup4/</a> </li>
+	<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">
+	https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a> </li>
+</ul>
+<p>Typically you only need to modify files stored in the template folder. The 
+name of the file represents the artifact it is generating. cbase.c and h_base.h 
+contain some common generator patterns.</p>
+<p>In the file RTEgen.py, you will find a couple of preprocess functions, which 
+are performing operations on the stored XML data, e.g. filtering the data and 
+similar.</p>
+<h3>Extension of the GUI</h3>
+<p>The folder \gui\sources\uifiles\ contains XML files, which can be edited with 
+the Python QT Designer (Python\Lib\site-packages\PySide2\designer.exe). Use 
+gui\makeUI.py to create the python GUI framework.</p>
+
+
+

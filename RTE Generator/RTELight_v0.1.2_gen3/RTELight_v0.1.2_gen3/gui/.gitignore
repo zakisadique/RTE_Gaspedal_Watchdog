@@ -1,0 +1,14 @@
+*.pyc
+*.zip
+__pycache__
+__pycache__/*
+__pycache__/**
+
+
+.history
+.history/*
+.history/**
+
+gen_jinja2/out/
+gen_jinja2/out/*
+gen_jinja2/out/**

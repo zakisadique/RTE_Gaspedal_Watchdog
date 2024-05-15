@@ -1,0 +1,17 @@
+RTELight_v0.1.2
+- Initial fully working release
+
+RTELight_v0.1.2_gen1
+Update Generator:
+- Own ticktime per task (previously it was global in the RTE)
+- Solved linker issue with missing ressource functions Erika
+
+RTELight_v0.1.2_gen2
+Update Generator:
+- Ticktime corrected for cyclic + event task
+
+RTELight_v0.1.2_gen3
+Update Generator
+- Added Terminate Tasks
+- Added additional user sections
+- Added FreeRTOS templates

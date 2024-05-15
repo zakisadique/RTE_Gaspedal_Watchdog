@@ -1,0 +1,9 @@
+{% macro descrBlock(data) -%}
+/*
+{% for k,v in data.items() -%}
+{% if v is string -%}
+* {{k}}: {{v}}
+{% endif -%}
+{% endfor -%}
+*/
+{%- endmacro %}

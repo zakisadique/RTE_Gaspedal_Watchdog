@@ -1,0 +1,18 @@
+tasks:
+    {%- for task in values %}
+    {{task.name}}:
+        timertickperiod: {{task.timertickperiod}}
+        mode: {{task.mode}}
+        signalpoolsRO: {{task.signalpoolsRO}}
+        signalpoolsRW: {{task.signalpoolsRW}}
+        events: {{task.events}}
+        runnables:
+            {%- for runnable in task.runnables %}
+                {{runnable.name}}:
+                    task: {{runnable.task}}
+                    cycletime: {{runnable.cycletime}}
+                    events: {{runnable.events}}
+                    signalIN: {{runnable.signalIN}}
+                    signalOUT: {{runnable.signalOUT}}
+            {% endfor -%}
+    {%- endfor -%}

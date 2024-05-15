@@ -1,0 +1,213 @@
+signalclasses:
+    sc_Protocol:
+        datatrigger: 
+    sc_Joystick:
+        datatrigger: 
+    sc_Event:
+        datatrigger: 
+    sc_ConnectionState:
+        datatrigger: 
+    sc_Button:
+        datatrigger: 
+    sc_Display:
+        datatrigger:
+
+signalpools:
+    sp_common:
+        start: 
+        end: 
+        signals:
+            so_protocolRx:
+                    class: sc_Protocol
+                    inDriver: default
+                    outDriver: 0
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: ev_protocolrx_onError
+                    onDataErrorTask: 
+            so_protocolTx:
+                    class: sc_Protocol
+                    inDriver: 0
+                    outDriver: default
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_joystick:
+                    class: sc_Joystick
+                    inDriver: default
+                    outDriver: 0
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_button:
+                    class: sc_Button
+                    inDriver: default
+                    outDriver: 0
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_display:
+                    class: sc_Display
+                    inDriver: 0
+                    outDriver: default
+                    onDataUpdate: ev_display_onData
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_connectionstate:
+                    class: sc_ConnectionState
+                    inDriver: 0
+                    outDriver: 0
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_event_rx_remote:
+                    class: sc_Event
+                    inDriver: 0
+                    outDriver: 0
+                    onDataUpdate: ev_event_rx_remote_onData
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_event_tx:
+                    class: sc_Event
+                    inDriver: 0
+                    outDriver: 0
+                    onDataUpdate: ev_event_tx_onData
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_event_rx_hmi:
+                    class: sc_Event
+                    inDriver: 0
+                    outDriver: 0
+                    onDataUpdate: ev_event_rx_hmi_onData
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask:
+
+tasks:
+    tsk_com:
+        timertickperiod: 0
+        mode: Event
+        signalpoolsRO: 
+        signalpoolsRW: sp_common
+        events: ev_protocolrx_onError|ev_isr_protocolBufferComplete|ev_event_tx_onData
+        runnables:
+                REMOTE_readProtocol_run:
+                    task: tsk_com
+                    cycletime: 0
+                    events: ev_isr_protocolBufferComplete
+                    signalIN: so_protocolRx
+                    signalOUT: so_event_rx_remote
+            
+                REMOTE_sendProtocol_run:
+                    task: tsk_com
+                    cycletime: 100
+                    events: ev_event_tx_onData
+                    signalIN: so_connectionstate|so_event_tx
+                    signalOUT: so_protocolTx
+            
+                REMOTE_readProtocolError_run:
+                    task: tsk_com
+                    cycletime: 0
+                    events: ev_protocolrx_onError
+                    signalIN: so_protocolRx
+                    signalOUT: 
+            
+    tsk_control:
+        timertickperiod: 5
+        mode: Cyclic and Event
+        signalpoolsRO: 
+        signalpoolsRW: sp_common
+        events: ev_5ms|ev_event_rx_hmi_onData|ev_event_rx_remote_onData
+        runnables:
+                CONTROL_processState_run:
+                    task: tsk_control
+                    cycletime: 0
+                    events: ev_event_rx_hmi_onData|ev_event_rx_remote_onData
+                    signalIN: so_joystick|so_connectionstate|so_event_rx_remote|so_event_rx_hmi
+                    signalOUT: so_display|so_connectionstate|so_event_tx
+            
+                CONTROL_readButtonJoystick_run:
+                    task: tsk_control
+                    cycletime: 10
+                    events: 
+                    signalIN: so_joystick|so_button|so_connectionstate
+                    signalOUT: so_joystick|so_button|so_event_rx_hmi
+            
+    tsk_tft:
+        timertickperiod: 100
+        mode: Event
+        signalpoolsRO: 
+        signalpoolsRW: sp_common
+        events: ev_display_onData
+        runnables:
+                TFT_updateDisplay_run:
+                    task: tsk_tft
+                    cycletime: 0
+                    events: ev_display_onData
+                    signalIN: so_joystick|so_button|so_display|so_connectionstate
+                    signalOUT: 
+            
+    tsk_system:
+        timertickperiod: 10
+        mode: System
+        signalpoolsRO: 
+        signalpoolsRW: 
+        events: 
+        runnables:
+
+swc:
+    swc_Control:
+        runnables:
+                CONTROL_processState_run:
+                    task: tsk_control
+                    cycletime: 0
+                    events: ev_event_rx_hmi_onData|ev_event_rx_remote_onData
+                    signalIN: so_joystick|so_connectionstate|so_event_rx_remote|so_event_rx_hmi
+                    signalOUT: so_display|so_connectionstate|so_event_tx
+            
+                CONTROL_readButtonJoystick_run:
+                    task: tsk_control
+                    cycletime: 10
+                    events: 
+                    signalIN: so_joystick|so_button|so_connectionstate
+                    signalOUT: so_joystick|so_button|so_event_rx_hmi
+            
+    swc_Remote:
+        runnables:
+                REMOTE_readProtocol_run:
+                    task: tsk_com
+                    cycletime: 0
+                    events: ev_isr_protocolBufferComplete
+                    signalIN: so_protocolRx
+                    signalOUT: so_event_rx_remote
+            
+                REMOTE_sendProtocol_run:
+                    task: tsk_com
+                    cycletime: 100
+                    events: ev_event_tx_onData
+                    signalIN: so_connectionstate|so_event_tx
+                    signalOUT: so_protocolTx
+            
+                REMOTE_readProtocolError_run:
+                    task: tsk_com
+                    cycletime: 0
+                    events: ev_protocolrx_onError
+                    signalIN: so_protocolRx
+                    signalOUT: 
+            
+    swc_TFT:
+        runnables:
+                TFT_updateDisplay_run:
+                    task: tsk_tft
+                    cycletime: 0
+                    events: ev_display_onData
+                    signalIN: so_joystick|so_button|so_display|so_connectionstate
+                    signalOUT:
+

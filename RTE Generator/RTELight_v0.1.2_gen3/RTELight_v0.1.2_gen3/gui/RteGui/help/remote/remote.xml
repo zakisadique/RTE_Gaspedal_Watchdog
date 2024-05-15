@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rte>
+ <configset>
+  <config name="version" value="Erika 2"/>
+  <config name="path_out" value="{PROJECT_PATH}\out"/>
+  <config name="templateDir" value="{GEN_PATH}\..\templates"/>
+  <config name="userCodeStart" value="/\* USER CODE START {TAG} \*/"/>
+  <config name="userCodeEnd" value="/\* USER CODE END {TAG} \*/"/>
+  <config name="guivers" value="0.1.2"/>
+ </configset>
+ <naming>
+  <config name="signalpoolPrefix" value="sp_"/>
+  <config name="signalpoolPostfix" value=""/>
+  <config name="taskPrefix" value="tsk_"/>
+  <config name="taskPostfix" value=""/>
+  <config name="signalclassPrefix" value="sc_"/>
+  <config name="signalclassPostfix" value=""/>
+  <config name="signalobjectPrefix" value="so_"/>
+  <config name="signalobjectPostfix" value=""/>
+  <config name="swcPrefix" value="swc_"/>
+  <config name="swcPostfix" value=""/>
+  <config name="runnablePrefix" value=""/>
+  <config name="runnablePostfix" value="_run"/>
+  <config name="eventPrefix" value="ev_"/>
+  <config name="eventPostfix" value=""/>
+  <config name="resourcePrefix" value="res_"/>
+  <config name="resourcePostfix" value=""/>
+  <config name="addrPrefix" value="ADR_"/>
+  <config name="addrStartPostfix" value="_START"/>
+  <config name="addrEndPostfix" value="_END"/>
+ </naming>
+ <signalpools>
+  <signalpool description="We do not have MPU protection on the PSOC, i.e. all signals will be part of the same signal pool." endaddr="" name="sp_common" shortname="common" startaddr=""/>
+ </signalpools>
+ <tasks>
+  <task description="Communication task, processing the UART" events="ev_isr_protocolBufferComplete" mode="Event" name="tsk_com" shortname="com" signalpoolsRO="" signalpoolsRW="sp_common" tickEvent="0" timertickperiod="0"/>
+  <task description="Cyclic task resing in all joysticks, knobs and buttons" events="" mode="Cyclic and Event" name="tsk_control" shortname="control" signalpoolsRO="" signalpoolsRW="sp_common" tickEvent="ev_5ms" timertickperiod="5"/>
+  <task description="Background task, updating the TFT" events="" mode="Event" name="tsk_tft" shortname="tft" signalpoolsRO="" signalpoolsRW="sp_common" tickEvent="0" timertickperiod="100"/>
+  <task description="Central system task" events="" mode="System" name="tsk_system" shortname="system" signalpoolsRO="" signalpoolsRW="" tickEvent="0" timertickperiod="10"/>
+ </tasks>
+ <signalclasses>
+  <signalclass description="Signalclass" name="sc_Protocol" shortname="Protocol"/>
+  <signalclass description="Signalclass" name="sc_Joystick" shortname="Joystick"/>
+  <signalclass description="Signalclass" name="sc_Event" shortname="Event"/>
+  <signalclass description="Signalclass" name="sc_ConnectionState" shortname="ConnectionState"/>
+  <signalclass description="Signalclass" name="sc_Button" shortname="Button"/>
+  <signalclass description="Signalclass" name="sc_Display" shortname="Display"/>
+ </signalclasses>
+ <signalobjects>
+  <signalobject description="Data received over XBee" indriver="default" name="so_protocolRx" onDataError="ev_protocolrx_onError" onDataUpdate="0" outdriver="0" resource="None" shortname="protocolRx" signalclass="sc_Protocol" signalpool="sp_common"/>
+  <signalobject description="Protocol send over XBEE" indriver="0" name="so_protocolTx" onDataError="0" onDataUpdate="0" outdriver="default" resource="None" shortname="protocolTx" signalclass="sc_Protocol" signalpool="sp_common"/>
+  <signalobject description="Signal representing all analogue SIgnals of the HMI" indriver="default" name="so_joystick" onDataError="0" onDataUpdate="0" outdriver="0" resource="None" shortname="joystick" signalclass="sc_Joystick" signalpool="sp_common"/>
+  <signalobject description="Button representation" indriver="default" name="so_button" onDataError="0" onDataUpdate="0" outdriver="0" resource="None" shortname="button" signalclass="sc_Button" signalpool="sp_common"/>
+  <signalobject description="Display representation" indriver="0" name="so_display" onDataError="0" onDataUpdate="ev_display_onData" outdriver="default" resource="res_display_Lock" shortname="display" signalclass="sc_Display" signalpool="sp_common"/>
+  <signalobject description="Connection State of the remote - must be in sync with the car" indriver="0" name="so_connectionstate" onDataError="0" onDataUpdate="0" outdriver="0" resource="None" shortname="connectionstate" signalclass="sc_ConnectionState" signalpool="sp_common"/>
+  <signalobject description="Event fired from remote to central state machine" indriver="0" name="so_event_rx_remote" onDataError="0" onDataUpdate="ev_event_rx_remote_onData" outdriver="0" resource="res_event_rx_Lock" shortname="event_rx_remote" signalclass="sc_Event" signalpool="sp_common"/>
+  <signalobject description="Event fired from the central state machine" indriver="0" name="so_event_tx" onDataError="0" onDataUpdate="ev_event_tx_onData" outdriver="0" resource="None" shortname="event_tx" signalclass="sc_Event" signalpool="sp_common"/>
+  <signalobject description="Event fired from hmi to central state machine" indriver="0" name="so_event_rx_hmi" onDataError="0" onDataUpdate="ev_event_rx_hmi_onData" outdriver="0" resource="res_event_rx_Lock" shortname="event_rx_hmi" signalclass="sc_Event" signalpool="sp_common"/>
+ </signalobjects>
+ <swcs>
+  <swc description="Processing incoming data from XBEE and user signals" name="swc_Control" shortname="Control"/>
+  <swc description="Communication services for XBEE" name="swc_Remote" shortname="Remote"/>
+  <swc description="Display services" name="swc_TFT" shortname="TFT"/>
+ </swcs>
+ <runnables>
+  <runnable component="swc_Control" cycletime="0" description="The connection state machine. Received the events from Uart and ButtonJoystick and reactes on them." events="ev_event_rx_hmi_onData|ev_event_rx_remote_onData" name="CONTROL_processState_run" shortname="processState" signalIN="so_joystick|so_connectionstate|so_event_rx_remote|so_event_rx_hmi" signalOUT="so_display|so_connectionstate|so_event_tx" task="tsk_control"/>
+  <runnable component="swc_Control" cycletime="10" description="Checks the button state and fires the HMI events." events="" name="CONTROL_readButtonJoystick_run" shortname="readButtonJoystick" signalIN="so_joystick|so_button|so_connectionstate" signalOUT="so_joystick|so_button|so_event_rx_hmi" task="tsk_control"/>
+  <runnable component="swc_Remote" cycletime="0" description="Read protocol from XBEE" events="ev_isr_protocolBufferComplete" name="REMOTE_readProtocol_run" shortname="readProtocol" signalIN="so_protocolRx" signalOUT="so_event_rx_remote" task="tsk_com"/>
+  <runnable component="swc_Remote" cycletime="100" description="Send protocol trhough XBEE" events="ev_event_tx_onData" name="REMOTE_sendProtocol_run" shortname="sendProtocol" signalIN="so_connectionstate|so_event_tx" signalOUT="so_protocolTx" task="tsk_com"/>
+  <runnable component="swc_Remote" cycletime="0" description="Error Handler for transmission errors" events="ev_protocolrx_onError" name="REMOTE_readProtocolError_run" shortname="readProtocolError" signalIN="so_protocolRx" signalOUT="" task="tsk_com"/>
+  <runnable component="swc_TFT" cycletime="0" description="Update the display" events="ev_display_onData" name="TFT_updateDisplay_run" shortname="updateDisplay" signalIN="so_joystick|so_button|so_display|so_connectionstate" signalOUT="" task="tsk_tft"/>
+ </runnables>
+ <events>
+  <event description="A Event" name="ev_protocolrx_onError" shortname="protocolrx_onError"/>
+  <event description="A Event" name="ev_event_tx_onData" shortname="event_tx_onData"/>
+  <event description="A complete protocol has been received" name="ev_isr_protocolBufferComplete" shortname="isr_protocolBufferComplete"/>
+  <event description="1ms tick event" name="ev_5ms" shortname="5ms"/>
+  <event description="A Event" name="ev_display_onData" shortname="display_onData"/>
+  <event description="A Event" name="ev_event_rx_hmi_onData" shortname="event_rx_hmi_onData"/>
+  <event description="A Event" name="ev_event_rx_remote_onData" shortname="event_rx_remote_onData"/>
+ </events>
+ <resources>
+  <resource description="Locking access to so_event_rx" name="res_event_rx_Lock" restype="semaphore" shortname="event_rx_Lock"/>
+  <resource description="Locking access to shared display ressource" name="res_display_Lock" restype="semaphore" shortname="display_Lock"/>
+ </resources>
+</rte>
