@@ -1,0 +1,5 @@
+signalclasses:
+    {%- for sigclass in values %}
+    {{sigclass.name}}:
+        datatrigger: {{sigclass.datatrigger}}
+    {%- endfor -%}

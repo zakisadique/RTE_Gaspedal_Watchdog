@@ -1,0 +1,17 @@
+signalpools:
+    {%- for pool in values %}
+    {{pool.name}}:
+        start: {{pool.startaddr}}
+        end: {{pool.endaddr}}
+        signals:
+            {% for signal in pool.signalobjects -%}
+                {{signal.name}}:
+                    class: {{signal.signalclass}}
+                    inDriver: {{signal.indriver}}
+                    outDriver: {{signal.outdriver}}
+                    onDataUpdate: {{signal.onDataUpdate}}
+                    onDataUpdateTask: {{signal.tskDataUpdate}}
+                    onDataError: {{signal.onDataError}}
+                    onDataErrorTask: {{signal.tskDataError}}
+            {% endfor -%}
+    {%- endfor -%}

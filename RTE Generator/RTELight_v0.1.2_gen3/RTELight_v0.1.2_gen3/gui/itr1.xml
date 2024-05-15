@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rte>
+ <configset>
+  <config name="version" value="Erika 2"/>
+  <config name="path_out" value="{PROJECT_PATH}\out"/>
+  <config name="templateDir" value="{GEN_PATH}\templates\Erika"/>
+  <config name="userCodeStart" value="/\* USER CODE START {TAG} \*/"/>
+  <config name="userCodeEnd" value="/\* USER CODE END {TAG} \*/"/>
+  <config name="guivers" value="0.1.2"/>
+ </configset>
+ <naming>
+  <config name="signalpoolPrefix" value="sp_"/>
+  <config name="signalpoolPostfix" value=""/>
+  <config name="taskPrefix" value="tsk_"/>
+  <config name="taskPostfix" value=""/>
+  <config name="signalclassPrefix" value="sc_"/>
+  <config name="signalclassPostfix" value=""/>
+  <config name="signalobjectPrefix" value="so_"/>
+  <config name="signalobjectPostfix" value=""/>
+  <config name="swcPrefix" value="swc_"/>
+  <config name="swcPostfix" value=""/>
+  <config name="runnablePrefix" value=""/>
+  <config name="runnablePostfix" value="_run"/>
+  <config name="eventPrefix" value="ev_"/>
+  <config name="eventPostfix" value=""/>
+  <config name="resourcePrefix" value="res_"/>
+  <config name="resourcePostfix" value=""/>
+  <config name="addrPrefix" value="ADR_"/>
+  <config name="addrStartPostfix" value="_START"/>
+  <config name="addrEndPostfix" value="_END"/>
+ </naming>
+ <signalpools>
+  <signalpool description="all signals will be part of this common signal pool" endaddr="" name="sp__common" shortname=" common" startaddr=""/>
+ </signalpools>
+ <tasks>
+  <task description="UART" events="" mode="Event" name="tsk_com" shortname="com" signalpoolsRO="" signalpoolsRW="sp__common" tickEvent="0" timertickperiod="1"/>
+  <task description="Task doing work" events="" mode="Event" name="tsk_control" shortname="control" signalpoolsRO="" signalpoolsRW="" tickEvent="0" timertickperiod="1"/>
+  <task description="Task doing work" events="" mode="Event" name="tsk_tft" shortname="tft" signalpoolsRO="" signalpoolsRW="" tickEvent="0" timertickperiod="1"/>
+  <task description="Task doing work" events="" mode="Event" name="tsk_system" shortname="system" signalpoolsRO="" signalpoolsRW="" tickEvent="0" timertickperiod="1"/>
+ </tasks>
+ <signalclasses/>
+ <signalobjects>
+  <signalobject description="A Signal" indriver="default" name="so_protocolRX" onDataError="0" onDataUpdate="0" outdriver="default" resource="None" shortname="protocolRX" signalclass="" signalpool=""/>
+ </signalobjects>
+ <swcs>
+  <swc description="Software component" name="swc_Control" shortname="Control"/>
+  <swc description="Software component" name="swc_Remote" shortname="Remote"/>
+  <swc description="Software component" name="swc_TFT" shortname="TFT"/>
+ </swcs>
+ <runnables/>
+ <events>
+  <event description="A Event" name="ev_event_tx_onData" shortname="event_tx_onData"/>
+  <event description="A Event" name="ev_protocolrx_onError" shortname="protocolrx_onError"/>
+ </events>
+ <resources/>
+</rte>

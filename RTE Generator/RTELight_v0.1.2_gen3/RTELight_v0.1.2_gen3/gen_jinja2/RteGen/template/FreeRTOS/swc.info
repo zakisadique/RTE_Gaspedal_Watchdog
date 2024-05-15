@@ -1,0 +1,13 @@
+swc:
+    {%- for swc in values %}
+    {{swc.name}}:
+        runnables:
+            {%- for runnable in swc.runnables %}
+                {{runnable.name}}:
+                    task: {{runnable.task}}
+                    cycletime: {{runnable.cycletime}}
+                    events: {{runnable.events}}
+                    signalIN: {{runnable.signalIN}}
+                    signalOUT: {{runnable.signalOUT}}
+            {% endfor -%}
+    {%- endfor -%}
