@@ -41,7 +41,7 @@
 inline RC_t SC_SPEED_driverIn(SC_SPEED_data_t *const data)
 {
 	/* USER CODE START driverInSC_SPEED */
-#error "Add your code here"
+//#error "Add your code here"
 
 	//Read data from the MCAL driver
 

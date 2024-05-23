@@ -44,6 +44,8 @@
 void OUTPUT_setEngine_run(RTE_event ev){
 	
 	/* USER CODE START OUTPUT_setEngine_run */
+    
+    UART_Logs_PutString("Send engine speed on UART, led glow\n");
 
     /* USER CODE END OUTPUT_setEngine_run */
 }
@@ -62,6 +64,8 @@ void OUTPUT_setEngine_run(RTE_event ev){
 void OUTPUT_setBrakeLight_run(RTE_event ev){
 	
 	/* USER CODE START OUTPUT_setBrakeLight_run */
+    
+    UART_Logs_PutString("Send brakelight on UART, led glow\n");
 
     /* USER CODE END OUTPUT_setBrakeLight_run */
 }

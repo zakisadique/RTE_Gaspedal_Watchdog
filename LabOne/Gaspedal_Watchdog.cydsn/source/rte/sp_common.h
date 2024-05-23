@@ -20,9 +20,9 @@
 
 
 
+#include "sc_joystick.h"
 #include "sc_speed.h"
-#include "sc_speed.h"
-#include "sc_speed.h"
+#include "sc_engine.h"
 #include "sc_brakelight.h"
 
 
@@ -36,15 +36,15 @@
  * outdriver: 0
  * resource: None
  * shortname: joystick
- * signalclass: sc_speed
+ * signalclass: sc_joystick
  * signalpool: sp_common
  */
-extern SC_SPEED_t SO_JOYSTICK_signal;
+extern SC_JOYSTICK_t SO_JOYSTICK_signal;
 
 
 /*
  * description: Speed of the car 
- * indriver: default
+ * indriver: 0
  * name: so_speed
  * onDataError: 0
  * onDataUpdate: ev_speed_onData
@@ -63,13 +63,13 @@ extern SC_SPEED_t SO_SPEED_signal;
  * name: so_engine
  * onDataError: 0
  * onDataUpdate: 0
- * outdriver: 0
+ * outdriver: default
  * resource: None
  * shortname: engine
- * signalclass: sc_speed
+ * signalclass: sc_engine
  * signalpool: sp_common
  */
-extern SC_SPEED_t SO_ENGINE_signal;
+extern SC_ENGINE_t SO_ENGINE_signal;
 
 
 /*
@@ -78,7 +78,7 @@ extern SC_SPEED_t SO_ENGINE_signal;
  * name: so_brakelight
  * onDataError: 0
  * onDataUpdate: 0
- * outdriver: 0
+ * outdriver: default
  * resource: None
  * shortname: brakelight
  * signalclass: sc_brakelight

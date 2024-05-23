@@ -32,23 +32,16 @@ typedef
 /* USER CODE START SC_SPEED_SIGNALDATADEFINITION */
 struct
 {
-	#error "Provide your data structure"
+	uint8_t m_speed;
 } 
 /* USER CODE END SC_SPEED_SIGNALDATADEFINITION */
 SC_SPEED_data_t;
 
 /* USER CODE START InitSC_SPEED */
-#error "Provide a sensible init value"
-#define SC_SPEED_INIT_DATA ((SC_SPEED_data_t){})
+
+#define SC_SPEED_INIT_DATA ((SC_SPEED_data_t){0})
 /* USER CODE END InitSC_SPEED */
 
-
-/**
- * Default IN driver API
- * \param SC_SPEED_data_t *const data : [OUT] scaled data read from the driver
- * \return RC_SUCCESS is all was ok, error code otherwise
- */
-RC_t SC_SPEED_driverIn(SC_SPEED_data_t *const data);
 
 
 

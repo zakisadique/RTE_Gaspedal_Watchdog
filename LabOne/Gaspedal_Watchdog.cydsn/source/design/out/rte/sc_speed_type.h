@@ -43,13 +43,6 @@ SC_SPEED_data_t;
 /* USER CODE END InitSC_SPEED */
 
 
-/**
- * Default IN driver API
- * \param SC_SPEED_data_t *const data : [OUT] scaled data read from the driver
- * \return RC_SUCCESS is all was ok, error code otherwise
- */
-RC_t SC_SPEED_driverIn(SC_SPEED_data_t *const data);
-
 
 
 

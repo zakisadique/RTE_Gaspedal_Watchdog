@@ -43,6 +43,13 @@ SC_JOYSTICK_data_t;
 /* USER CODE END InitSC_JOYSTICK */
 
 
+/**
+ * Default IN driver API
+ * \param SC_JOYSTICK_data_t *const data : [OUT] scaled data read from the driver
+ * \return RC_SUCCESS is all was ok, error code otherwise
+ */
+RC_t SC_JOYSTICK_driverIn(SC_JOYSTICK_data_t *const data);
+
 
 
 

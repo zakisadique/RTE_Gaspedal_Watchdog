@@ -1,0 +1,54 @@
+--------------- Build Started: 05/20/2024 20:13:55 Project: Gaspedal_Watchdog, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source\asw -I.\source\bsw -I.\source\rte -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/swc_control.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c source\asw\swc_control.c -o .\CortexM3\ARM_GCC_541\Debug\swc_control.o
+In file included from .\source\rte/rte.h:82:0,
+                 from source\asw\swc_control.c:14:
+.\source\rte/rte_types.h:46:0: warning: "GetResource" redefined
+     #define GetResource(A)
+ ^
+In file included from Generated_Source\PSoC5/ErikaOS_ee_api.inc:73:0,
+                 from Generated_Source\PSoC5/ErikaOS_ee.h:129,
+                 from Generated_Source\PSoC5/project.h:22,
+                 from source\asw\swc_control.c:12:
+Generated_Source\PSoC5/ErikaOS_ee_oo_api.inc:136:0: note: this is the location of the previous definition
+ #define GetResource               EE_oo_GetResource
+ ^
+In file included from .\source\rte/rte.h:82:0,
+                 from source\asw\swc_control.c:14:
+.\source\rte/rte_types.h:47:0: warning: "ReleaseResource" redefined
+     #define ReleaseResource(A)
+ ^
+In file included from Generated_Source\PSoC5/ErikaOS_ee_api.inc:73:0,
+                 from Generated_Source\PSoC5/ErikaOS_ee.h:129,
+                 from Generated_Source\PSoC5/project.h:22,
+                 from source\asw\swc_control.c:12:
+Generated_Source\PSoC5/ErikaOS_ee_oo_api.inc:140:0: note: this is the location of the previous definition
+ #define ReleaseResource           EE_oo_ReleaseResource
+ ^
+In file included from .\source\rte/sc_joystick.h:27:0,
+                 from .\source\rte/sp_common.h:23,
+                 from source\asw\swc_control.c:25:
+.\source\rte/sc_joystick.h: In function 'RTE_SC_JOYSTICK_init':
+.\source\rte/sc_joystick_type.h:42:55: warning: excess elements in struct initializer
+ #define SC_JOYSTICK_INIT_DATA ((SC_JOYSTICK_data_t){0,0})
+                                                       ^
+.\source\rte/sc_joystick.h:166:21: note: in expansion of macro 'SC_JOYSTICK_INIT_DATA'
+    signal->value  = SC_JOYSTICK_INIT_DATA;
+                     ^
+.\source\rte/sc_joystick_type.h:42:55: note: (near initialization for '(anonymous)')
+ #define SC_JOYSTICK_INIT_DATA ((SC_JOYSTICK_data_t){0,0})
+                                                       ^
+.\source\rte/sc_joystick.h:166:21: note: in expansion of macro 'SC_JOYSTICK_INIT_DATA'
+    signal->value  = SC_JOYSTICK_INIT_DATA;
+                     ^
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_activate.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alcancel.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alget.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_algetbase.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetabs.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetrel.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_altick.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_chaintas.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evclear.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evget.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evset.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evwait.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_force_schedule.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getcountervalue.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getelapsedvalue.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskid.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskstate.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_iparam.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_irqendin.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lockres.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lookup.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_exchg.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_first.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_inser.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_schedule.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semgetvalue.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_sempost.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semtrywait.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semwait.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_shtdown.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_startos.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_terminat.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_thendin.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tnterm.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tstub.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockallres.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockres.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_context.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_system_timer.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_utils.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_common_ee_hal_structs.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_eecfg.o .\CortexM3\ARM_GCC_541\Debug\UART_Logs.o .\CortexM3\ARM_GCC_541\Debug\UART_Logs_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_Logs_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_Logs_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_Logs_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_change_context_isr.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_irq_stack.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_multi_context.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_oo.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\swc_control.o .\CortexM3\ARM_GCC_541\Debug\swc_output.o .\CortexM3\ARM_GCC_541\Debug\tsk_control.o .\CortexM3\ARM_GCC_541\Debug\tsk_output.o .\CortexM3\ARM_GCC_541\Debug\swc_input.o .\CortexM3\ARM_GCC_541\Debug\tsk_input.o .\CortexM3\ARM_GCC_541\Debug\rte.o .\CortexM3\ARM_GCC_541\Debug\sc_brakelight.o .\CortexM3\ARM_GCC_541\Debug\sc_joystick.o .\CortexM3\ARM_GCC_541\Debug\sc_speed.o .\CortexM3\ARM_GCC_541\Debug\sc_speed_type.o .\CortexM3\ARM_GCC_541\Debug\sp_common.o .\CortexM3\ARM_GCC_541\Debug\sc_brakelight_type.o .\CortexM3\ARM_GCC_541\Debug\sc_engine.o .\CortexM3\ARM_GCC_541\Debug\sc_engine_type.o .\CortexM3\ARM_GCC_541\Debug\sc_joystick_type.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Gaspedal_Watchdog.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.elf
+Flash used: 7646 of 262144 bytes (2.9%).
+SRAM used: 6769 of 65536 bytes (10.3%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 05/20/2024 20:13:56 ---------------

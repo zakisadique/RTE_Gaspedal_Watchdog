@@ -32,16 +32,23 @@ typedef
 /* USER CODE START SC_JOYSTICK_SIGNALDATADEFINITION */
 struct
 {
-	#error "Provide your data structure"
+	sint8_t m_joystickValueX;
 } 
 /* USER CODE END SC_JOYSTICK_SIGNALDATADEFINITION */
 SC_JOYSTICK_data_t;
 
 /* USER CODE START InitSC_JOYSTICK */
-#error "Provide a sensible init value"
-#define SC_JOYSTICK_INIT_DATA ((SC_JOYSTICK_data_t){})
+
+#define SC_JOYSTICK_INIT_DATA ((SC_JOYSTICK_data_t){0,0})
 /* USER CODE END InitSC_JOYSTICK */
 
+
+/**
+ * Default IN driver API
+ * \param SC_JOYSTICK_data_t *const data : [OUT] scaled data read from the driver
+ * \return RC_SUCCESS is all was ok, error code otherwise
+ */
+RC_t SC_JOYSTICK_driverIn(SC_JOYSTICK_data_t *const data);
 
 
 

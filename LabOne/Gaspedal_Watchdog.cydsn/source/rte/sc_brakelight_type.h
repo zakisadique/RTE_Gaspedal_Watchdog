@@ -32,18 +32,24 @@ typedef
 /* USER CODE START SC_BRAKELIGHT_SIGNALDATADEFINITION */
 struct
 {
-	#error "Provide your data structure"
+	boolean_t m_brakelight;
 } 
 /* USER CODE END SC_BRAKELIGHT_SIGNALDATADEFINITION */
 SC_BRAKELIGHT_data_t;
 
 /* USER CODE START InitSC_BRAKELIGHT */
-#error "Provide a sensible init value"
-#define SC_BRAKELIGHT_INIT_DATA ((SC_BRAKELIGHT_data_t){})
+#define SC_BRAKELIGHT_INIT_DATA ((SC_BRAKELIGHT_data_t){0})
 /* USER CODE END InitSC_BRAKELIGHT */
 
 
 
+
+/**
+ * Default OUT driver API
+ * \param const SC_BRAKELIGHT_data_t  *const data : [IN] signal data for the driver, will be scaled in this function
+ * \return RC_SUCCESS is all was ok, error code otherwise
+ */
+RC_t SC_BRAKELIGHT_driverOut(const SC_BRAKELIGHT_data_t  *const data);
 
 
 /* USER CODE START SC_BRAKELIGHT_USERFUNCTIONS */
