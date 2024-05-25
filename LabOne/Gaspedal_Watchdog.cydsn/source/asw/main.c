@@ -11,10 +11,13 @@
 */
 #include "project.h"
 #include "global.h"
+#include "joystick.h"
 
-#include "tsk_input.h"
-#include "tsk_output.h"
+#include "tsk_io.h"
+#include "tsk_logging.h"
 #include "tsk_control.h"
+#include "led.h"
+#include "tft.h"
 
 //ISR which will increment the systick counter every ms
 ISR(systick_handler)
@@ -52,6 +55,10 @@ TASK(tsk_init)
     //Init MCAL Drivers
 
     UART_Logs_Start();
+    JOYSTICK_Init();
+    LED_Init();
+    TFT_init();
+    
     UART_Logs_PutString("UART Initiated\n");
     
     //Reconfigure ISRs with OS parameters.
@@ -63,12 +70,11 @@ TASK(tsk_init)
     EE_systick_start();  
 	
     //Start the alarm with 100ms cycle time
-    SetRelAlarm(alrm_engine,1,1);
-    SetRelAlarm(alrm_joystick,1,1);
+    SetRelAlarm(alrm_10_ms,10,10);
     
-    ActivateTask(tsk_input);
+    ActivateTask(tsk_io);
     ActivateTask(tsk_control);
-    ActivateTask(tsk_output);
+    ActivateTask(tsk_logging);
     ActivateTask(tsk_background);
     
     TerminateTask();

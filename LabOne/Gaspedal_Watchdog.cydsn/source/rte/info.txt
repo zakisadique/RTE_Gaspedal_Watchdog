@@ -6,6 +6,8 @@ signalclasses:
     sc_brakelight:
         datatrigger: 
     sc_engine:
+        datatrigger: 
+    sc_logging:
         datatrigger:
 
 signalpools:
@@ -44,29 +46,58 @@ signalpools:
                     onDataUpdate: 0
                     onDataUpdateTask: 
                     onDataError: 0
+                    onDataErrorTask: 
+            so_logging:
+                    class: sc_logging
+                    inDriver: 0
+                    outDriver: default
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
                     onDataErrorTask:
 
 tasks:
-    tsk_output:
-        timertickperiod: 1
+    tsk_io:
+        timertickperiod: 10
         mode: Cyclic and Event
         signalpoolsRO: sp_common
         signalpoolsRW: sp_common
-        events: ev_speed_onData
+        events: ev_speed_onData|ev_tick_10ms
         runnables:
+                INPUT_readJoystick_run:
+                    task: tsk_io
+                    cycletime: 10
+                    events: 
+                    signalIN: 
+                    signalOUT: so_joystick
+            
                 OUTPUT_setEngine_run:
-                    task: tsk_output
+                    task: tsk_io
                     cycletime: 100
                     events: 
                     signalIN: so_speed
                     signalOUT: so_engine
             
                 OUTPUT_setBrakeLight_run:
-                    task: tsk_output
+                    task: tsk_io
                     cycletime: 0
                     events: ev_speed_onData
                     signalIN: so_speed
                     signalOUT: so_brakelight
+            
+    tsk_logging:
+        timertickperiod: 1
+        mode: Event
+        signalpoolsRO: sp_common
+        signalpoolsRW: sp_common
+        events: ev_joystick_onData
+        runnables:
+                LOGGING_logging_run:
+                    task: tsk_logging
+                    cycletime: 0
+                    events: 
+                    signalIN: so_joystick
+                    signalOUT: so_logging
             
     tsk_control:
         timertickperiod: 1
@@ -81,26 +112,12 @@ tasks:
                     events: ev_joystick_onData
                     signalIN: so_joystick
                     signalOUT: so_speed
-            
-    tsk_input:
-        timertickperiod: 1
-        mode: Cyclic
-        signalpoolsRO: sp_common
-        signalpoolsRW: sp_common
-        events: 
-        runnables:
-                INPUT_readJoystick_run:
-                    task: tsk_input
-                    cycletime: 10
-                    events: 
-                    signalIN: 
-                    signalOUT: so_joystick
 
 swc:
     swc_input:
         runnables:
                 INPUT_readJoystick_run:
-                    task: tsk_input
+                    task: tsk_io
                     cycletime: 10
                     events: 
                     signalIN: 
@@ -118,16 +135,25 @@ swc:
     swc_output:
         runnables:
                 OUTPUT_setEngine_run:
-                    task: tsk_output
+                    task: tsk_io
                     cycletime: 100
                     events: 
                     signalIN: so_speed
                     signalOUT: so_engine
             
                 OUTPUT_setBrakeLight_run:
-                    task: tsk_output
+                    task: tsk_io
                     cycletime: 0
                     events: ev_speed_onData
                     signalIN: so_speed
                     signalOUT: so_brakelight
+            
+    swc_logging:
+        runnables:
+                LOGGING_logging_run:
+                    task: tsk_logging
+                    cycletime: 0
+                    events: 
+                    signalIN: so_joystick
+                    signalOUT: so_logging
 

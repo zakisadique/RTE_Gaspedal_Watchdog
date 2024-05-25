@@ -31,18 +31,20 @@
 #include "sc_engine_type.h"
 #include "sc_brakelight.h"
 #include "sc_brakelight_type.h"
+#include "sc_logging.h"
+#include "sc_logging_type.h"
 
 
 
 /* signal configuration */
 /*
- * description: Joystick position (x, y)
+ * description: Joystick position
  * indriver: default
  * name: so_joystick
  * onDataError: 0
  * onDataUpdate: ev_joystick_onData
  * outdriver: 0
- * resource: None
+ * resource: res_joystick
  * shortname: joystick
  * signalclass: sc_joystick
  * signalpool: sp_common
@@ -65,8 +67,8 @@ static const SC_JOYSTICK_cfg_t SO_JOYSTICK_cfg =
    /* taskCount onError  */  0,
    /* task list onError  */  NULL,
 
-   /* resource active    */  FALSE,
-   /* resource           */  0,
+   /* resource active    */  TRUE,
+   /* resource           */  res_joystick,
    
 }; /* configuration so_joystick */
 
@@ -89,7 +91,7 @@ SC_JOYSTICK_t SO_JOYSTICK_signal=
  * onDataError: 0
  * onDataUpdate: ev_speed_onData
  * outdriver: 0
- * resource: None
+ * resource: res_speed
  * shortname: speed
  * signalclass: sc_speed
  * signalpool: sp_common
@@ -97,7 +99,7 @@ SC_JOYSTICK_t SO_JOYSTICK_signal=
 
 
 /* The following array contains the receiving tasks for onUpdate signal events */
-const TaskTypeArray so_speed_updTasks = { tsk_output };
+const TaskTypeArray so_speed_updTasks = { tsk_io };
  
 
 static const SC_SPEED_cfg_t SO_SPEED_cfg = 
@@ -112,8 +114,8 @@ static const SC_SPEED_cfg_t SO_SPEED_cfg =
    /* taskCount onError  */  0,
    /* task list onError  */  NULL,
 
-   /* resource active    */  FALSE,
-   /* resource           */  0,
+   /* resource active    */  TRUE,
+   /* resource           */  res_speed,
    
 }; /* configuration so_speed */
 
@@ -136,7 +138,7 @@ SC_SPEED_t SO_SPEED_signal=
  * onDataError: 0
  * onDataUpdate: 0
  * outdriver: default
- * resource: None
+ * resource: res_engine
  * shortname: engine
  * signalclass: sc_engine
  * signalpool: sp_common
@@ -156,8 +158,8 @@ static const SC_ENGINE_cfg_t SO_ENGINE_cfg =
    /* taskCount onError  */  0,
    /* task list onError  */  NULL,
 
-   /* resource active    */  FALSE,
-   /* resource           */  0,
+   /* resource active    */  TRUE,
+   /* resource           */  res_engine,
    
 }; /* configuration so_engine */
 
@@ -180,7 +182,7 @@ SC_ENGINE_t SO_ENGINE_signal=
  * onDataError: 0
  * onDataUpdate: 0
  * outdriver: default
- * resource: None
+ * resource: res_brakelight
  * shortname: brakelight
  * signalclass: sc_brakelight
  * signalpool: sp_common
@@ -200,8 +202,8 @@ static const SC_BRAKELIGHT_cfg_t SO_BRAKELIGHT_cfg =
    /* taskCount onError  */  0,
    /* task list onError  */  NULL,
 
-   /* resource active    */  FALSE,
-   /* resource           */  0,
+   /* resource active    */  TRUE,
+   /* resource           */  res_brakelight,
    
 }; /* configuration so_brakelight */
 
@@ -216,6 +218,50 @@ SC_BRAKELIGHT_t SO_BRAKELIGHT_signal=
    /* cfg           */  &SO_BRAKELIGHT_cfg,
 }; /* data so_brakelight */
 
+/* signal configuration */
+/*
+ * description: A Signal for logging on an HMI device
+ * indriver: 0
+ * name: so_logging
+ * onDataError: 0
+ * onDataUpdate: 0
+ * outdriver: default
+ * resource: res_logging
+ * shortname: logging
+ * signalclass: sc_logging
+ * signalpool: sp_common
+ */
+
+ 
+
+static const SC_LOGGING_cfg_t SO_LOGGING_cfg = 
+{
+   /* indriver           */  0,
+   /* outdriver          */  SC_LOGGING_driverOut,
+
+   /* onUpdate           */  0,
+   /* onError            */  0,
+   /* taskCount onUpdate */  0,
+   /* task list onUpdate */  NULL,
+   /* taskCount onError  */  0,
+   /* task list onError  */  NULL,
+
+   /* resource active    */  TRUE,
+   /* resource           */  res_logging,
+   
+}; /* configuration so_logging */
+
+
+/* signal data */
+
+SC_LOGGING_t SO_LOGGING_signal= 
+{
+   /* init value    */  SC_LOGGING_INIT_DATA,
+   /* status        */  RTE_SIGNALSTATUS_STARTUP,
+   /* age           */  0,
+   /* cfg           */  &SO_LOGGING_cfg,
+}; /* data so_logging */
+
 
 
 /*
@@ -226,6 +272,7 @@ void RTE_timertick_sp_common_tick(uint32_t tick){
    RTE_SC_SPEED_incAge( &SO_SPEED_signal, tick); 
    RTE_SC_ENGINE_incAge( &SO_ENGINE_signal, tick); 
    RTE_SC_BRAKELIGHT_incAge( &SO_BRAKELIGHT_signal, tick); 
+   RTE_SC_LOGGING_incAge( &SO_LOGGING_signal, tick); 
    
 }
 
@@ -237,6 +284,7 @@ void RTE_reset_sp_common(){
    RTE_SC_SPEED_init( &SO_SPEED_signal); 
    RTE_SC_ENGINE_init( &SO_ENGINE_signal); 
    RTE_SC_BRAKELIGHT_init( &SO_BRAKELIGHT_signal); 
+   RTE_SC_LOGGING_init( &SO_LOGGING_signal); 
    
 }		
 

@@ -27,13 +27,13 @@
     #define tsk_background 1
     #endif
     #if EE_MAX_TASK > 2
-    #define tsk_output 2
+    #define tsk_io 2
     #endif
     #if EE_MAX_TASK > 3
     #define tsk_control 3
     #endif
     #if EE_MAX_TASK > 4
-    #define tsk_input 4
+    #define tsk_logging 4
     #endif
     #if EE_MAX_TASK > 5
     #define Task_6 5
@@ -52,23 +52,23 @@
     #else
     #define RES1 0
     #endif
-    #if (0 || RES1)
-    #define EE_MAX_RESOURCE (0+RES1)
+    #if (5 || RES1)
+    #define EE_MAX_RESOURCE (5+RES1)
     #endif
     #if EE_MAX_RESOURCE > 0
-    #define Resource_1 (0+RES1)
+    #define res_speed (0+RES1)
     #endif    
     #if EE_MAX_RESOURCE > 1
-    #define Resource_2 (1+RES1)
+    #define res_joystick (1+RES1)
     #endif    
     #if EE_MAX_RESOURCE > 2
-    #define Resource_3 (2+RES1)
+    #define res_logging (2+RES1)
     #endif    
     #if EE_MAX_RESOURCE > 3
-    #define Resource_4 (3+RES1)
+    #define res_engine (3+RES1)
     #endif    
     #if EE_MAX_RESOURCE > 4
-    #define Resource_5 (4+RES1)
+    #define res_brakelight (4+RES1)
     #endif    
     #if EE_MAX_RESOURCE > 5
     #define Resource_6 (5+RES1)
@@ -86,12 +86,12 @@
     #endif
     
     /* ALARM definition */
-    #define EE_MAX_ALARM 2U
+    #define EE_MAX_ALARM 1U
     #if EE_MAX_ALARM > 0
-    #define alrm_joystick 0U
+    #define alrm_10_ms 0U
     #endif
     #if EE_MAX_ALARM > 1
-    #define alrm_engine 1U
+    #define alrm_10_ms 1U
     #endif
     #if EE_MAX_ALARM > 2
     #define Alarm_3 2U

@@ -17,7 +17,9 @@
 
 
 
+
 /* USER CODE START SC_BRAKELIGHT_INCLUDE */
+#include "led.h"
 
 /* USER CODE END SC_BRAKELIGHT_INCLUDE */
 
@@ -40,11 +42,17 @@
 inline RC_t SC_BRAKELIGHT_driverOut(const SC_BRAKELIGHT_data_t  *const data)
 {
 	/* USER CODE START driverOutSC_BRAKELIGHT */
-//#error "Add your code here"
+    
 
 	//Scale application data to drive format
-
+//    UART_Logs_PutString("Brakelight here");
 	//Write scaled data to driver
+    
+    if (data -> m_brakeValue == FALSE){
+        LED_Set(LED_RED, LED_OFF);
+    } else {
+        LED_Set(LED_RED, LED_ON);
+    }
 
 	return RC_SUCCESS;
 	/* USER CODE END driverOutSC_BRAKELIGHT */

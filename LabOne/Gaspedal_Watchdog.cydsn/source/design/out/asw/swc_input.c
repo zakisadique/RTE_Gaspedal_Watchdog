@@ -39,7 +39,7 @@
  * shortname: readJoystick
  * signalIN: 
  * signalOUT: so_joystick
- * task: tsk_input
+ * task: tsk_io
  */
 void INPUT_readJoystick_run(RTE_event ev){
 	

@@ -32,13 +32,12 @@ typedef
 /* USER CODE START SC_ENGINE_SIGNALDATADEFINITION */
 struct
 {
-	uint8_t m_engine;
+    uint8_t m_engineValue;
 } 
 /* USER CODE END SC_ENGINE_SIGNALDATADEFINITION */
 SC_ENGINE_data_t;
 
 /* USER CODE START InitSC_ENGINE */
-
 #define SC_ENGINE_INIT_DATA ((SC_ENGINE_data_t){0})
 /* USER CODE END InitSC_ENGINE */
 

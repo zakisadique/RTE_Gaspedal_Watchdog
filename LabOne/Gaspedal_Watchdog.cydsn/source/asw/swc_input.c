@@ -39,18 +39,19 @@
  * shortname: readJoystick
  * signalIN: 
  * signalOUT: so_joystick
- * task: tsk_input
+ * task: tsk_io
  */
 void INPUT_readJoystick_run(RTE_event ev){
 	
 	/* USER CODE START INPUT_readJoystick_run */
-
-    //UART_Logs_PutString("Reading Joystick value, update so_joystick\n");
+    //pullport the joystick
     RTE_SC_JOYSTICK_pullPort(&SO_JOYSTICK_signal);
-    UART_Logs_PutChar(SO_JOYSTICK_signal.value.m_joystickValueX);
-    //UART_Logs_PutChar(SO_JOYSTICK_signal.value.m_joystickValueY);
+//    UART_Logs_PutString("In readJoystick\n");
     
-
+//    UART_Logs_PutChar(SO_JOYSTICK_signal.value.m_joystickValue);
+//    UART_Logs_PutString("\n");
+    
+    
     /* USER CODE END INPUT_readJoystick_run */
 }
 

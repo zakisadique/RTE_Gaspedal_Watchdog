@@ -33,19 +33,33 @@
 /*
  * component: swc_output
  * cycletime: 100
- * description: Runnable
+ * description: Sets Green LED according to Engine Speed
  * events: 
  * name: OUTPUT_setEngine_run
  * shortname: setEngine
  * signalIN: so_speed
  * signalOUT: so_engine
- * task: tsk_output
+ * task: tsk_io
  */
 void OUTPUT_setEngine_run(RTE_event ev){
 	
 	/* USER CODE START OUTPUT_setEngine_run */
     
-    UART_Logs_PutString("Send engine speed on UART, led glow\n");
+//    UART_Logs_PutString("In Engine\n");
+//    UART_Logs_PutChar(SO_SPEED_signal.age);
+//    UART_Logs_PutString("\n"); 
+    
+    SC_SPEED_data_t speed = RTE_SC_SPEED_get(&SO_SPEED_signal);
+    SC_ENGINE_data_t engine = SC_ENGINE_INIT_DATA;
+    
+    if (RTE_SC_SPEED_getAge(&SO_SPEED_signal) < 50){
+        engine.m_engineValue = speed.m_speedValue;
+    } else {
+        engine.m_engineValue = 0;
+    }
+    
+    RTE_SC_ENGINE_set(&SO_ENGINE_signal, engine);
+    RC_t error = RTE_SC_ENGINE_pushPort(&SO_ENGINE_signal);
 
     /* USER CODE END OUTPUT_setEngine_run */
 }
@@ -53,19 +67,28 @@ void OUTPUT_setEngine_run(RTE_event ev){
 /*
  * component: swc_output
  * cycletime: 0
- * description: Runnable
+ * description: Sets LED according to brake condition
  * events: ev_speed_onData
  * name: OUTPUT_setBrakeLight_run
  * shortname: setBrakeLight
  * signalIN: so_speed
  * signalOUT: so_brakelight
- * task: tsk_output
+ * task: tsk_io
  */
 void OUTPUT_setBrakeLight_run(RTE_event ev){
 	
 	/* USER CODE START OUTPUT_setBrakeLight_run */
     
-    UART_Logs_PutString("Send brakelight on UART, led glow\n");
+//    UART_Logs_PutString("In Brakelight\n");
+    
+    
+    volatile SC_SPEED_data_t speed = RTE_SC_SPEED_get(&SO_SPEED_signal);
+    SC_BRAKELIGHT_data_t brake = SC_BRAKELIGHT_INIT_DATA;
+    if (speed.m_speedValue <= 0){
+        brake.m_brakeValue = TRUE;
+    }
+    RTE_SC_BRAKELIGHT_set(&SO_BRAKELIGHT_signal, brake);
+    RC_t error = RTE_SC_BRAKELIGHT_pushPort(&SO_BRAKELIGHT_signal);
 
     /* USER CODE END OUTPUT_setBrakeLight_run */
 }

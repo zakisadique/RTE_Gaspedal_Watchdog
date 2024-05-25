@@ -28,7 +28,7 @@
 /*
  * component: swc_control
  * cycletime: 0
- * description: Runnable
+ * description: Takes in Joystick data and updates Speed
  * events: ev_joystick_onData
  * name: CONTROL_calcControl_run
  * shortname: calcControl

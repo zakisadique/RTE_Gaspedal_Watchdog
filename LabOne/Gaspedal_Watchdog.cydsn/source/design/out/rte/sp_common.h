@@ -24,17 +24,18 @@
 #include "sc_speed.h"
 #include "sc_engine.h"
 #include "sc_brakelight.h"
+#include "sc_logging.h"
 
 
 
 /*
- * description: Joystick position (x, y)
+ * description: Joystick position
  * indriver: default
  * name: so_joystick
  * onDataError: 0
  * onDataUpdate: ev_joystick_onData
  * outdriver: 0
- * resource: None
+ * resource: res_joystick
  * shortname: joystick
  * signalclass: sc_joystick
  * signalpool: sp_common
@@ -49,7 +50,7 @@ extern SC_JOYSTICK_t SO_JOYSTICK_signal;
  * onDataError: 0
  * onDataUpdate: ev_speed_onData
  * outdriver: 0
- * resource: None
+ * resource: res_speed
  * shortname: speed
  * signalclass: sc_speed
  * signalpool: sp_common
@@ -64,7 +65,7 @@ extern SC_SPEED_t SO_SPEED_signal;
  * onDataError: 0
  * onDataUpdate: 0
  * outdriver: default
- * resource: None
+ * resource: res_engine
  * shortname: engine
  * signalclass: sc_engine
  * signalpool: sp_common
@@ -79,12 +80,27 @@ extern SC_ENGINE_t SO_ENGINE_signal;
  * onDataError: 0
  * onDataUpdate: 0
  * outdriver: default
- * resource: None
+ * resource: res_brakelight
  * shortname: brakelight
  * signalclass: sc_brakelight
  * signalpool: sp_common
  */
 extern SC_BRAKELIGHT_t SO_BRAKELIGHT_signal;
+
+
+/*
+ * description: A Signal for logging on an HMI device
+ * indriver: 0
+ * name: so_logging
+ * onDataError: 0
+ * onDataUpdate: 0
+ * outdriver: default
+ * resource: res_logging
+ * shortname: logging
+ * signalclass: sc_logging
+ * signalpool: sp_common
+ */
+extern SC_LOGGING_t SO_LOGGING_signal;
 
 
 

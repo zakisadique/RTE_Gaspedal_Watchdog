@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
   28:Generated_Source\PSoC5/UART_Logs.c **** 
   29:Generated_Source\PSoC5/UART_Logs.c **** #if (UART_Logs_TX_INTERRUPT_ENABLED && UART_Logs_TX_ENABLED)
   30:Generated_Source\PSoC5/UART_Logs.c ****     volatile uint8 UART_Logs_txBuffer[UART_Logs_TX_BUFFER_SIZE];
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 2
 
 
   31:Generated_Source\PSoC5/UART_Logs.c ****     volatile uint8 UART_Logs_txBufferRead = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
   85:Generated_Source\PSoC5/UART_Logs.c ****     UART_Logs_Enable();
   86:Generated_Source\PSoC5/UART_Logs.c **** }
   87:Generated_Source\PSoC5/UART_Logs.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 3
 
 
   88:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -156,13 +156,13 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  112:Generated_Source\PSoC5/UART_Logs.c ****             (void) CyIntSetVector(UART_Logs_RX_VECT_NUM, &UART_Logs_RXISR);
   36              		.loc 1 112 0
   37 0002 1149     		ldr	r1, .L3
-  38 0004 0020     		movs	r0, #0
+  38 0004 0120     		movs	r0, #1
   39 0006 FFF7FEFF 		bl	CyIntSetVector
   40              	.LVL0:
  113:Generated_Source\PSoC5/UART_Logs.c ****             CyIntSetPriority(UART_Logs_RX_VECT_NUM, UART_Logs_RX_PRIOR_NUM);
   41              		.loc 1 113 0
   42 000a 0721     		movs	r1, #7
-  43 000c 0020     		movs	r0, #0
+  43 000c 0120     		movs	r0, #1
   44 000e FFF7FEFF 		bl	CyIntSetPriority
   45              	.LVL1:
  114:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_errorStatus = 0u;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  120:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_SetRxAddress2(UART_Logs_RX_HW_ADDRESS2);
  121:Generated_Source\PSoC5/UART_Logs.c ****         #endif /* End UART_Logs_RXHW_ADDRESS_ENABLED */
  122:Generated_Source\PSoC5/UART_Logs.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 4
 
 
  123:Generated_Source\PSoC5/UART_Logs.c ****         /* Init Count7 period */
@@ -191,7 +191,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  126:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_RXSTATUS_MASK_REG  = UART_Logs_INIT_RX_INTERRUPTS_MASK;
   54              		.loc 1 126 0
   55 001e 2022     		movs	r2, #32
-  56 0020 0133     		adds	r3, r3, #1
+  56 0020 033B     		subs	r3, r3, #3
   57 0022 1A70     		strb	r2, [r3]
  127:Generated_Source\PSoC5/UART_Logs.c ****     #endif /* End UART_Logs_RX_ENABLED || UART_Logs_HD_ENABLED*/
  128:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -201,13 +201,13 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  132:Generated_Source\PSoC5/UART_Logs.c ****             (void) CyIntSetVector(UART_Logs_TX_VECT_NUM, &UART_Logs_TXISR);
   58              		.loc 1 132 0
   59 0024 0B49     		ldr	r1, .L3+12
-  60 0026 0120     		movs	r0, #1
+  60 0026 0220     		movs	r0, #2
   61 0028 FFF7FEFF 		bl	CyIntSetVector
   62              	.LVL2:
  133:Generated_Source\PSoC5/UART_Logs.c ****             CyIntSetPriority(UART_Logs_TX_VECT_NUM, UART_Logs_TX_PRIOR_NUM);
   63              		.loc 1 133 0
   64 002c 0721     		movs	r1, #7
-  65 002e 0120     		movs	r0, #1
+  65 002e 0220     		movs	r0, #2
   66 0030 FFF7FEFF 		bl	CyIntSetPriority
   67              	.LVL3:
  134:Generated_Source\PSoC5/UART_Logs.c ****         #endif /* (UART_Logs_TX_INTERRUPT_ENABLED) */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
   78 0042 5133     		adds	r3, r3, #81
   79 0044 1A70     		strb	r2, [r3]
   80 0046 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 5
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 5
 
 
   81              	.L4:
@@ -246,9 +246,9 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
   83              	.L3:
   84 0048 00000000 		.word	UART_Logs_RXISR
   85 004c 00000000 		.word	.LANCHOR0
-  86 0050 88650040 		.word	1073767816
+  86 0050 8B650040 		.word	1073767819
   87 0054 00000000 		.word	UART_Logs_TXISR
-  88 0058 2A650040 		.word	1073767722
+  88 0058 23640040 		.word	1073767459
   89              		.cfi_endproc
   90              	.LFE1:
   91              		.size	UART_Logs_Init, .-UART_Logs_Init
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  184:Generated_Source\PSoC5/UART_Logs.c **** {
  100              		.loc 1 184 0
  101              		.cfi_startproc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 6
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 6
 
 
  102              		@ args = 0, pretend = 0, frame = 0
@@ -327,7 +327,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  192:Generated_Source\PSoC5/UART_Logs.c ****         /* Enable the RX Interrupt */
  193:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_RXSTATUS_ACTL_REG  |= UART_Logs_INT_ENABLE;
  118              		.loc 1 193 0
- 119 0012 0132     		adds	r2, r2, #1
+ 119 0012 033A     		subs	r2, r2, #3
  120 0014 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  121 0016 43F01003 		orr	r3, r3, #16
  122 001a 1370     		strb	r3, [r2]
@@ -336,7 +336,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  196:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_EnableRxInt();
  123              		.loc 1 196 0
  124 001c 094A     		ldr	r2, .L7+4
- 125 001e 0123     		movs	r3, #1
+ 125 001e 0223     		movs	r3, #2
  126 0020 1360     		str	r3, [r2]
  197:Generated_Source\PSoC5/UART_Logs.c **** 
  198:Generated_Source\PSoC5/UART_Logs.c ****             #if (UART_Logs_RXHW_ADDRESS_ENABLED)
@@ -358,13 +358,13 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  129 0024 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
  130 0026 43F01003 		orr	r3, r3, #16
  131 002a 0B70     		strb	r3, [r1]
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 7
 
 
  212:Generated_Source\PSoC5/UART_Logs.c ****         #if (UART_Logs_TX_INTERRUPT_ENABLED)
  213:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_ClearPendingTxInt(); /* Clear history of TX_NOT_EMPTY */
  132              		.loc 1 213 0
- 133 002c 0223     		movs	r3, #2
+ 133 002c 0423     		movs	r3, #4
  134 002e 0749     		ldr	r1, .L7+12
  135 0030 0B60     		str	r3, [r1]
  214:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_EnableTxInt();
@@ -390,9 +390,9 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  147              	.L8:
  148              		.align	2
  149              	.L7:
- 150 0040 98650040 		.word	1073767832
+ 150 0040 9B650040 		.word	1073767835
  151 0044 00E100E0 		.word	-536813312
- 152 0048 9B650040 		.word	1073767835
+ 152 0048 94640040 		.word	1073767572
  153 004c 80E200E0 		.word	-536812928
  154              		.cfi_endproc
  155              	.LFE2:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  173              		.loc 1 79 0
  174 0002 054B     		ldr	r3, .L12
  175 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 8
 
 
  176 0006 23B9     		cbnz	r3, .L10
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  208 0000 10B5     		push	{r4, lr}
  209              		.cfi_def_cfa_offset 8
  210              		.cfi_offset 4, -8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 9
 
 
  211              		.cfi_offset 14, -4
@@ -526,7 +526,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  265:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_DisableRxInt();
  230              		.loc 1 265 0
  231 0020 084A     		ldr	r2, .L16+8
- 232 0022 0123     		movs	r3, #1
+ 232 0022 0223     		movs	r3, #2
  233 0024 1360     		str	r3, [r2]
  266:Generated_Source\PSoC5/UART_Logs.c ****         #endif /* (UART_Logs_RX_INTERRUPT_ENABLED) */
  267:Generated_Source\PSoC5/UART_Logs.c ****     #endif /* (UART_Logs_RX_ENABLED || UART_Logs_HD_ENABLED) */
@@ -538,14 +538,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  236 0028 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
  237 002a 03F0EF03 		and	r3, r3, #239
  238 002e 0B70     		strb	r3, [r1]
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 10
 
 
  271:Generated_Source\PSoC5/UART_Logs.c **** 
  272:Generated_Source\PSoC5/UART_Logs.c ****         #if (UART_Logs_TX_INTERRUPT_ENABLED)
  273:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_DisableTxInt();
  239              		.loc 1 273 0
- 240 0030 0223     		movs	r3, #2
+ 240 0030 0423     		movs	r3, #4
  241 0032 1360     		str	r3, [r2]
  274:Generated_Source\PSoC5/UART_Logs.c ****         #endif /* (UART_Logs_TX_INTERRUPT_ENABLED) */
  275:Generated_Source\PSoC5/UART_Logs.c ****     #endif /* (UART_Logs_TX_ENABLED) */
@@ -560,10 +560,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  248              	.L17:
  249              		.align	2
  250              	.L16:
- 251 003c 98650040 		.word	1073767832
- 252 0040 99650040 		.word	1073767833
+ 251 003c 9B650040 		.word	1073767835
+ 252 0040 98650040 		.word	1073767832
  253 0044 80E100E0 		.word	-536813184
- 254 0048 9B650040 		.word	1073767835
+ 254 0048 94640040 		.word	1073767572
  255              		.cfi_endproc
  256              	.LFE3:
  257              		.size	UART_Logs_Stop, .-UART_Logs_Stop
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  267              		.cfi_startproc
  268              		@ args = 0, pretend = 0, frame = 0
  269              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 11
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 11
 
 
  270              		@ link register save eliminated.
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  300              		.type	UART_Logs_SetRxInterruptMode, %function
  301              	UART_Logs_SetRxInterruptMode:
  302              	.LFB6:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 12
 
 
  321:Generated_Source\PSoC5/UART_Logs.c ****     #if (UART_Logs_CONTROL_REG_REMOVED)
@@ -715,10 +715,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  313              	.L22:
  314 0006 00BF     		.align	2
  315              	.L21:
- 316 0008 89650040 		.word	1073767817
+ 316 0008 88650040 		.word	1073767816
  317              		.cfi_endproc
  318              	.LFE6:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 13
 
 
  319              		.size	UART_Logs_SetRxInterruptMode, .-UART_Logs_SetRxInterruptMode
@@ -777,8 +777,8 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  401:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt */
  402:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableRxInt();
  333              		.loc 1 402 0
- 334 0000 0122     		movs	r2, #1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 14
+ 334 0000 0222     		movs	r2, #2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 14
 
 
  335 0002 134B     		ldr	r3, .L29
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  418:Generated_Source\PSoC5/UART_Logs.c **** 
  419:Generated_Source\PSoC5/UART_Logs.c ****             if(UART_Logs_rxBufferLoopDetect != 0u)
  374              		.loc 1 419 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 15
 
 
  375 0030 1379     		ldrb	r3, [r2, #4]	@ zero_extendqisi2
@@ -885,7 +885,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  442:Generated_Source\PSoC5/UART_Logs.c **** 
  443:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_EnableRxInt();
  394              		.loc 1 443 0
- 395 0046 0122     		movs	r2, #1
+ 395 0046 0222     		movs	r2, #2
  396 0048 054B     		ldr	r3, .L29+16
  397 004a 1A60     		str	r2, [r3]
  444:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  451:Generated_Source\PSoC5/UART_Logs.c **** 
  452:Generated_Source\PSoC5/UART_Logs.c ****         return(rxData);
  453:Generated_Source\PSoC5/UART_Logs.c ****     }
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 16
 
 
  398              		.loc 1 453 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  419              		.loc 1 486 0
  420              		.cfi_startproc
  421              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 17
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 17
 
 
  422              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1000,7 +1000,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  444              	.L34:
  445 001e 00BF     		.align	2
  446              	.L33:
- 447 0020 69650040 		.word	1073767785
+ 447 0020 68650040 		.word	1073767784
  448 0024 00000000 		.word	.LANCHOR0
  449              		.cfi_endproc
  450              	.LFE8:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  503:Generated_Source\PSoC5/UART_Logs.c ****     /*******************************************************************************
  504:Generated_Source\PSoC5/UART_Logs.c ****     * Function Name: UART_Logs_GetChar
  505:Generated_Source\PSoC5/UART_Logs.c ****     ********************************************************************************
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 18
 
 
  506:Generated_Source\PSoC5/UART_Logs.c ****     *
@@ -1065,7 +1065,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  541:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt */
  542:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableRxInt();
  466              		.loc 1 542 0
- 467 0000 0122     		movs	r2, #1
+ 467 0000 0222     		movs	r2, #2
  468 0002 194B     		ldr	r3, .L43
  469 0004 1A60     		str	r2, [r3]
  543:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  545:Generated_Source\PSoC5/UART_Logs.c ****         locRxBufferWrite = UART_Logs_rxBufferWrite;
  475              		.loc 1 545 0
  476 000c D178     		ldrb	r1, [r2, #3]	@ zero_extendqisi2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 19
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 19
 
 
  477 000e C9B2     		uxtb	r1, r1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  516              	.LVL39:
  517 003e 0FE0     		b	.L39
  518              	.LVL40:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 20
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 20
 
 
  519              	.L37:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  545              		.loc 1 587 0
  546 005e 0020     		movs	r0, #0
  547              	.LVL46:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 21
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 21
 
 
  548              	.L39:
@@ -1208,7 +1208,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  591:Generated_Source\PSoC5/UART_Logs.c **** 
  592:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_EnableRxInt();
  549              		.loc 1 592 0
- 550 0060 0122     		movs	r2, #1
+ 550 0060 0222     		movs	r2, #2
  551 0062 064B     		ldr	r3, .L43+20
  552 0064 1A60     		str	r2, [r3]
  593:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -1239,7 +1239,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  558 0068 80E100E0 		.word	-536813184
  559 006c 00000000 		.word	.LANCHOR0
  560 0070 00000000 		.word	UART_Logs_rxBuffer
- 561 0074 69650040 		.word	1073767785
+ 561 0074 68650040 		.word	1073767784
  562 0078 48650040 		.word	1073767752
  563 007c 00E100E0 		.word	-536813312
  564              		.cfi_endproc
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  615:Generated_Source\PSoC5/UART_Logs.c ****     /*******************************************************************************
  616:Generated_Source\PSoC5/UART_Logs.c ****     * Function Name: UART_Logs_GetByte
  617:Generated_Source\PSoC5/UART_Logs.c ****     ********************************************************************************
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 22
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 22
 
 
  618:Generated_Source\PSoC5/UART_Logs.c ****     *
@@ -1293,7 +1293,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  639:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt */
  640:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableRxInt();
  583              		.loc 1 640 0
- 584 0002 0123     		movs	r3, #1
+ 584 0002 0223     		movs	r3, #2
  585 0004 064A     		ldr	r2, .L47
  586 0006 1360     		str	r3, [r2]
  641:Generated_Source\PSoC5/UART_Logs.c ****         locErrorStatus = (uint16)UART_Logs_errorStatus;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  602 001a 2043     		orrs	r0, r0, r4
  645:Generated_Source\PSoC5/UART_Logs.c ****     #else
  646:Generated_Source\PSoC5/UART_Logs.c ****         return ( ((uint16)UART_Logs_ReadRxStatus() << 8u) | UART_Logs_ReadRxData() );
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 23
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 23
 
 
  647:Generated_Source\PSoC5/UART_Logs.c ****     #endif /* UART_Logs_RX_INTERRUPT_ENABLED */
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  681:Generated_Source\PSoC5/UART_Logs.c ****     *
  682:Generated_Source\PSoC5/UART_Logs.c ****     *******************************************************************************/
  683:Generated_Source\PSoC5/UART_Logs.c ****     uint8 UART_Logs_GetRxBufferSize(void)
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 24
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 24
 
 
  684:Generated_Source\PSoC5/UART_Logs.c ****                                                             
@@ -1395,7 +1395,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  690:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt */
  691:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableRxInt();
  628              		.loc 1 691 0
- 629 0000 0122     		movs	r2, #1
+ 629 0000 0222     		movs	r2, #2
  630 0002 144B     		ldr	r3, .L54
  631 0004 1A60     		str	r2, [r3]
  692:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  656 002e 05D2     		bcs	.L52
  705:Generated_Source\PSoC5/UART_Logs.c ****         {
  706:Generated_Source\PSoC5/UART_Logs.c ****             size = (UART_Logs_rxBufferWrite - UART_Logs_rxBufferRead);
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 25
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 25
 
 
  657              		.loc 1 706 0
@@ -1475,7 +1475,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  712:Generated_Source\PSoC5/UART_Logs.c **** 
  713:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_EnableRxInt();
  682              		.loc 1 713 0
- 683 004c 0122     		movs	r2, #1
+ 683 004c 0222     		movs	r2, #2
  684 004e 034B     		ldr	r3, .L54+8
  685 0050 1A60     		str	r2, [r3]
  714:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  693 005c 00E100E0 		.word	-536813312
  694              		.cfi_endproc
  695              	.LFE11:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 26
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 26
 
 
  696              		.size	UART_Logs_GetRxBufferSize, .-UART_Logs_GetRxBufferSize
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  761:Generated_Source\PSoC5/UART_Logs.c ****         /* Clear the HW FIFO */
  762:Generated_Source\PSoC5/UART_Logs.c ****         enableInterrupts = CyEnterCriticalSection();
  713              		.loc 1 762 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 27
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 27
 
 
  714 0002 FFF7FEFF 		bl	CyEnterCriticalSection
@@ -1584,7 +1584,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  769:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt. */
  770:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableRxInt();
  728              		.loc 1 770 0
- 729 001c 0121     		movs	r1, #1
+ 729 001c 0221     		movs	r1, #2
  730 001e 064B     		ldr	r3, .L58+4
  731 0020 1960     		str	r1, [r3]
  771:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  753              		.cfi_endproc
  754              	.LFE12:
  755              		.size	UART_Logs_ClearRxBuffer, .-UART_Logs_ClearRxBuffer
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 28
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 28
 
 
  756              		.section	.text.UART_Logs_SetRxAddressMode,"ax",%progbits
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  772              	.LFE13:
  773              		.size	UART_Logs_SetRxAddressMode, .-UART_Logs_SetRxAddressMode
  774 0002 00BF     		.section	.text.UART_Logs_SetRxAddress1,"ax",%progbits
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 29
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 29
 
 
  775              		.align	2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  786              		@ link register save eliminated.
  787              	.LVL58:
  859:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_RXADDRESS1_REG = address;
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 30
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 30
 
 
  788              		.loc 1 859 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  822              	.LFE15:
  823              		.size	UART_Logs_SetRxAddress2, .-UART_Logs_SetRxAddress2
  824              		.section	.text.UART_Logs_SetTxInterruptMode,"ax",%progbits
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 31
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 31
 
 
  825              		.align	2
@@ -1852,13 +1852,13 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  842              	.L69:
  843 0006 00BF     		.align	2
  844              	.L68:
- 845 0008 8B650040 		.word	1073767819
+ 845 0008 84640040 		.word	1073767556
  846              		.cfi_endproc
  847              	.LFE16:
  848              		.size	UART_Logs_SetTxInterruptMode, .-UART_Logs_SetTxInterruptMode
  849              		.section	.text.UART_Logs_WriteTxData,"ax",%progbits
  850              		.align	2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 32
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 32
 
 
  851              		.global	UART_Logs_WriteTxData
@@ -1918,10 +1918,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  949:Generated_Source\PSoC5/UART_Logs.c ****             /* Protect variables that could change on interrupt. */
  950:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_DisableTxInt();
  867              		.loc 1 950 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 33
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 33
 
 
- 868 0006 0222     		movs	r2, #2
+ 868 0006 0422     		movs	r2, #4
  869 0008 104B     		ldr	r3, .L75+4
  870 000a 1A60     		str	r2, [r3]
  951:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -1978,14 +1978,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  903 003a 0133     		adds	r3, r3, #1
  904 003c D371     		strb	r3, [r2, #7]
  905              	.L73:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 34
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 34
 
 
  969:Generated_Source\PSoC5/UART_Logs.c ****             }
  970:Generated_Source\PSoC5/UART_Logs.c **** 
  971:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_EnableTxInt();
  906              		.loc 1 971 0
- 907 003e 0222     		movs	r2, #2
+ 907 003e 0422     		movs	r2, #4
  908 0040 064B     		ldr	r3, .L75+20
  909 0042 1A60     		str	r2, [r3]
  910              	.L70:
@@ -1995,8 +1995,8 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  914              	.L75:
  915 0048 00000000 		.word	.LANCHOR0
  916 004c 80E100E0 		.word	-536813184
- 917 0050 6B650040 		.word	1073767787
- 918 0054 4B650040 		.word	1073767755
+ 917 0050 64640040 		.word	1073767524
+ 918 0054 44640040 		.word	1073767492
  919 0058 00000000 		.word	UART_Logs_txBuffer
  920 005c 00E100E0 		.word	-536813312
  921              		.cfi_endproc
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  997:Generated_Source\PSoC5/UART_Logs.c ****     *  This function reads the TX status register, which is cleared on read.
  998:Generated_Source\PSoC5/UART_Logs.c ****     *  It is up to the user to handle all bits in this return value accordingly,
  999:Generated_Source\PSoC5/UART_Logs.c ****     *  even if the bit was not enabled as an interrupt source the event happened
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 35
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 35
 
 
 1000:Generated_Source\PSoC5/UART_Logs.c ****     *  and must be handled accordingly.
@@ -2061,7 +2061,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  942              	.L79:
  943 0006 00BF     		.align	2
  944              	.L78:
- 945 0008 6B650040 		.word	1073767787
+ 945 0008 64640040 		.word	1073767524
  946              		.cfi_endproc
  947              	.LFE18:
  948              		.size	UART_Logs_ReadTxStatus, .-UART_Logs_ReadTxStatus
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1029:Generated_Source\PSoC5/UART_Logs.c ****     *  UART_Logs_txBufferRead - cyclic index for read from txBuffer,
 1030:Generated_Source\PSoC5/UART_Logs.c ****     *     checked to identify free space in txBuffer.
 1031:Generated_Source\PSoC5/UART_Logs.c ****     *  UART_Logs_initVar - checked to identify that the component has been
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 36
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 36
 
 
 1032:Generated_Source\PSoC5/UART_Logs.c ****     *     initialized.
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  975              		.loc 1 1067 0 is_stmt 0 discriminator 1
  976 000c 5A1E     		subs	r2, r3, #1
  977 000e 9142     		cmp	r1, r2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 37
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 37
 
 
  978 0010 14BF     		ite	ne
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1082:Generated_Source\PSoC5/UART_Logs.c ****             }
 1083:Generated_Source\PSoC5/UART_Logs.c ****             /* Add to the software buffer. */
 1084:Generated_Source\PSoC5/UART_Logs.c ****             UART_Logs_txBuffer[locTxBufferWrite] = txDataByte;
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 38
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 38
 
 
  1016              		.loc 1 1084 0
@@ -2253,7 +2253,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1100:Generated_Source\PSoC5/UART_Logs.c ****                 /* Trigger TX interrupt to send software buffer */
 1101:Generated_Source\PSoC5/UART_Logs.c ****                 UART_Logs_SetPendingTxInt();
  1030              		.loc 1 1101 0
- 1031 0054 0222     		movs	r2, #2
+ 1031 0054 0422     		movs	r2, #4
  1032 0056 054B     		ldr	r3, .L88+16
  1033 0058 1A60     		str	r2, [r3]
  1034              	.L80:
@@ -2262,8 +2262,8 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1037              		.align	2
  1038              	.L88:
  1039 005c 00000000 		.word	.LANCHOR0
- 1040 0060 6B650040 		.word	1073767787
- 1041 0064 4B650040 		.word	1073767755
+ 1040 0060 64640040 		.word	1073767524
+ 1041 0064 44640040 		.word	1073767492
  1042 0068 00000000 		.word	UART_Logs_txBuffer
  1043 006c 00E200E0 		.word	-536813056
  1044              		.cfi_endproc
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1053              	UART_Logs_PutString:
  1054              	.LFB20:
 1102:Generated_Source\PSoC5/UART_Logs.c ****             }
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 39
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 39
 
 
 1103:Generated_Source\PSoC5/UART_Logs.c ****         }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1065              		.cfi_offset 14, -4
  1066              	.LVL69:
 1147:Generated_Source\PSoC5/UART_Logs.c ****         uint16 bufIndex = 0u;
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 40
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 40
 
 
 1148:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1158:Generated_Source\PSoC5/UART_Logs.c ****         }
 1159:Generated_Source\PSoC5/UART_Logs.c ****     }
 1160:Generated_Source\PSoC5/UART_Logs.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 41
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 41
 
 
 1161:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1198:Generated_Source\PSoC5/UART_Logs.c ****         {
 1199:Generated_Source\PSoC5/UART_Logs.c ****             while(bufIndex < byteCount)
 1200:Generated_Source\PSoC5/UART_Logs.c ****             {
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 42
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 42
 
 
 1201:Generated_Source\PSoC5/UART_Logs.c ****                 UART_Logs_PutChar(string[bufIndex]);
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1204:Generated_Source\PSoC5/UART_Logs.c ****         }
 1205:Generated_Source\PSoC5/UART_Logs.c ****     }
 1206:Generated_Source\PSoC5/UART_Logs.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 43
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 43
 
 
 1207:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1199              	.LVL88:
  1200              	.L106:
  1201 0018 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 44
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 44
 
 
  1202              	.L110:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1218              		.cfi_startproc
  1219              		@ args = 0, pretend = 0, frame = 0
  1220              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 45
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 45
 
 
  1221              		@ link register save eliminated.
@@ -2649,7 +2649,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1280:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt. */
 1281:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableTxInt();
  1222              		.loc 1 1281 0
- 1223 0000 0222     		movs	r2, #2
+ 1223 0000 0422     		movs	r2, #4
  1224 0002 0E4B     		ldr	r3, .L115
  1225 0004 1A60     		str	r2, [r3]
 1282:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1257              	.L114:
 1285:Generated_Source\PSoC5/UART_Logs.c ****         }
  1258              		.loc 1 1285 0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 46
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 46
 
 
  1259 0032 0020     		movs	r0, #0
@@ -2709,7 +2709,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1296:Generated_Source\PSoC5/UART_Logs.c **** 
 1297:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_EnableTxInt();
  1262              		.loc 1 1297 0
- 1263 0034 0222     		movs	r2, #2
+ 1263 0034 0422     		movs	r2, #4
  1264 0036 034B     		ldr	r3, .L115+8
  1265 0038 1A60     		str	r2, [r3]
 1298:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1322:Generated_Source\PSoC5/UART_Logs.c **** 
 1323:Generated_Source\PSoC5/UART_Logs.c **** 
 1324:Generated_Source\PSoC5/UART_Logs.c ****     /*******************************************************************************
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 47
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 47
 
 
 1325:Generated_Source\PSoC5/UART_Logs.c ****     * Function Name: UART_Logs_ClearTxBuffer
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1302 0010 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  1303 0012 02F0FE02 		and	r2, r2, #254
  1304 0016 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 48
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 48
 
 
 1362:Generated_Source\PSoC5/UART_Logs.c ****         CyExitCriticalSection(enableInterrupts);
@@ -2831,7 +2831,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1366:Generated_Source\PSoC5/UART_Logs.c ****         /* Protect variables that could change on interrupt. */
 1367:Generated_Source\PSoC5/UART_Logs.c ****         UART_Logs_DisableTxInt();
  1308              		.loc 1 1367 0
- 1309 001c 0223     		movs	r3, #2
+ 1309 001c 0423     		movs	r3, #4
  1310 001e 054A     		ldr	r2, .L119+4
  1311 0020 1360     		str	r3, [r2]
 1368:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -2853,7 +2853,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1322              	.L120:
  1323              		.align	2
  1324              	.L119:
- 1325 0030 9B650040 		.word	1073767835
+ 1325 0030 94640040 		.word	1073767572
  1326 0034 80E100E0 		.word	-536813184
  1327 0038 00000000 		.word	.LANCHOR0
  1328 003c 00E100E0 		.word	-536813312
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1381:Generated_Source\PSoC5/UART_Logs.c ****     ********************************************************************************
 1382:Generated_Source\PSoC5/UART_Logs.c ****     *
 1383:Generated_Source\PSoC5/UART_Logs.c ****     * Summary:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 49
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 49
 
 
 1384:Generated_Source\PSoC5/UART_Logs.c ****     *  Transmits a break signal on the bus.
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1438:Generated_Source\PSoC5/UART_Logs.c ****     *
 1439:Generated_Source\PSoC5/UART_Logs.c ****     *******************************************************************************/
 1440:Generated_Source\PSoC5/UART_Logs.c ****     void UART_Logs_SendBreak(uint8 retMode) 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 50
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 50
 
 
 1441:Generated_Source\PSoC5/UART_Logs.c ****     {
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
 1484:Generated_Source\PSoC5/UART_Logs.c ****             }
 1485:Generated_Source\PSoC5/UART_Logs.c **** 
 1486:Generated_Source\PSoC5/UART_Logs.c ****         #else /* UART_Logs_HD_ENABLED Full Duplex mode */
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 51
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 51
 
 
 1487:Generated_Source\PSoC5/UART_Logs.c **** 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1376 0026 FAD1     		bne	.L125
  1377              	.LVL98:
  1378              	.L124:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 52
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 52
 
 
 1516:Generated_Source\PSoC5/UART_Logs.c ****             }
@@ -3115,10 +3115,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1410              		.align	2
  1411              	.L128:
  1412 004c 00000000 		.word	.LANCHOR0
- 1413 0050 3A650040 		.word	1073767738
- 1414 0054 6B650040 		.word	1073767787
+ 1413 0050 33640040 		.word	1073767475
+ 1414 0054 64640040 		.word	1073767524
  1415              	.LBE2:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 53
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 53
 
 
  1416              		.cfi_endproc
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1431              		@ link register save eliminated.
  1432              	.LVL102:
  1433 0000 7047     		bx	lr
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 54
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 54
 
 
  1434              		.cfi_endproc
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1488              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
  1489              		.file 4 "Generated_Source\\PSoC5\\UART_Logs_IntClock.h"
  1490              		.section	.debug_info,"",%progbits
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 55
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 55
 
 
  1491              	.Ldebug_info0:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1545 006c 99010000 		.4byte	.LASF9
  1546 0070 02       		.byte	0x2
  1547 0071 E801     		.2byte	0x1e8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 56
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 56
 
 
  1548 0073 2C000000 		.4byte	0x2c
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1602 00e7 00000000 		.4byte	.LFB1
  1603 00eb 5C000000 		.4byte	.LFE1-.LFB1
  1604 00ef 01       		.uleb128 0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 57
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 57
 
 
  1605 00f0 9C       		.byte	0x9c
@@ -3371,7 +3371,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1612 0103 01       		.uleb128 0x1
  1613 0104 50       		.byte	0x50
  1614 0105 01       		.uleb128 0x1
- 1615 0106 30       		.byte	0x30
+ 1615 0106 31       		.byte	0x31
  1616 0107 00       		.byte	0
  1617 0108 07       		.uleb128 0x7
  1618 0109 12000000 		.4byte	.LVL1
@@ -3381,7 +3381,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1622 0116 01       		.uleb128 0x1
  1623 0117 50       		.byte	0x50
  1624 0118 01       		.uleb128 0x1
- 1625 0119 30       		.byte	0x30
+ 1625 0119 31       		.byte	0x31
  1626 011a 08       		.uleb128 0x8
  1627 011b 01       		.uleb128 0x1
  1628 011c 51       		.byte	0x51
@@ -3396,7 +3396,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1637 012e 01       		.uleb128 0x1
  1638 012f 50       		.byte	0x50
  1639 0130 01       		.uleb128 0x1
- 1640 0131 31       		.byte	0x31
+ 1640 0131 32       		.byte	0x32
  1641 0132 00       		.byte	0
  1642 0133 09       		.uleb128 0x9
  1643 0134 34000000 		.4byte	.LVL3
@@ -3405,7 +3405,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1646 013d 01       		.uleb128 0x1
  1647 013e 50       		.byte	0x50
  1648 013f 01       		.uleb128 0x1
- 1649 0140 31       		.byte	0x31
+ 1649 0140 32       		.byte	0x32
  1650 0141 08       		.uleb128 0x8
  1651 0142 01       		.uleb128 0x1
  1652 0143 51       		.byte	0x51
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1659 014d 01       		.byte	0x1
  1660 014e B7       		.byte	0xb7
  1661 014f 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 58
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 58
 
 
  1662 0153 50000000 		.4byte	.LFE2-.LFB2
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1716 01d1 01       		.byte	0x1
  1717 01d2 F2       		.byte	0xf2
  1718 01d3 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 59
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 59
 
 
  1719 01d7 13000000 		.4byte	.LLST1
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1773 0250 AF020000 		.4byte	.LASF28
  1774 0254 01       		.byte	0x1
  1775 0255 6701     		.2byte	0x167
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 60
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 60
 
 
  1776 0257 6B000000 		.4byte	0x6b
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1830 02d5 01       		.byte	0x1
  1831 02d6 1402     		.2byte	0x214
  1832 02d8 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 61
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 61
 
 
  1833 02dc 00000000 		.4byte	.LFB9
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1887 0363 AB02     		.2byte	0x2ab
  1888 0365 6B000000 		.4byte	0x6b
  1889 0369 00000000 		.4byte	.LFB11
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 62
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 62
 
 
  1890 036d 60000000 		.4byte	.LFE11-.LFB11
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  1944 03ee 00000000 		.4byte	.LFB14
  1945 03f2 0C000000 		.4byte	.LFE14-.LFB14
  1946 03f6 01       		.uleb128 0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 63
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 63
 
 
  1947 03f7 9C       		.byte	0x9c
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2001 046c 38000000 		.4byte	.LASF49
  2002 0470 01       		.byte	0x1
  2003 0471 AE03     		.2byte	0x3ae
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 64
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 64
 
 
  2004 0473 6B000000 		.4byte	0x6b
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2058 04ee 01       		.byte	0x1
  2059 04ef 7904     		.2byte	0x479
  2060 04f1 13050000 		.4byte	0x513
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 65
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 65
 
 
  2061 04f5 90010000 		.4byte	.LLST11
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2115 057e 01       		.byte	0x1
  2116 057f CE04     		.2byte	0x4ce
  2117 0581 00000000 		.4byte	.LFB22
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 66
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 66
 
 
  2118 0585 20000000 		.4byte	.LFE22-.LFB22
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2172 05fe 00000000 		.4byte	.LFB24
  2173 0602 40000000 		.4byte	.LFE24-.LFB24
  2174 0606 01       		.uleb128 0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 67
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 67
 
 
  2175 0607 9C       		.byte	0x9c
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2229 068e 02000000 		.4byte	.LFE26-.LFB26
  2230 0692 01       		.uleb128 0x1
  2231 0693 9C       		.byte	0x9c
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 68
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 68
 
 
  2232 0694 A7060000 		.4byte	0x6a7
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2286 0707 6B000000 		.4byte	0x6b
  2287 070b 05       		.uleb128 0x5
  2288 070c 03       		.byte	0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 69
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 69
 
 
  2289 070d 00000000 		.4byte	UART_Logs_errorStatus
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2343 0782 42020000 		.4byte	.LASF80
  2344 0786 42020000 		.4byte	.LASF80
  2345 078a 03       		.byte	0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 70
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 70
 
 
  2346 078b 7D       		.byte	0x7d
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2400 0023 3E       		.uleb128 0x3e
  2401 0024 0B       		.uleb128 0xb
  2402 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 71
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 71
 
 
  2403 0026 08       		.uleb128 0x8
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2457 005f 13       		.uleb128 0x13
  2458 0060 01       		.uleb128 0x1
  2459 0061 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 72
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 72
 
 
  2460 0062 00       		.byte	0
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2514 009f 05       		.uleb128 0x5
  2515 00a0 27       		.uleb128 0x27
  2516 00a1 19       		.uleb128 0x19
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 73
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 73
 
 
  2517 00a2 49       		.uleb128 0x49
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2571 00da 01       		.byte	0x1
  2572 00db 3F       		.uleb128 0x3f
  2573 00dc 19       		.uleb128 0x19
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 74
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 74
 
 
  2574 00dd 03       		.uleb128 0x3
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2628 0114 00       		.byte	0
  2629 0115 03       		.uleb128 0x3
  2630 0116 0E       		.uleb128 0xe
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 75
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 75
 
 
  2631 0117 3A       		.uleb128 0x3a
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2685 014d 01       		.byte	0x1
  2686 014e 49       		.uleb128 0x49
  2687 014f 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 76
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 76
 
 
  2688 0150 01       		.uleb128 0x1
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2742 0039 0100     		.2byte	0x1
  2743 003b 50       		.byte	0x50
  2744 003c 00000000 		.4byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 77
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 77
 
 
  2745 0040 00000000 		.4byte	0
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2799 00cd 50       		.byte	0x50
  2800 00ce 00000000 		.4byte	0
  2801 00d2 00000000 		.4byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 78
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 78
 
 
  2802              	.LLST5:
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2856 0166 00000000 		.4byte	0
  2857              	.LLST9:
  2858 016a 06000000 		.4byte	.LVL55
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 79
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 79
 
 
  2859 016e 1B000000 		.4byte	.LVL56-1
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2913 01fc 0200     		.2byte	0x2
  2914 01fe 30       		.byte	0x30
  2915 01ff 9F       		.byte	0x9f
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 80
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 80
 
 
  2916 0200 18000000 		.4byte	.LVL75
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  2970 0286 9F       		.byte	0x9f
  2971 0287 00000000 		.4byte	0
  2972 028b 00000000 		.4byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 81
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 81
 
 
  2973              	.LLST15:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3027              	.LLST18:
  3028 031a 06000000 		.4byte	.LVL94
  3029 031e 1B000000 		.4byte	.LVL95-1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 82
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 82
 
 
  3030 0322 0100     		.2byte	0x1
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3084 0054 28000000 		.4byte	.LFE8-.LFB8
  3085 0058 00000000 		.4byte	.LFB9
  3086 005c 80000000 		.4byte	.LFE9-.LFB9
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 83
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 83
 
 
  3087 0060 00000000 		.4byte	.LFB10
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3141 0040 00000000 		.4byte	.LFB8
  3142 0044 28000000 		.4byte	.LFE8
  3143 0048 00000000 		.4byte	.LFB9
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 84
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 84
 
 
  3144 004c 80000000 		.4byte	.LFE9
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3189 0022 43794578 		.ascii	"CyExitCriticalSection\000"
  3189      69744372 
  3189      69746963 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 85
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 85
 
 
  3189      616C5365 
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3209      6720696E 
  3209      7400
  3210              	.LASF0:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 86
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 86
 
 
  3211 00f9 7369676E 		.ascii	"signed char\000"
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3233      6573734D 
  3233      6F646500 
  3234              	.LASF11:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 87
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 87
 
 
  3235 01b2 75696E74 		.ascii	"uint32\000"
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3257      5F4C6F67 
  3257      735F5365 
  3257      74547849 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 88
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 88
 
 
  3257      6E746572 
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3281      74797065 
  3281      00
  3282              	.LASF18:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 89
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 89
 
 
  3283 031d 6C6F6E67 		.ascii	"long double\000"
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3303      7400
  3304              	.LASF16:
  3305 03d0 72656738 		.ascii	"reg8\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 90
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 90
 
 
  3305      00
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3325      735F496E 
  3325      74436C6F 
  3325      636B5F53 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 91
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 91
 
 
  3326              	.LASF25:
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 1
  3346      735F7478 
  3346      42756666 
  3346      65725265 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccT3GcGB.s 			page 92
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccNumebT.s 			page 92
 
 
  3347              	.LASF51:

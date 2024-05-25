@@ -38,7 +38,7 @@ typedef EventMaskType RTE_event;
  * So we create a stub here. Must be commented out if we have real resources.
  **/
 
-#define OSRES 0 //0: No ressources being used, 1: Ressources present
+#define OSRES 1 //0: No ressources being used, 1: Ressources present
 
 
 #if OSRES == 0

@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LabOne\Gaspedal_Watchdog\asw\tsk_output.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LabOne\Gaspedal_Watchdog\asw\swc_logging.c">
 <ExpandedNodeIds>
 <v>LabOne</v>
 <v>LabOne\Gaspedal_Watchdog</v>
@@ -40,17 +40,87 @@
 <v>LabOne\Gaspedal_Watchdog\asw\swc_control.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_input.c</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_input.h</v>
+<v>LabOne\Gaspedal_Watchdog\asw\swc_logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\asw\swc_logging.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_output.c</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_output.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\tsk_control.c</v>
 <v>LabOne\Gaspedal_Watchdog\asw\tsk_control.h</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_input.c</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_input.h</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_output.c</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_output.h</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_io.c</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_io.h</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_logging.h</v>
 <v>LabOne\Gaspedal_Watchdog\bsw</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\Services\logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\Services\logging.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\Services\logging_cfg.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\Services\math_helper.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\Services\ringbuffer.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMono12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMono18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMono24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMono9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBold12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBold18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBold24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBold9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBoldOblique12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBoldOblique18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBoldOblique24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoBoldOblique9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoOblique12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoOblique18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoOblique24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeMonoOblique9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSans12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSans18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSans24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSans9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBold12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBold18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBold24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBold9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBoldOblique12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBoldOblique18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBoldOblique24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansBoldOblique9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansOblique12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansOblique18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansOblique24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSansOblique9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerif12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerif18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerif24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerif9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBold12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBold18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBold24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBold9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBoldItalic12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBoldItalic18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBoldItalic24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifBoldItalic9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifItalic12pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifItalic18pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifItalic24pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\FreeSerifItalic9pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\glcdfont.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\Org_01.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\Picopixel.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\Tiny3x3a2pt7b.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts\TomThumb.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\ST7735.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\tft.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\tft.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\button.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\button.h</v>
 <v>LabOne\Gaspedal_Watchdog\bsw\derivate.h</v>
 <v>LabOne\Gaspedal_Watchdog\bsw\global.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\joystick.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\joystick.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\led.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\led.h</v>
 <v>LabOne\Gaspedal_Watchdog\rte</v>
 <v>LabOne\Gaspedal_Watchdog\rte\info.txt</v>
 <v>LabOne\Gaspedal_Watchdog\rte\rte.c</v>
@@ -68,16 +138,23 @@
 <v>LabOne\Gaspedal_Watchdog\rte\sc_joystick.h</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_joystick_type.c</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_joystick_type.h</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging.h</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging_type.c</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging_type.h</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_speed.c</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_speed.h</v>
-<v>LabOne\Gaspedal_Watchdog\rte\sc_speed_type.c</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_speed_type.h</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sp_common.c</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sp_common.h</v>
 <v>LabOne\Gaspedal_Watchdog\Generated_Source</v>
 <v>LabOne\Gaspedal_Watchdog\Generated_Source\PSoC5</v>
+<v>LabOne\Gaspedal_Watchdog\Generated_Source\PSoC5\LED_green</v>
+<v>LabOne\Gaspedal_Watchdog\Generated_Source\PSoC5\LED_red</v>
+<v>LabOne\Gaspedal_Watchdog\Generated_Source\PSoC5\LED_yellow</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>LabOne\Gaspedal_Watchdog\Gaspedal_Watchdog.cydwr\EEPROM</v>
 <v>LabOne\Gaspedal_Watchdog\asw</v>
 <v>LabOne\Gaspedal_Watchdog\asw\cyapicallbacks.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\main.c</v>
@@ -85,17 +162,31 @@
 <v>LabOne\Gaspedal_Watchdog\asw\swc_control.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_input.c</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_input.h</v>
+<v>LabOne\Gaspedal_Watchdog\asw\swc_logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\asw\swc_logging.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_output.c</v>
 <v>LabOne\Gaspedal_Watchdog\asw\swc_output.h</v>
 <v>LabOne\Gaspedal_Watchdog\asw\tsk_control.c</v>
 <v>LabOne\Gaspedal_Watchdog\asw\tsk_control.h</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_input.c</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_input.h</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_output.c</v>
-<v>LabOne\Gaspedal_Watchdog\asw\tsk_output.h</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_io.c</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_io.h</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\asw\tsk_logging.h</v>
 <v>LabOne\Gaspedal_Watchdog\bsw</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\Services</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\fonts</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\ST7735.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\tft.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\tft\tft.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\button.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\button.h</v>
 <v>LabOne\Gaspedal_Watchdog\bsw\derivate.h</v>
 <v>LabOne\Gaspedal_Watchdog\bsw\global.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\joystick.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\joystick.h</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\led.c</v>
+<v>LabOne\Gaspedal_Watchdog\bsw\led.h</v>
 <v>LabOne\Gaspedal_Watchdog\rte</v>
 <v>LabOne\Gaspedal_Watchdog\rte\info.txt</v>
 <v>LabOne\Gaspedal_Watchdog\rte\rte.c</v>
@@ -113,6 +204,10 @@
 <v>LabOne\Gaspedal_Watchdog\rte\sc_joystick.h</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_joystick_type.c</v>
 <v>LabOne\Gaspedal_Watchdog\rte\sc_joystick_type.h</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging.c</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging.h</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging_type.c</v>
+<v>LabOne\Gaspedal_Watchdog\rte\sc_logging_type.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LabOne\Gaspedal_Watchdog">
@@ -261,6 +356,25 @@
 <v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_as_timing_prot.inc</v>
 <v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_chaintas.c</v>
 <v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_evclear.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_evget.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_evset.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_evwait.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_force_schedule.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_getcountervalue.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_getelapsedvalue.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_gettaskid.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_gettaskstate.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_gnu_change_context_isr.s</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_gnu_irq_stack.s</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_gnu_multi_context.s</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_gnu_oo.s</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_internal.inc</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_iparam.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_irq.inc</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_irqendin.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_lockres.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_lookup.c</v>
+<v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3\API\ee_oo_api.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -271,6 +385,13 @@
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\button.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_1.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_2.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_3.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_4.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_JOYSTICK.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CLK_LED.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -328,7 +449,37 @@
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_ulockallres.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_ulockres.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_eecfg.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_Button.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_Button_Joystick.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\joystick.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_FinalBuf_dma.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_INT.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_IntClock.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_IRQ.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_PM.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_SAR.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_SAR_INT.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_SAR_PM.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_ADC_XY_TempBuf_dma.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_X.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\JOYSTICK_Y.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_green.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_red.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_yellow.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\logging.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_Clock.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_B.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_G.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_blue.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_blue_PM.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_green.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_green_PM.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_red.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_red_PM.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_R.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\rte.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_brakelight.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_brakelight_type.lst</v>
@@ -336,15 +487,30 @@
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_engine_type.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_joystick.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_joystick_type.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_logging.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_logging_type.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_speed.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sc_speed_type.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\sp_common.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\swc_control.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\swc_input.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\swc_logging.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\swc_output.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\tft.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_BackLight.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_BackLight_PM.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_CS.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_DC.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_LED.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_RES.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_SCL.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_SDA.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_SPI.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_SPI_INT.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_SPI_IntClock.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\TFT_SPI_PM.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\tsk_control.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\tsk_input.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\tsk_output.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\tsk_io.lst</v>
+<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\tsk_logging.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_Logs.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_Logs_BOOT.lst</v>
 <v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_Logs_INT.lst</v>
@@ -360,39 +526,6 @@
 <VisibleNodeIds>
 <v>LabOne</v>
 <v>LabOne\Gaspedal_Watchdog</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_common_ee_hal_structs.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_cortex_mx_ee_context.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_cortex_mx_ee_system_timer.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_cortex_mx_ee_utils.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_activate.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alcancel.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alget.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_algetbase.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alsetabs.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alsetrel.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_altick.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_chaintas.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evclear.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evget.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evset.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evwait.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_force_schedule.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_getcountervalue.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -408,9 +541,23 @@
 <v>LabOne\Gaspedal_Watchdog\CY8C58LP Family Datasheet</v>
 <v>LabOne\Gaspedal_Watchdog\System Reference Guides</v>
 <v>LabOne\Gaspedal_Watchdog\System Reference Guides\cy_boot_v6_0</v>
+<v>LabOne\Gaspedal_Watchdog\ADC_SAR_SEQ_v2_10.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\cy_clock_v2_20</v>
+<v>LabOne\Gaspedal_Watchdog\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\cy_constant_v1_0</v>
+<v>LabOne\Gaspedal_Watchdog\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\cy_isr_v1_70</v>
+<v>LabOne\Gaspedal_Watchdog\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>LabOne\Gaspedal_Watchdog\cy_pins_v2_20</v>
 <v>LabOne\Gaspedal_Watchdog\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\Gnd_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\or_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\Power_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\PWM_v3_30</v>
+<v>LabOne\Gaspedal_Watchdog\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\Resistor_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\SPI_Master_v2_50.pdf</v>
 <v>LabOne\Gaspedal_Watchdog\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -420,9 +567,23 @@
 <v>LabOne\Gaspedal_Watchdog\CY8C58LP Family Datasheet</v>
 <v>LabOne\Gaspedal_Watchdog\System Reference Guides</v>
 <v>LabOne\Gaspedal_Watchdog\System Reference Guides\cy_boot_v6_0</v>
+<v>LabOne\Gaspedal_Watchdog\ADC_SAR_SEQ_v2_10.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\cy_clock_v2_20</v>
+<v>LabOne\Gaspedal_Watchdog\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\cy_constant_v1_0</v>
+<v>LabOne\Gaspedal_Watchdog\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\cy_isr_v1_70</v>
+<v>LabOne\Gaspedal_Watchdog\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>LabOne\Gaspedal_Watchdog\cy_pins_v2_20</v>
 <v>LabOne\Gaspedal_Watchdog\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>LabOne\Gaspedal_Watchdog\ErikaOS_v2_5_3.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\Gnd_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\or_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\Power_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\PWM_v3_30</v>
+<v>LabOne\Gaspedal_Watchdog\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\Resistor_v1_0.pdf</v>
+<v>LabOne\Gaspedal_Watchdog\SPI_Master_v2_50.pdf</v>
 <v>LabOne\Gaspedal_Watchdog\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
@@ -434,33 +595,16 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Gaspedal_Watchdog.cydsn\source\asw\main.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_input.h" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\tsk_input.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\tsk_input.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\tsk_output.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\tsk_control.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\tsk_control.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_control.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\tsk_output.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_output.h" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\Generated_Source\PSoC5\UART_Logs.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\rte.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\rte.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\rte_types.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sp_common.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sp_common.h" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_speed_type.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_speed.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\info.txt" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.c" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.h" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_engine.h" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_brakelight_type.c" />
+<name v=".\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -468,7 +612,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="888, 437" SelectedTabbedMdiWindow="e92a84cc-072f-4cb6-8609-ace24982c66e"><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\main.c" Guid="b12dea95-27ca-42b4-a57b-b89a307cbf8d" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_input.h" Guid="dcb68eec-e926-4829-a13f-bfc8c08f89df" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" Guid="6cb5472f-b596-4e9c-81f5-64fb36373de9" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\tsk_input.h" Guid="8eb0db0c-3669-4df1-a308-522fcb29efe6" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\tsk_input.c" Guid="4c373e41-9710-4eda-9ea1-93deaf0c1c96" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\tsk_output.c" Guid="e92a84cc-072f-4cb6-8609-ace24982c66e" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\tsk_control.h" Guid="66b8e02e-5e9b-48a1-9d74-98c8abc351b3" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\tsk_control.c" Guid="d7a481a7-3d90-4cd7-9f1b-54473d47c5f8" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_control.h" Guid="8c23eb4d-ebd3-4809-8eb3-28b285038c63" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" Guid="655cfce6-5558-4054-b046-d562dd440eed" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\tsk_output.h" Guid="73ddbe07-396b-4b28-85c2-5327d62bf167" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_output.h" Guid="3158df8e-ea13-4706-800e-d1d49bb006b2" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" Guid="9f6cdc8b-8e6c-4f17-abb4-aa380d5a5588" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\Generated_Source\PSoC5\UART_Logs.c" Guid="bdc72e2f-e90b-429b-bdd8-d9da592bca06" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\rte.c" Guid="fc3d44e4-f377-4649-93cb-9ff134f50655" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\rte.h" Guid="9371432b-e814-4620-8389-83425d007a5d" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\rte_types.h" Guid="6f18fcc5-3f71-4aca-82ae-56c5a6d02eb4" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sp_common.c" Guid="80719887-12ee-4229-96a4-d9cd8919379b" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sp_common.h" Guid="7d1571cd-d299-4305-ba98-054459848e23" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.c" Guid="8ec5a67f-0297-4885-87fd-bcd70ee2ad4e" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.h" Guid="8df0a358-d7b9-4d39-b92e-dbc7093e18d0" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick.c" Guid="3807ee02-ad03-4106-a9f0-19183c26fbc9" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick.h" Guid="99a067e8-5988-48a0-8615-e677f1fc1e37" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_speed_type.h" Guid="c90631d4-d68a-43ef-959f-ae131d4779ef" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" Guid="b596b02e-6b8e-4eb3-97a4-8c279eb7af1b" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_speed.h" Guid="e944a91c-be5d-4ecb-b082-2e1b324550fe" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\info.txt" Guid="bd26bec4-26a3-4e3d-bba4-728e87fa2d86" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.h" Guid="d6f9d96d-179c-44ea-b411-5ae039913565" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1198, 892" SelectedTabbedMdiWindow="52d9f07a-a346-4ca6-b24c-45d4066b5c55"><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\main.c" Guid="d330fe05-be0f-48e5-8a80-dc03e61a056e" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" Guid="f6f37c9f-4bdb-4730-9e12-0f760c7e0413" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" Guid="d8d3ba78-c9ef-4053-baec-4a79549b6314" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" Guid="fa057fb9-1113-419c-98bd-3d1ec8263129" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.c" Guid="91db3723-accc-4abf-9f03-102f52d71d03" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_speed.h" Guid="b2c7898d-a6c5-4099-ad7c-f60c74e729c2" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.c" Guid="30c60769-a215-498a-8442-1f96cde6257f" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.h" Guid="12a1afac-6094-49a6-bbac-6d97f97da890" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine.h" Guid="9139f457-7c5a-4833-bcc0-90719e58f992" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_brakelight_type.c" Guid="9f27f6bd-d687-49bf-aba3-c2eb116336b0" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" Guid="52d9f07a-a346-4ca6-b24c-45d4066b5c55" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
