@@ -43,7 +43,7 @@
 /* Cyclic Table */
 
 const RTE_cyclicTable_t RTE_cyclicActivationTable_tsk_io[] = {
-	{ INPUT_readJoystick_run, 10 },	//takes input from joystick
+	{ INPUT_readJoystick_run, 20 },	//takes input from joystick
 	{ OUTPUT_setEngine_run, 100 },	//Sets Green LED according to Engine Speed
 };
 const uint16_t RTE_cyclicActivation_tsk_io_size = sizeof (RTE_cyclicActivationTable_tsk_io) / sizeof(RTE_cyclicTable_t); 
@@ -96,7 +96,7 @@ TASK(tsk_io)
             //Process Cyclic table on tick
             RTE_ProcessCyclicTable(RTE_cyclicActivationTable_tsk_io, RTE_cyclicActivation_tsk_io_size, ticktime);
 
-			ticktime += 10;
+			ticktime += 20;
 			if (ticktime > 0xFFFFFF00) ticktime = 0;
 
 		};

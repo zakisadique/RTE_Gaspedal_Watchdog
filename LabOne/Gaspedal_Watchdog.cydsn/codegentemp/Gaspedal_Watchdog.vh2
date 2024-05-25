@@ -2,7 +2,7 @@
 --	Conversion of Gaspedal_Watchdog.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat May 25 21:03:59 2024
+--	Sat May 25 21:40:41 2024
 --
 
 USE cypress.cypress.all;

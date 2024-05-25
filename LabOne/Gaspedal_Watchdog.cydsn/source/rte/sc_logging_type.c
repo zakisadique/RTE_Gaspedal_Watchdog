@@ -60,12 +60,7 @@ inline RC_t SC_LOGGING_driverOut(const SC_LOGGING_data_t  *const data)
     TFT_setCursor(0, 40);
     TFT_print(data->loggingValue);
     
-	//Scale application data to drive format
-//    UART_Logs_PutString(data -> m_loggingValue);
-//    
-////    TFT_clearScreen();
-//    TFT_setCursor(19, 0);
-//    TFT_print(data->m_loggingValue);
+
     return RC_SUCCESS;
     
 	//Write scaled data to driver

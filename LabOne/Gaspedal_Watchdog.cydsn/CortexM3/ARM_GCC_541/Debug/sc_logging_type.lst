@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
   28:source\rte/sc_logging_type.c **** /* USER CODE START SC_LOGGING_USERDEFINITIONS */
   29:source\rte/sc_logging_type.c **** 
   30:source\rte/sc_logging_type.c **** /* USER CODE END SC_LOGGING_USERDEFINITIONS */
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 2
 
 
   31:source\rte/sc_logging_type.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
   60 0024 1A70     		strb	r2, [r3]
   61              	.L2:
   53:source\rte/sc_logging_type.c ****     }
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 3
 
 
   54:source\rte/sc_logging_type.c ****     
@@ -155,19 +155,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
   85 0048 FFF7FEFF 		bl	TFT_print
   86              	.LVL10:
   62:source\rte/sc_logging_type.c ****     
-  63:source\rte/sc_logging_type.c **** 	//Scale application data to drive format
-  64:source\rte/sc_logging_type.c **** //    UART_Logs_PutString(data -> m_loggingValue);
-  65:source\rte/sc_logging_type.c **** //    
-  66:source\rte/sc_logging_type.c **** ////    TFT_clearScreen();
-  67:source\rte/sc_logging_type.c **** //    TFT_setCursor(19, 0);
-  68:source\rte/sc_logging_type.c **** //    TFT_print(data->m_loggingValue);
-  69:source\rte/sc_logging_type.c ****     return RC_SUCCESS;
-  70:source\rte/sc_logging_type.c ****     
-  71:source\rte/sc_logging_type.c **** 	//Write scaled data to driver
-  72:source\rte/sc_logging_type.c **** 
-  73:source\rte/sc_logging_type.c **** 	/* USER CODE END driverOutSC_LOGGING */
-  74:source\rte/sc_logging_type.c **** }
-  87              		.loc 1 74 0
+  63:source\rte/sc_logging_type.c **** 
+  64:source\rte/sc_logging_type.c ****     return RC_SUCCESS;
+  65:source\rte/sc_logging_type.c ****     
+  66:source\rte/sc_logging_type.c **** 	//Write scaled data to driver
+  67:source\rte/sc_logging_type.c **** 
+  68:source\rte/sc_logging_type.c **** 	/* USER CODE END driverOutSC_LOGGING */
+  69:source\rte/sc_logging_type.c **** }
+  87              		.loc 1 69 0
   88 004c 0020     		movs	r0, #0
   89 004e 10BD     		pop	{r4, pc}
   90              	.LVL11:
@@ -178,14 +173,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
   95 0054 00000000 		.word	.LC0
   96 0058 04000000 		.word	.LC1
   97              		.cfi_endproc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 4
-
-
   98              	.LFE111:
   99              		.size	SC_LOGGING_driverOut, .-SC_LOGGING_driverOut
  100              		.data
  101              		.set	.LANCHOR0,. + 0
  102              		.type	firstUse.7847, %object
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 4
+
+
  103              		.size	firstUse.7847, 1
  104              	firstUse.7847:
  105 0000 01       		.byte	1
@@ -238,14 +233,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  152 0039 08       		.byte	0x8
  153 003a 83020000 		.4byte	.LASF1
  154 003e 02       		.uleb128 0x2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 5
-
-
  155 003f 02       		.byte	0x2
  156 0040 05       		.byte	0x5
  157 0041 32000000 		.4byte	.LASF2
  158 0045 02       		.uleb128 0x2
  159 0046 02       		.byte	0x2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 5
+
+
  160 0047 07       		.byte	0x7
  161 0048 05030000 		.4byte	.LASF3
  162 004c 03       		.uleb128 0x3
@@ -298,14 +293,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  209 00a5 02       		.uleb128 0x2
  210 00a6 01       		.byte	0x1
  211 00a7 08       		.byte	0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 6
-
-
  212 00a8 A6030000 		.4byte	.LASF15
  213 00ac 02       		.uleb128 0x2
  214 00ad 08       		.byte	0x8
  215 00ae 04       		.byte	0x4
  216 00af 25020000 		.4byte	.LASF16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 6
+
+
  217 00b3 03       		.uleb128 0x3
  218 00b4 FC020000 		.4byte	.LASF17
  219 00b8 04       		.byte	0x4
@@ -358,14 +353,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  266 011a 93040000 		.4byte	.LASF26
  267 011e 7F       		.sleb128 -1
  268 011f 07       		.uleb128 0x7
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 7
-
-
  269 0120 D8020000 		.4byte	.LASF27
  270 0124 7E       		.sleb128 -2
  271 0125 07       		.uleb128 0x7
  272 0126 75000000 		.4byte	.LASF28
  273 012a 7D       		.sleb128 -3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 7
+
+
  274 012b 07       		.uleb128 0x7
  275 012c 9C040000 		.4byte	.LASF29
  276 0130 7C       		.sleb128 -4
@@ -418,14 +413,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  323 018c E8030000 		.4byte	.LASF45
  324 0190 6C       		.sleb128 -20
  325 0191 07       		.uleb128 0x7
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 8
-
-
  326 0192 09020000 		.4byte	.LASF46
  327 0196 6B       		.sleb128 -21
  328 0197 07       		.uleb128 0x7
  329 0198 74040000 		.4byte	.LASF47
  330 019c 6A       		.sleb128 -22
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 8
+
+
  331 019d 07       		.uleb128 0x7
  332 019e C1000000 		.4byte	.LASF48
  333 01a2 69       		.sleb128 -23
@@ -478,14 +473,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  380 01fe 01       		.byte	0x1
  381 01ff 29       		.byte	0x29
  382 0200 B0010000 		.4byte	0x1b0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 9
-
-
  383 0204 00000000 		.4byte	.LFB111
  384 0208 5C000000 		.4byte	.LFE111-.LFB111
  385 020c 01       		.uleb128 0x1
  386 020d 9C       		.byte	0x9c
  387 020e BF020000 		.4byte	0x2bf
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 9
+
+
  388 0212 0C       		.uleb128 0xc
  389 0213 FB030000 		.4byte	.LASF69
  390 0217 01       		.byte	0x1
@@ -538,14 +533,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  437 027c 0E       		.uleb128 0xe
  438 027d 38000000 		.4byte	.LVL7
  439 0281 17030000 		.4byte	0x317
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 10
-
-
  440 0285 0F       		.uleb128 0xf
  441 0286 3E000000 		.4byte	.LVL8
  442 028a 17030000 		.4byte	0x317
  443 028e 9C020000 		.4byte	0x29c
  444 0292 10       		.uleb128 0x10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 10
+
+
  445 0293 01       		.uleb128 0x1
  446 0294 50       		.byte	0x50
  447 0295 05       		.uleb128 0x5
@@ -598,14 +593,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  494 02f1 ED000000 		.4byte	.LASF59
  495 02f5 09       		.byte	0x9
  496 02f6 48       		.byte	0x48
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 11
-
-
  497 02f7 DF000000 		.4byte	0xdf
  498 02fb 12       		.uleb128 0x12
  499 02fc D8000000 		.4byte	.LASF60
  500 0300 0A       		.byte	0xa
  501 0301 44       		.byte	0x44
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 11
+
+
  502 0302 C9000000 		.4byte	0xc9
  503 0306 13       		.uleb128 0x13
  504 0307 86040000 		.4byte	.LASF61
@@ -658,14 +653,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  551 0017 0B       		.uleb128 0xb
  552 0018 3E       		.uleb128 0x3e
  553 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 12
-
-
  554 001a 03       		.uleb128 0x3
  555 001b 0E       		.uleb128 0xe
  556 001c 00       		.byte	0
  557 001d 00       		.byte	0
  558 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 12
+
+
  559 001f 16       		.uleb128 0x16
  560 0020 00       		.byte	0
  561 0021 03       		.uleb128 0x3
@@ -718,14 +713,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  608 0050 00       		.byte	0
  609 0051 03       		.uleb128 0x3
  610 0052 0E       		.uleb128 0xe
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 13
-
-
  611 0053 1C       		.uleb128 0x1c
  612 0054 0D       		.uleb128 0xd
  613 0055 00       		.byte	0
  614 0056 00       		.byte	0
  615 0057 08       		.uleb128 0x8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 13
+
+
  616 0058 13       		.uleb128 0x13
  617 0059 01       		.byte	0x1
  618 005a 0B       		.uleb128 0xb
@@ -778,14 +773,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  665 0089 49       		.uleb128 0x49
  666 008a 13       		.uleb128 0x13
  667 008b 11       		.uleb128 0x11
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 14
-
-
  668 008c 01       		.uleb128 0x1
  669 008d 12       		.uleb128 0x12
  670 008e 06       		.uleb128 0x6
  671 008f 40       		.uleb128 0x40
  672 0090 18       		.uleb128 0x18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 14
+
+
  673 0091 9742     		.uleb128 0x2117
  674 0093 19       		.uleb128 0x19
  675 0094 01       		.uleb128 0x1
@@ -838,14 +833,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  722 00c7 01       		.uleb128 0x1
  723 00c8 31       		.uleb128 0x31
  724 00c9 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 15
-
-
  725 00ca 01       		.uleb128 0x1
  726 00cb 13       		.uleb128 0x13
  727 00cc 00       		.byte	0
  728 00cd 00       		.byte	0
  729 00ce 10       		.uleb128 0x10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 15
+
+
  730 00cf 8A8201   		.uleb128 0x410a
  731 00d2 00       		.byte	0
  732 00d3 02       		.uleb128 0x2
@@ -898,14 +893,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  779 0103 14       		.uleb128 0x14
  780 0104 35       		.uleb128 0x35
  781 0105 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 16
-
-
  782 0106 49       		.uleb128 0x49
  783 0107 13       		.uleb128 0x13
  784 0108 00       		.byte	0
  785 0109 00       		.byte	0
  786 010a 15       		.uleb128 0x15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 16
+
+
  787 010b 2E       		.uleb128 0x2e
  788 010c 00       		.byte	0
  789 010d 3F       		.uleb128 0x3f
@@ -958,14 +953,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  836 0021 01       		.uleb128 0x1
  837 0022 50       		.byte	0x50
  838 0023 9F       		.byte	0x9f
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 17
-
-
  839 0024 00000000 		.4byte	0
  840 0028 00000000 		.4byte	0
  841              		.section	.debug_aranges,"",%progbits
  842 0000 1C000000 		.4byte	0x1c
  843 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 17
+
+
  844 0006 00000000 		.4byte	.Ldebug_info0
  845 000a 04       		.byte	0x4
  846 000b 00       		.byte	0
@@ -983,7 +978,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  858 000c 00000000 		.4byte	0
  859              		.section	.debug_line,"",%progbits
  860              	.Ldebug_line0:
- 861 0000 73020000 		.section	.debug_str,"MS",%progbits,1
+ 861 0000 71020000 		.section	.debug_str,"MS",%progbits,1
  861      02005002 
  861      00000201 
  861      FB0E0D00 
@@ -1018,14 +1013,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  873 004d 52435F45 		.ascii	"RC_ERROR_WRITE_FAILS\000"
  873      52524F52 
  873      5F575249 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 18
-
-
  873      54455F46 
  873      41494C53 
  874              	.LASF64:
  875 0062 5446545F 		.ascii	"TFT_print\000"
  875      7072696E 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 18
+
+
  875      7400
  876              	.LASF22:
  877 006c 73697A65 		.ascii	"sizetype\000"
@@ -1078,14 +1073,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  897      636C655F 
  897      6E657874 
  898              	.LASF30:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 19
-
-
  899 0106 52435F45 		.ascii	"RC_ERROR_RANGE\000"
  899      52524F52 
  899      5F52414E 
  899      474500
  900              	.LASF13:
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 19
+
+
  901 0115 666C6F61 		.ascii	"float\000"
  901      7400
  902              	.LASF68:
@@ -1138,14 +1133,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  919      5F554E44 
  919      45525255 
  919      4E00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 20
-
-
  920              	.LASF24:
  921 01bc 63686172 		.ascii	"char_t\000"
  921      5F7400
  922              	.LASF35:
  923 01c3 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 20
+
+
  923      52524F52 
  923      5F425553 
  923      5900
@@ -1198,14 +1193,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  941              	.LASF0:
  942 0291 7369676E 		.ascii	"signed char\000"
  942      65642063 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 21
-
-
  942      68617200 
  943              	.LASF9:
  944 029d 6C6F6E67 		.ascii	"long long unsigned int\000"
  944      206C6F6E 
  944      6720756E 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 21
+
+
  944      7369676E 
  944      65642069 
  945              	.LASF10:
@@ -1258,14 +1253,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  962      66756E63 
  962      74696F6E 
  962      2D736563 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 22
-
-
  962      74696F6E 
  963              	.LASF15:
  964 03a6 63686172 		.ascii	"char\000"
  964      00
  965              	.LASF33:
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 22
+
+
  966 03ab 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
  966      52524F52 
  966      5F425546 
@@ -1318,14 +1313,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 1
  985              	.LASF38:
  986 0440 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
  986      52524F52 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccPto0ag.s 			page 23
-
-
  986      5F434845 
  986      434B5355 
  986      4D00
  987              	.LASF19:
  988 0452 45455F55 		.ascii	"EE_UREG\000"
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccO4pAl6.s 			page 23
+
+
  988      52454700 
  989              	.LASF52:
  990 045a 6D5F6C6F 		.ascii	"m_loggingEntity\000"

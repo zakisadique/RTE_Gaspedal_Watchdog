@@ -132,6 +132,9 @@ void LOGGING_logging_run(RTE_event ev){
 //    log.dataSize = sizeof(buffer);
     
     RTE_SC_LOGGING_set(&SO_LOGGING_signal, log);
+    
+    
+    
     RC_t error = RTE_SC_LOGGING_pushPort(&SO_LOGGING_signal);
     
 //    RTE_SC_LOGGING_set(SC_

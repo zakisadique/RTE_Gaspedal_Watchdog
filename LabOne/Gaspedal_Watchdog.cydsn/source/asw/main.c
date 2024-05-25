@@ -22,6 +22,8 @@
 
 extern WDT_Bitfields wdtBitfields;
 
+#define TEST_WATCHDOG 1
+
 //ISR which will increment the systick counter every ms
 ISR(systick_handler)
 {
@@ -85,8 +87,8 @@ TASK(tsk_init)
     
     
     //Start the alarm with 100ms cycle time
-    SetRelAlarm(alrm_10_ms,1,10);
-    SetRelAlarm(alrm_1_ms,1,5);
+    SetRelAlarm(alrm_10_ms,1,20);
+    SetRelAlarm(alrm_1_ms,1,1);
     
     ActivateTask(tsk_io);
     ActivateTask(tsk_control);
@@ -105,6 +107,7 @@ TASK(tsk_background)
     while(1)
     {
         //do something with low prioroty
+        #if TEST_WATCHDOG == 1 
         
         if (
             wdtBitfields.m_Bit_CalcControl == 1 &&
@@ -123,7 +126,10 @@ TASK(tsk_background)
         wdtBitfields.m_Bit_SetEngine = 0;
         wdtBitfields.m_Bit_System = 0;
         wdtBitfields.m_BitReadJoystick = 0;
+        
+        #endif
     }
+    TerminateTask();
     
 }
 

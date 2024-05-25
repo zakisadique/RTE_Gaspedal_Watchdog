@@ -29,6 +29,8 @@
 
 /* USER CODE START SWC_SYSTEM_USERDEFINITIONS */
 
+#define TEST_AGE 0
+
 /* USER CODE END SWC_SYSTEM_USERDEFINITIONS */
 
 
@@ -49,26 +51,33 @@ void SYSTEM_system_run(RTE_event ev){
 	/* USER CODE START SYSTEM_system_run */
     
     uint32_t speedAge = RTE_SC_SPEED_getAge(&SO_SPEED_signal);
-    RTE_SC_SPEED_incAge(&SO_SPEED_signal, 5);
+    
+    #if TEST_AGE == 0
+    RTE_SC_SPEED_incAge(&SO_SPEED_signal, 1);
+    #endif
+    
+    #if TEST_AGE == 1
+        RTE_SC_SPEED_incAge(&SO_SPEED_signal, 500);
+    #endif
     WD_Alive(WATCHDOG_RUN_SYSTEM);
     
-    if (
-            wdtBitfields.m_Bit_CalcControl == 1 &&
-            wdtBitfields.m_Bit_Logging == 1 &&
-            wdtBitfields.m_Bit_SetBrakelight == 1 &&
-            wdtBitfields.m_Bit_SetEngine == 1 &&
-            wdtBitfields.m_Bit_System == 1 &&
-            wdtBitfields.m_BitReadJoystick == 1
-        ) {
-        WD_Trigger();
-        
-        wdtBitfields.m_Bit_CalcControl = 0;
-        wdtBitfields.m_Bit_Logging = 0;
-        wdtBitfields.m_Bit_SetBrakelight = 0;
-        wdtBitfields.m_Bit_SetEngine = 0;
-        wdtBitfields.m_Bit_System = 0;
-        wdtBitfields.m_BitReadJoystick = 0;
-    }
+//    if (
+//            wdtBitfields.m_Bit_CalcControl == 1 &&
+//            wdtBitfields.m_Bit_Logging == 1 &&
+//            wdtBitfields.m_Bit_SetBrakelight == 1 &&
+//            wdtBitfields.m_Bit_SetEngine == 1 &&
+//            wdtBitfields.m_Bit_System == 1 &&
+//            wdtBitfields.m_BitReadJoystick == 1
+//        ) {
+//        WD_Trigger();
+//        
+//        wdtBitfields.m_Bit_CalcControl = 0;
+//        wdtBitfields.m_Bit_Logging = 0;
+//        wdtBitfields.m_Bit_SetBrakelight = 0;
+//        wdtBitfields.m_Bit_SetEngine = 0;
+//        wdtBitfields.m_Bit_System = 0;
+//        wdtBitfields.m_BitReadJoystick = 0;
+//    }
     
     
     
