@@ -24,6 +24,7 @@
     
     RC_t convertToString(sint8_t number, char_t *buffer);
     RC_t reverseString(char_t *str, uint8_t length);
+    char* strcpy_custom(char* destination, const char* source);
     
 /* USER CODE END SWC_LOGGING_USERDEFINITIONS */
 

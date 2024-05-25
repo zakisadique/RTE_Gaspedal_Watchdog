@@ -41,14 +41,31 @@
 inline RC_t SC_LOGGING_driverOut(const SC_LOGGING_data_t  *const data)
 {
 	/* USER CODE START driverOutSC_LOGGING */
-
+    
+    static boolean_t firstUse = 1;
+    
+    if (firstUse == 1){
+        UART_Logs_PutString(data->m_loggingEntity);
+        
+        TFT_setCursor(0, 0);
+        TFT_print(data->m_loggingEntity);
+        firstUse = 0;
+    }
+    
+    UART_Logs_PutString(data->m_loggingEntity);
+    UART_Logs_PutString(": ");
+    UART_Logs_PutString(data->loggingValue);
+    UART_Logs_PutString("\n");
+    
+    TFT_setCursor(0, 19);
+    TFT_print(data->loggingValue);
     
 	//Scale application data to drive format
-    UART_Logs_PutString(data -> m_loggingValue);
-    
-//    TFT_clearScreen();
-    TFT_setCursor(19, 0);
-    TFT_print(data->m_loggingValue);
+//    UART_Logs_PutString(data -> m_loggingValue);
+//    
+////    TFT_clearScreen();
+//    TFT_setCursor(19, 0);
+//    TFT_print(data->m_loggingValue);
     return RC_SUCCESS;
     
 	//Write scaled data to driver

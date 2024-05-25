@@ -25,6 +25,9 @@
  **********************************************************************/
 
 /* USER CODE START SC_LOGGING_USERDEFINITIONS */
+    
+#define MAX_ENTITIES 2 
+#define MAX_LOG_LENGTH 10
 
 /* USER CODE END SC_LOGGING_USERDEFINITIONS */
 
@@ -33,15 +36,15 @@ typedef
 struct
 {
     
-	char* m_loggingValue;
-    
+	char_t* m_loggingEntity;
+    char_t* loggingValue;
     uint8_t dataSize;
 } 
 /* USER CODE END SC_LOGGING_SIGNALDATADEFINITION */
 SC_LOGGING_data_t;
 
 /* USER CODE START InitSC_LOGGING */
-#define SC_LOGGING_INIT_DATA ((SC_LOGGING_data_t){NULL, 0})
+#define SC_LOGGING_INIT_DATA ((SC_LOGGING_data_t){  "Accelerator Value: " ,  NULL , 0 })
 /* USER CODE END InitSC_LOGGING */
 
 
