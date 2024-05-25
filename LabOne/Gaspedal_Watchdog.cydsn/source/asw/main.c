@@ -18,6 +18,9 @@
 #include "tsk_control.h"
 #include "led.h"
 #include "tft.h"
+#include "watchdog.h"
+
+extern WDT_Bitfields wdtBitfields;
 
 //ISR which will increment the systick counter every ms
 ISR(systick_handler)
@@ -32,7 +35,8 @@ int main()
     //Set systick period to 1 ms. Enable the INT and start it.
 	EE_systick_set_period(MILLISECONDS_TO_TICKS(1, BCLK__BUS_CLK__HZ));
 	EE_systick_enable_int();
-   
+    
+    
     
     // Start Operating System
     for(;;)	    
@@ -58,8 +62,17 @@ TASK(tsk_init)
     JOYSTICK_Init();
     LED_Init();
     TFT_init();
+    TFT_setCursor(0, 0);
     
-    UART_Logs_PutString("UART Initiated\n");
+    UART_Logs_PutString("\nSytem Online\n");
+    if (WD_CheckResetBit() == TRUE){
+        UART_Logs_PutString("Rebooted after watchdog reset\n");
+        
+        TFT_print((char_t*)"Rebooted after watchdog reset");
+    } else {
+        UART_Logs_PutString("Rebooted after power on reset\n");
+        TFT_print((char_t*)"Rebooted after power on reset");
+    }
     
     //Reconfigure ISRs with OS parameters.
     //This line MUST be called after the hardware driver initialisation!
@@ -69,14 +82,18 @@ TASK(tsk_init)
 	//Must be done here, because otherwise the isr vector is not overwritten yet
     EE_systick_start();  
 	
+    
+    
     //Start the alarm with 100ms cycle time
-    SetRelAlarm(alrm_10_ms,10,10);
+    SetRelAlarm(alrm_10_ms,1,10);
+    SetRelAlarm(alrm_1_ms,1,5);
     
     ActivateTask(tsk_io);
     ActivateTask(tsk_control);
     ActivateTask(tsk_logging);
+    ActivateTask(tsk_system);
     ActivateTask(tsk_background);
-    
+    WD_Start(PERIOD_2_SEC);
     TerminateTask();
     
 }
@@ -88,7 +105,17 @@ TASK(tsk_background)
     while(1)
     {
         //do something with low prioroty
-        __asm("nop");
+        
+        if (
+            wdtBitfields.m_Bit_CalcControl == 1 &&
+            wdtBitfields.m_Bit_Logging == 1 &&
+            wdtBitfields.m_Bit_SetBrakelight == 1 &&
+            wdtBitfields.m_Bit_SetEngine == 1 &&
+            wdtBitfields.m_Bit_System == 1 &&
+            wdtBitfields.m_BitReadJoystick == 1
+        ) {
+        WD_Trigger();
+        }
     }
 }
 

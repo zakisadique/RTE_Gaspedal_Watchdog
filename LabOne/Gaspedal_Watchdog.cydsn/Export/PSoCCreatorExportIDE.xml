@@ -52,6 +52,12 @@
           <File BuildType="BUILD" Toolchain="">source\asw\tsk_io.h</File>
           <File BuildType="BUILD" Toolchain="">source\asw\tsk_logging.c</File>
           <File BuildType="BUILD" Toolchain="">source\asw\tsk_logging.h</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\swc_system.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\swc_system.h</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\tsk_system.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\tsk_system.h</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\watchdog.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\watchdog.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn">

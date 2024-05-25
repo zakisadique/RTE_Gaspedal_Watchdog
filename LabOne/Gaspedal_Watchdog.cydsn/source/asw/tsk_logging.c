@@ -41,14 +41,8 @@
 
 /* Event Table */
 const RTE_eventTable_t RTE_eventActivationTable_tsk_logging[] = {
-    { LOGGING_logging_run, ev_joystick_onData }
+    { LOGGING_logging_run, ev_joystick_onData },  //Runnable
 }; 
-
-//const rte_eventtable_t rte_eventactivationtable_tsk_control[] = {
-//    { control_calccontrol_run, ev_joystick_ondata },  //takes in joystick data and updates speed
-//}; 
-
-
 const uint16_t RTE_eventActivation_tsk_logging_size = sizeof (RTE_eventActivationTable_tsk_logging) / sizeof(RTE_eventTable_t);
 
 /*******************************************************************************
@@ -83,9 +77,9 @@ TASK(tsk_logging)
         ClearEvent(ev);
 		
 		/* USER CODE START TSK_LOGGING_TASKBOBY_PRE */
-//        UART_Logs_PutString("tsklogging\n");
+
 		/* USER CODE END TSK_LOGGING_TASKBODY_PRE */
-        
+    
 
         //Process Event table on event
         RTE_ProcessEventTable(RTE_eventActivationTable_tsk_logging, RTE_eventActivation_tsk_logging_size, ev);

@@ -47,7 +47,7 @@ inline RC_t SC_LOGGING_driverOut(const SC_LOGGING_data_t  *const data)
     if (firstUse == 1){
         UART_Logs_PutString(data->m_loggingEntity);
         
-        TFT_setCursor(0, 0);
+        TFT_setCursor(0, 30);
         TFT_print(data->m_loggingEntity);
         firstUse = 0;
     }
@@ -57,7 +57,7 @@ inline RC_t SC_LOGGING_driverOut(const SC_LOGGING_data_t  *const data)
     UART_Logs_PutString(data->loggingValue);
     UART_Logs_PutString("\n");
     
-    TFT_setCursor(0, 19);
+    TFT_setCursor(0, 40);
     TFT_print(data->loggingValue);
     
 	//Scale application data to drive format

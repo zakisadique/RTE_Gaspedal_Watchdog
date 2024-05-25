@@ -20,6 +20,7 @@
 /* USER CODE START SWC_LOGGING_INCLUDE */
 
 #include <string.h>
+#include "watchdog.h"
 
 
 /* USER CODE END SWC_LOGGING_INCLUDE */
@@ -30,14 +31,24 @@
 /* USER CODE START SWC_LOGGING_USERDEFINITIONS */
 
 RC_t convertToString(sint8_t number, char_t *buffer) {
-    if (number <= 0){
-        buffer[0] = '0';
-        buffer[1] = '0'; 
-        buffer[2] = '0'; 
-        buffer[3] = '\0';
+    buffer[0] = '0'; 
+    buffer[1] = '0'; 
+    buffer[2] = '0';
+    buffer[3] = ' ';
+
+    
+    if (number == 0){
+        buffer[4] = '\0';
         return RC_SUCCESS;
     }
     
+    if (number < 0){
+        number = -1 * number;
+        buffer[3] = '-';
+    } else if (number > 0){
+        buffer[3] = '+';
+    }
+        
     int i = 0;
 
     /* Convert the number to a string in reverse order. */
@@ -48,15 +59,15 @@ RC_t convertToString(sint8_t number, char_t *buffer) {
     }
 
     /* Add null terminator to the end of the string. */
-    buffer[i] = '\0';
+    buffer[4] = '\0';
 
-    while (i < 3) {
-        buffer[i++] = '0';
-    }
+//    while (i < 3) {
+//        buffer[i++] = '0';
+//    }
 
     /* Reverse the string to get the correct order. */
-    reverseString(buffer, i);
-    buffer[i] = '\0';
+    reverseString(buffer, 4);
+    buffer[4] = '\0';
     
 
     return RC_SUCCESS;
@@ -79,21 +90,7 @@ RC_t reverseString(char_t *str, uint8_t length) {
     return RC_SUCCESS;
 }
 
-char* strcpy_custom(char* destination, const char* source) {
-    char* original_destination = destination; // Save the original destination pointer
 
-    // Copy the characters from source to destination
-    while (*source) {
-        *destination = *source;
-        destination++;
-        source++;
-    }
-
-    // Null-terminate the destination string
-    *destination = '\0';
-
-    return original_destination; // Return a pointer to the beginning of the destination string
-}
 
 
 /* USER CODE END SWC_LOGGING_USERDEFINITIONS */
@@ -104,7 +101,7 @@ char* strcpy_custom(char* destination, const char* source) {
  * component: swc_logging
  * cycletime: 0
  * description: Runnable
- * events: 
+ * events: ev_joystick_onData
  * name: LOGGING_logging_run
  * shortname: logging
  * signalIN: so_joystick
@@ -138,6 +135,8 @@ void LOGGING_logging_run(RTE_event ev){
     RC_t error = RTE_SC_LOGGING_pushPort(&SO_LOGGING_signal);
     
 //    RTE_SC_LOGGING_set(SC_
+    
+    WD_Alive(WATCHDOG_RUN_LOGGING);
     
     /* USER CODE END LOGGING_logging_run */
 }

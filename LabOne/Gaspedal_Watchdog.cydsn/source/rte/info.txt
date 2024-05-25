@@ -95,7 +95,7 @@ tasks:
                 LOGGING_logging_run:
                     task: tsk_logging
                     cycletime: 0
-                    events: 
+                    events: ev_joystick_onData
                     signalIN: so_joystick
                     signalOUT: so_logging
             
@@ -112,6 +112,20 @@ tasks:
                     events: ev_joystick_onData
                     signalIN: so_joystick
                     signalOUT: so_speed
+            
+    tsk_system:
+        timertickperiod: 1
+        mode: Cyclic
+        signalpoolsRO: sp_common
+        signalpoolsRW: sp_common
+        events: 
+        runnables:
+                SYSTEM_system_run:
+                    task: tsk_system
+                    cycletime: 1
+                    events: 
+                    signalIN: 
+                    signalOUT:
 
 swc:
     swc_input:
@@ -153,7 +167,16 @@ swc:
                 LOGGING_logging_run:
                     task: tsk_logging
                     cycletime: 0
-                    events: 
+                    events: ev_joystick_onData
                     signalIN: so_joystick
                     signalOUT: so_logging
+            
+    swc_system:
+        runnables:
+                SYSTEM_system_run:
+                    task: tsk_system
+                    cycletime: 1
+                    events: 
+                    signalIN: 
+                    signalOUT:
 

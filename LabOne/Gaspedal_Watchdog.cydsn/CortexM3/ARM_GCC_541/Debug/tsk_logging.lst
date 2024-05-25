@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
   28:source\asw/tsk_logging.c **** /* USER CODE END TSK_LOGGING_INCLUDE */
   29:source\asw/tsk_logging.c **** 
   30:source\asw/tsk_logging.c **** #include "swc_logging.h"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 2
 
 
   31:source\asw/tsk_logging.c **** 
@@ -74,35 +74,29 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
   41:source\asw/tsk_logging.c **** 
   42:source\asw/tsk_logging.c **** /* Event Table */
   43:source\asw/tsk_logging.c **** const RTE_eventTable_t RTE_eventActivationTable_tsk_logging[] = {
-  44:source\asw/tsk_logging.c ****     { LOGGING_logging_run, ev_joystick_onData }
+  44:source\asw/tsk_logging.c ****     { LOGGING_logging_run, ev_joystick_onData },  //Runnable
   45:source\asw/tsk_logging.c **** }; 
-  46:source\asw/tsk_logging.c **** 
-  47:source\asw/tsk_logging.c **** //const rte_eventtable_t rte_eventactivationtable_tsk_control[] = {
-  48:source\asw/tsk_logging.c **** //    { control_calccontrol_run, ev_joystick_ondata },  //takes in joystick data and updates speed
-  49:source\asw/tsk_logging.c **** //}; 
-  50:source\asw/tsk_logging.c **** 
+  46:source\asw/tsk_logging.c **** const uint16_t RTE_eventActivation_tsk_logging_size = sizeof (RTE_eventActivationTable_tsk_logging)
+  47:source\asw/tsk_logging.c **** 
+  48:source\asw/tsk_logging.c **** /*******************************************************************************
+  49:source\asw/tsk_logging.c ****  * Task Body
+  50:source\asw/tsk_logging.c ****  *******************************************************************************/
   51:source\asw/tsk_logging.c **** 
-  52:source\asw/tsk_logging.c **** const uint16_t RTE_eventActivation_tsk_logging_size = sizeof (RTE_eventActivationTable_tsk_logging)
-  53:source\asw/tsk_logging.c **** 
-  54:source\asw/tsk_logging.c **** /*******************************************************************************
-  55:source\asw/tsk_logging.c ****  * Task Body
-  56:source\asw/tsk_logging.c ****  *******************************************************************************/
-  57:source\asw/tsk_logging.c **** 
-  58:source\asw/tsk_logging.c **** 
-  59:source\asw/tsk_logging.c **** /*
-  60:source\asw/tsk_logging.c ****  * description: Task to log data on UART/TFT
-  61:source\asw/tsk_logging.c ****  * events: ev_joystick_onData
-  62:source\asw/tsk_logging.c ****  * mode: Event
-  63:source\asw/tsk_logging.c ****  * name: tsk_logging
-  64:source\asw/tsk_logging.c ****  * shortname: logging
-  65:source\asw/tsk_logging.c ****  * signalpoolsRO: sp_common
-  66:source\asw/tsk_logging.c ****  * signalpoolsRW: sp_common
-  67:source\asw/tsk_logging.c ****  * tickEvent: ev_joystick_onData
-  68:source\asw/tsk_logging.c ****  * timertickperiod: 1
-  69:source\asw/tsk_logging.c ****  */
-  70:source\asw/tsk_logging.c **** TASK(tsk_logging)
-  71:source\asw/tsk_logging.c **** {
-  28              		.loc 1 71 0
+  52:source\asw/tsk_logging.c **** 
+  53:source\asw/tsk_logging.c **** /*
+  54:source\asw/tsk_logging.c ****  * description: Task to log data on UART/TFT
+  55:source\asw/tsk_logging.c ****  * events: ev_joystick_onData
+  56:source\asw/tsk_logging.c ****  * mode: Event
+  57:source\asw/tsk_logging.c ****  * name: tsk_logging
+  58:source\asw/tsk_logging.c ****  * shortname: logging
+  59:source\asw/tsk_logging.c ****  * signalpoolsRO: sp_common
+  60:source\asw/tsk_logging.c ****  * signalpoolsRW: sp_common
+  61:source\asw/tsk_logging.c ****  * tickEvent: ev_joystick_onData
+  62:source\asw/tsk_logging.c ****  * timertickperiod: 1
+  63:source\asw/tsk_logging.c ****  */
+  64:source\asw/tsk_logging.c **** TASK(tsk_logging)
+  65:source\asw/tsk_logging.c **** {
+  28              		.loc 1 65 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 8
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -111,47 +105,47 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
   34              		.cfi_offset 14, -4
   35 0002 83B0     		sub	sp, sp, #12
   36              		.cfi_def_cfa_offset 16
-  72:source\asw/tsk_logging.c ****     EventMaskType ev = 0;
-  37              		.loc 1 72 0
+  66:source\asw/tsk_logging.c ****     EventMaskType ev = 0;
+  37              		.loc 1 66 0
   38 0004 0023     		movs	r3, #0
   39 0006 0193     		str	r3, [sp, #4]
   40              	.L2:
-  73:source\asw/tsk_logging.c ****     
-  74:source\asw/tsk_logging.c **** 	/* USER CODE START TSK_LOGGING_INIT */
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 3
+  67:source\asw/tsk_logging.c ****     
+  68:source\asw/tsk_logging.c **** 	/* USER CODE START TSK_LOGGING_INIT */
+  69:source\asw/tsk_logging.c **** 
+  70:source\asw/tsk_logging.c **** 	/* USER CODE END TSK_LOGGING_INIT */
+  71:source\asw/tsk_logging.c **** 	
+  72:source\asw/tsk_logging.c ****     while(1)
+  73:source\asw/tsk_logging.c ****     {
+  74:source\asw/tsk_logging.c ****         //Wait, read and clear the event
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 3
 
 
-  75:source\asw/tsk_logging.c **** 
-  76:source\asw/tsk_logging.c **** 	/* USER CODE END TSK_LOGGING_INIT */
-  77:source\asw/tsk_logging.c **** 	
-  78:source\asw/tsk_logging.c ****     while(1)
-  79:source\asw/tsk_logging.c ****     {
-  80:source\asw/tsk_logging.c ****         //Wait, read and clear the event
-  81:source\asw/tsk_logging.c ****         WaitEvent(ev_joystick_onData);
-  41              		.loc 1 81 0 discriminator 1
+  75:source\asw/tsk_logging.c ****         WaitEvent(ev_joystick_onData);
+  41              		.loc 1 75 0 discriminator 1
   42 0008 0120     		movs	r0, #1
   43 000a FFF7FEFF 		bl	EE_oo_WaitEvent
   44              	.LVL0:
-  82:source\asw/tsk_logging.c ****         GetEvent(tsk_logging,&ev);
-  45              		.loc 1 82 0 discriminator 1
+  76:source\asw/tsk_logging.c ****         GetEvent(tsk_logging,&ev);
+  45              		.loc 1 76 0 discriminator 1
   46 000e 01A9     		add	r1, sp, #4
   47 0010 0420     		movs	r0, #4
   48 0012 FFF7FEFF 		bl	EE_oo_GetEvent
   49              	.LVL1:
-  83:source\asw/tsk_logging.c ****         ClearEvent(ev);
-  50              		.loc 1 83 0 discriminator 1
+  77:source\asw/tsk_logging.c ****         ClearEvent(ev);
+  50              		.loc 1 77 0 discriminator 1
   51 0016 0198     		ldr	r0, [sp, #4]
   52 0018 FFF7FEFF 		bl	EE_oo_ClearEvent
   53              	.LVL2:
-  84:source\asw/tsk_logging.c **** 		
-  85:source\asw/tsk_logging.c **** 		/* USER CODE START TSK_LOGGING_TASKBOBY_PRE */
-  86:source\asw/tsk_logging.c **** //        UART_Logs_PutString("tsklogging\n");
-  87:source\asw/tsk_logging.c **** 		/* USER CODE END TSK_LOGGING_TASKBODY_PRE */
-  88:source\asw/tsk_logging.c ****         
-  89:source\asw/tsk_logging.c **** 
-  90:source\asw/tsk_logging.c ****         //Process Event table on event
-  91:source\asw/tsk_logging.c ****         RTE_ProcessEventTable(RTE_eventActivationTable_tsk_logging, RTE_eventActivation_tsk_logging
-  54              		.loc 1 91 0 discriminator 1
+  78:source\asw/tsk_logging.c **** 		
+  79:source\asw/tsk_logging.c **** 		/* USER CODE START TSK_LOGGING_TASKBOBY_PRE */
+  80:source\asw/tsk_logging.c **** 
+  81:source\asw/tsk_logging.c **** 		/* USER CODE END TSK_LOGGING_TASKBODY_PRE */
+  82:source\asw/tsk_logging.c ****     
+  83:source\asw/tsk_logging.c **** 
+  84:source\asw/tsk_logging.c ****         //Process Event table on event
+  85:source\asw/tsk_logging.c ****         RTE_ProcessEventTable(RTE_eventActivationTable_tsk_logging, RTE_eventActivation_tsk_logging
+  54              		.loc 1 85 0 discriminator 1
   55 001c 019A     		ldr	r2, [sp, #4]
   56 001e 0121     		movs	r1, #1
   57 0020 0148     		ldr	r0, .L4
@@ -178,15 +172,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
   78              		.type	RTE_eventActivation_tsk_logging_size, %object
   79              		.size	RTE_eventActivation_tsk_logging_size, 2
   80              	RTE_eventActivation_tsk_logging_size:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 4
-
-
   81 0008 0100     		.short	1
   82              		.text
   83              	.Letext0:
   84              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
   85              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
   86              		.file 4 "Generated_Source\\PSoC5/ErikaOS_common_ee_types.inc"
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 4
+
+
   87              		.file 5 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc"
   88              		.file 6 "Generated_Source\\PSoC5/ErikaOS_ee_oo_common.inc"
   89              		.file 7 ".\\source\\rte/rte_types.h"
@@ -238,15 +232,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  135 0053 57000000 		.4byte	0x57
  136 0057 02       		.uleb128 0x2
  137 0058 04       		.byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 5
-
-
  138 0059 05       		.byte	0x5
  139 005a 89020000 		.4byte	.LASF6
  140 005e 02       		.uleb128 0x2
  141 005f 04       		.byte	0x4
  142 0060 07       		.byte	0x7
  143 0061 69010000 		.4byte	.LASF7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 5
+
+
  144 0065 02       		.uleb128 0x2
  145 0066 08       		.byte	0x8
  146 0067 05       		.byte	0x5
@@ -298,15 +292,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  192 00bf 26020000 		.4byte	.LASF18
  193 00c3 04       		.byte	0x4
  194 00c4 54       		.byte	0x54
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 6
-
-
  195 00c5 7A000000 		.4byte	0x7a
  196 00c9 03       		.uleb128 0x3
  197 00ca C6020000 		.4byte	.LASF19
  198 00ce 05       		.byte	0x5
  199 00cf 4D       		.byte	0x4d
  200 00d0 BE000000 		.4byte	0xbe
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 6
+
+
  201 00d4 03       		.uleb128 0x3
  202 00d5 1E020000 		.4byte	.LASF20
  203 00d9 05       		.byte	0x5
@@ -358,22 +352,22 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  249 0138 0B       		.uleb128 0xb
  250 0139 F2010000 		.4byte	.LASF26
  251 013d 08       		.byte	0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 7
-
-
  252 013e 77       		.byte	0x77
  253 013f EA000000 		.4byte	0xea
  254 0143 04       		.byte	0x4
  255 0144 00       		.byte	0
  256 0145 03       		.uleb128 0x3
  257 0146 35000000 		.4byte	.LASF27
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 7
+
+
  258 014a 08       		.byte	0x8
  259 014b 78       		.byte	0x78
  260 014c 24010000 		.4byte	0x124
  261 0150 0C       		.uleb128 0xc
  262 0151 A3020000 		.4byte	.LASF43
  263 0155 01       		.byte	0x1
- 264 0156 46       		.byte	0x46
+ 264 0156 40       		.byte	0x40
  265 0157 00000000 		.4byte	.LFB110
  266 015b 2C000000 		.4byte	.LFE110-.LFB110
  267 015f 01       		.uleb128 0x1
@@ -382,7 +376,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  270 0165 0D       		.uleb128 0xd
  271 0166 657600   		.ascii	"ev\000"
  272 0169 01       		.byte	0x1
- 273 016a 48       		.byte	0x48
+ 273 016a 42       		.byte	0x42
  274 016b EA000000 		.4byte	0xea
  275 016f 02       		.uleb128 0x2
  276 0170 91       		.byte	0x91
@@ -418,15 +412,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  306 01a3 61020000 		.4byte	0x261
  307 01a7 11       		.uleb128 0x11
  308 01a8 26000000 		.4byte	.LVL3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 8
-
-
  309 01ac 6D020000 		.4byte	0x26d
  310 01b0 0F       		.uleb128 0xf
  311 01b1 01       		.uleb128 0x1
  312 01b2 50       		.byte	0x50
  313 01b3 05       		.uleb128 0x5
  314 01b4 03       		.byte	0x3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 8
+
+
  315 01b5 00000000 		.4byte	.LANCHOR0
  316 01b9 0F       		.uleb128 0xf
  317 01ba 01       		.uleb128 0x1
@@ -478,21 +472,21 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  363 0219 45010000 		.4byte	0x145
  364 021d 18       		.uleb128 0x18
  365 021e F6020000 		.4byte	.LASF34
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 9
-
-
  366 0222 01       		.byte	0x1
  367 0223 2B       		.byte	0x2b
  368 0224 2E020000 		.4byte	0x22e
  369 0228 05       		.uleb128 0x5
  370 0229 03       		.byte	0x3
  371 022a 00000000 		.4byte	RTE_eventActivationTable_tsk_logging
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 9
+
+
  372 022e 17       		.uleb128 0x17
  373 022f 08020000 		.4byte	0x208
  374 0233 18       		.uleb128 0x18
  375 0234 00000000 		.4byte	.LASF35
  376 0238 01       		.byte	0x1
- 377 0239 34       		.byte	0x34
+ 377 0239 2E       		.byte	0x2e
  378 023a 44020000 		.4byte	0x244
  379 023e 05       		.uleb128 0x5
  380 023f 03       		.byte	0x3
@@ -538,15 +532,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  420 000d 11       		.uleb128 0x11
  421 000e 01       		.uleb128 0x1
  422 000f 10       		.uleb128 0x10
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 10
-
-
  423 0010 17       		.uleb128 0x17
  424 0011 00       		.byte	0
  425 0012 00       		.byte	0
  426 0013 02       		.uleb128 0x2
  427 0014 24       		.uleb128 0x24
  428 0015 00       		.byte	0
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 10
+
+
  429 0016 0B       		.uleb128 0xb
  430 0017 0B       		.uleb128 0xb
  431 0018 3E       		.uleb128 0x3e
@@ -598,15 +592,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  477 0046 0B       		.uleb128 0xb
  478 0047 0B       		.uleb128 0xb
  479 0048 49       		.uleb128 0x49
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 11
-
-
  480 0049 13       		.uleb128 0x13
  481 004a 00       		.byte	0
  482 004b 00       		.byte	0
  483 004c 07       		.uleb128 0x7
  484 004d 15       		.uleb128 0x15
  485 004e 01       		.byte	0x1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 11
+
+
  486 004f 27       		.uleb128 0x27
  487 0050 19       		.uleb128 0x19
  488 0051 01       		.uleb128 0x1
@@ -658,15 +652,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  534 007f 3B       		.uleb128 0x3b
  535 0080 0B       		.uleb128 0xb
  536 0081 49       		.uleb128 0x49
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 12
-
-
  537 0082 13       		.uleb128 0x13
  538 0083 38       		.uleb128 0x38
  539 0084 0B       		.uleb128 0xb
  540 0085 00       		.byte	0
  541 0086 00       		.byte	0
  542 0087 0C       		.uleb128 0xc
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 12
+
+
  543 0088 2E       		.uleb128 0x2e
  544 0089 01       		.byte	0x1
  545 008a 3F       		.uleb128 0x3f
@@ -718,15 +712,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  591 00bc 01       		.uleb128 0x1
  592 00bd 13       		.uleb128 0x13
  593 00be 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 13
-
-
  594 00bf 00       		.byte	0
  595 00c0 0F       		.uleb128 0xf
  596 00c1 8A8201   		.uleb128 0x410a
  597 00c4 00       		.byte	0
  598 00c5 02       		.uleb128 0x2
  599 00c6 18       		.uleb128 0x18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 13
+
+
  600 00c7 9142     		.uleb128 0x2111
  601 00c9 18       		.uleb128 0x18
  602 00ca 00       		.byte	0
@@ -778,15 +772,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  648 00fc 49       		.uleb128 0x49
  649 00fd 13       		.uleb128 0x13
  650 00fe 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 14
-
-
  651 00ff 19       		.uleb128 0x19
  652 0100 3C       		.uleb128 0x3c
  653 0101 19       		.uleb128 0x19
  654 0102 00       		.byte	0
  655 0103 00       		.byte	0
  656 0104 14       		.uleb128 0x14
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 14
+
+
  657 0105 35       		.uleb128 0x35
  658 0106 00       		.byte	0
  659 0107 49       		.uleb128 0x49
@@ -838,15 +832,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  705 0135 19       		.uleb128 0x19
  706 0136 2E       		.uleb128 0x2e
  707 0137 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 15
-
-
  708 0138 3F       		.uleb128 0x3f
  709 0139 19       		.uleb128 0x19
  710 013a 3C       		.uleb128 0x3c
  711 013b 19       		.uleb128 0x19
  712 013c 6E       		.uleb128 0x6e
  713 013d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 15
+
+
  714 013e 03       		.uleb128 0x3
  715 013f 0E       		.uleb128 0xe
  716 0140 3A       		.uleb128 0x3a
@@ -898,15 +892,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  760      00000201 
  760      FB0E0D00 
  760      01010101 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 16
-
-
  761              	.LASF35:
  762 0000 5254455F 		.ascii	"RTE_eventActivation_tsk_logging_size\000"
  762      6576656E 
  762      74416374 
  762      69766174 
  762      696F6E5F 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 16
+
+
  763              	.LASF36:
  764 0025 45455F6F 		.ascii	"EE_oo_WaitEvent\000"
  764      6F5F5761 
@@ -958,15 +952,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  783      352E342E 
  783      31203230 
  783      31363036 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 17
-
-
  784 0105 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  784      20726576 
  784      6973696F 
  784      6E203233 
  784      37373135 
  785 0138 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 17
+
+
  785      66756E63 
  785      74696F6E 
  785      2D736563 
@@ -1018,15 +1012,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  803      52784275 
  803      66666572 
  803      00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 18
-
-
  804              	.LASF26:
  805 01f2 6576656E 		.ascii	"event\000"
  805      7400
  806              	.LASF31:
  807 01f8 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
  807      74645F65 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 18
+
+
  807      6E646379 
  807      636C655F 
  807      6E657874 
@@ -1078,15 +1072,15 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 1
  827      74797065 
  827      00
  828              	.LASF43:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccM8iYBW.s 			page 19
-
-
  829 02a3 46756E63 		.ascii	"Functsk_logging\000"
  829      74736B5F 
  829      6C6F6767 
  829      696E6700 
  830              	.LASF8:
  831 02b3 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccQyW0x0.s 			page 19
+
+
  831      206C6F6E 
  831      6720696E 
  831      7400

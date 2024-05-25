@@ -18,6 +18,7 @@
 
 
 /* USER CODE START SWC_OUTPUT_INCLUDE */
+#include "watchdog.h"
 
 /* USER CODE END SWC_OUTPUT_INCLUDE */
 
@@ -60,6 +61,8 @@ void OUTPUT_setEngine_run(RTE_event ev){
     
     RTE_SC_ENGINE_set(&SO_ENGINE_signal, engine);
     RC_t error = RTE_SC_ENGINE_pushPort(&SO_ENGINE_signal);
+    
+    WD_Alive(WATCHDOG_RUN_SETENGINE);
 
     /* USER CODE END OUTPUT_setEngine_run */
 }
@@ -89,6 +92,7 @@ void OUTPUT_setBrakeLight_run(RTE_event ev){
     }
     RTE_SC_BRAKELIGHT_set(&SO_BRAKELIGHT_signal, brake);
     RC_t error = RTE_SC_BRAKELIGHT_pushPort(&SO_BRAKELIGHT_signal);
+    WD_Alive(WATCHDOG_RUN_SETBRAKELIGHT);
 
     /* USER CODE END OUTPUT_setBrakeLight_run */
 }

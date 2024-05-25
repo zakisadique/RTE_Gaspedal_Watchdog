@@ -14,7 +14,6 @@
 #include "rte.h"
 #include "rte_types.h"
 #include "sc_joystick_type.h"
-#include "joystick.h"
 
 
 

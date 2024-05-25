@@ -34,7 +34,7 @@
     #endif
     #if ((1 == 2) && (EE_MAX_TASK > 5))
     #define TASK_6_STACK_SIZE 0/4 // size = 0 bytes
-    int EE_cortex_mx_stack_6[TASK_6_STACK_SIZE];	/* Task 6 (Task_6) */
+    int EE_cortex_mx_stack_6[TASK_6_STACK_SIZE];	/* Task 6 (tsk_system) */
     #endif
     #if ((1 == 2) && (EE_MAX_TASK > 6))
     #define TASK_7_STACK_SIZE 0/4 // size = 0 bytes
@@ -128,7 +128,7 @@
         ,Tsk5	 /* tsk_logging*/
     #endif
     #if EE_MAX_TASK > 5
-        ,Tsk6	 /* Task_6*/
+        ,Tsk6	 /* tsk_system*/
     #endif
     #if EE_MAX_TASK > 6
         ,Tsk7 	 /* Task_7*/
@@ -156,7 +156,7 @@
         ,{(EE_ADDR)(&EE_cortex_mx_stack_5[(TASK_5_STACK_SIZE) - CORTEX_MX_INIT_TOS_OFFSET])}    /* tsk_logging*/
         #endif
         #ifdef TASK_6_STACK_SIZE
-        ,{(EE_ADDR)(&EE_cortex_mx_stack_6[(TASK_6_STACK_SIZE) - CORTEX_MX_INIT_TOS_OFFSET])}    /* Task_6*/
+        ,{(EE_ADDR)(&EE_cortex_mx_stack_6[(TASK_6_STACK_SIZE) - CORTEX_MX_INIT_TOS_OFFSET])}    /* tsk_system*/
         #endif
         #ifdef TASK_7_STACK_SIZE
         ,{(EE_ADDR)(&EE_cortex_mx_stack_7[(TASK_7_STACK_SIZE) - CORTEX_MX_INIT_TOS_OFFSET])}    /* Task_7*/
@@ -198,7 +198,7 @@
     DeclareTask(tsk_logging);
     #endif
     #if EE_MAX_TASK > 5
-    DeclareTask(Task_6);
+    DeclareTask(tsk_system);
     #endif
     #if EE_MAX_TASK > 6
     DeclareTask(Task_7);
@@ -224,7 +224,7 @@
         ,&EE_oo_thread_stub      /* thread tsk_logging */
     #endif
     #if EE_MAX_TASK > 5
-        ,&EE_oo_thread_stub      /* thread Task_6 */
+        ,&EE_oo_thread_stub      /* thread tsk_system */
     #endif
     #if EE_MAX_TASK > 6
         ,&EE_oo_thread_stub      /* thread Task_7 */
@@ -254,7 +254,7 @@
         ,&Functsk_logging
     #endif
     #if EE_MAX_TASK > 5
-        ,&FuncTask_6
+        ,&Functsk_system
     #endif
     #if EE_MAX_TASK > 6
         ,&FuncTask_7
@@ -273,16 +273,16 @@
         ,2U
     #endif
     #if EE_MAX_TASK > 2
-        ,16U
+        ,32U
     #endif
     #if EE_MAX_TASK > 3
-        ,8U
+        ,16U
     #endif
     #if EE_MAX_TASK > 4
-        ,4U
+        ,8U
     #endif
     #if EE_MAX_TASK > 5
-        ,0U
+        ,128U
     #endif
     #if EE_MAX_TASK > 6
         ,0U
@@ -311,7 +311,7 @@
         ,"tsk_logging"
     #endif
     #if EE_MAX_TASK > 5
-        ,"Task_6"
+        ,"tsk_system"
     #endif
     #if EE_MAX_TASK > 6
         ,"Task_7"
@@ -595,28 +595,28 @@
     #endif
     #if EE_MAX_TASK > 2
         #if 1
-        ,16U
+        ,32U
         #else
         ,MAX_PRIORITY
         #endif
     #endif
     #if EE_MAX_TASK > 3
         #if 1
-        ,8U
+        ,16U
         #else
         ,MAX_PRIORITY
         #endif
     #endif
     #if EE_MAX_TASK > 4
         #if 1
-        ,4U
+        ,8U
         #else
         ,MAX_PRIORITY
         #endif
     #endif
     #if EE_MAX_TASK > 5
         #if 1
-        ,0U
+        ,128U
         #else
         ,MAX_PRIORITY
         #endif
@@ -1570,7 +1570,7 @@
         {alrm_10_ms}
     #endif
     #if EE_MAX_ALARM > 1
-        ,{alrm_10_ms}
+        ,{alrm_1_ms}
     #endif
     #if EE_MAX_ALARM > 2
         ,{Alarm_3}
@@ -1600,7 +1600,7 @@ const char* EE_ALARM_NAME[EE_MAX_ALARM]=
          "alrm_10_ms"
     #endif
     #if EE_MAX_ALARM > 1
-        ,"alrm_10_ms"
+        ,"alrm_1_ms"
     #endif
     #if EE_MAX_ALARM > 2
         ,"Alarm_3"
@@ -1628,7 +1628,7 @@ const unsigned long EE_ALARM_ID[EE_MAX_ALARM]=
          alrm_10_ms
     #endif
     #if EE_MAX_ALARM > 1
-        ,alrm_10_ms
+        ,alrm_1_ms
     #endif
     #if EE_MAX_ALARM > 2
         ,Alarm_3
@@ -1654,7 +1654,7 @@ const unsigned long EE_ALARM_ID[EE_MAX_ALARM]=
 #if (EE_MAX_ALARM > 0) && (1 == 3)
     void alarm_callback_3(void);
 #endif
-#if (EE_MAX_ALARM > 1) && (1 == 3)
+#if (EE_MAX_ALARM > 1) && (0 == 3)
     void alarm_callback_3(void);
 #endif
 #if (EE_MAX_ALARM > 2) && (1 == 3)
@@ -1688,7 +1688,7 @@ const unsigned long EE_ALARM_ID[EE_MAX_ALARM]=
         {0, alrm_10_ms, EE_ALARM }
         #endif
         #if EE_MAX_ALARM > 1
-        ,{0, alrm_10_ms, EE_ALARM }
+        ,{0, alrm_1_ms, EE_ALARM }
         #endif
         #if EE_MAX_ALARM > 2
         ,{0, Alarm_3, EE_ALARM }
@@ -1740,18 +1740,18 @@ const unsigned long EE_ALARM_ID[EE_MAX_ALARM]=
             (EE_TYPECOUNTER)-1 }
     #endif
     #if EE_ACTION_ROM_SIZE > 1
-        ,{1    , 
-            #if 1 != 3 
-                2,
+        ,{0    , 
+            #if 0 != 3 
+                5,
             #else
                 0,
             #endif
-            #if 1 == 1
+            #if 0 == 1
                 4U,
             #else
                 0U,
             #endif
-            #if 1 != 3
+            #if 0 != 3
              (EE_VOID_CALLBACK)NULL,
             #else
                 alarm_callback_3,
@@ -1923,7 +1923,7 @@ const unsigned long EE_ALARM_ID[EE_MAX_ALARM]=
     #if 1 || 0 || 0 || 0 || 0
         ,
     #endif
-        Task_6
+        tsk_system
     #endif
     #if (EE_MAX_TASK > 6) && 0
     #if 1 || 0 || 0 || 0 || 0 || 0

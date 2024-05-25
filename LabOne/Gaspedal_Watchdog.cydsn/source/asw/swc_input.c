@@ -19,6 +19,8 @@
 
 /* USER CODE START SWC_INPUT_INCLUDE */
 
+#include "watchdog.h"
+
 /* USER CODE END SWC_INPUT_INCLUDE */
 
 
@@ -51,6 +53,7 @@ void INPUT_readJoystick_run(RTE_event ev){
 //    UART_Logs_PutChar(SO_JOYSTICK_signal.value.m_joystickValue);
 //    UART_Logs_PutString("\n");
     
+    WD_Alive(WATCHDOG_RUN_READJOYSTICK);
     
     /* USER CODE END INPUT_readJoystick_run */
 }

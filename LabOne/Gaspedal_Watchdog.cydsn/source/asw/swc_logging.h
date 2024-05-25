@@ -24,7 +24,6 @@
     
     RC_t convertToString(sint8_t number, char_t *buffer);
     RC_t reverseString(char_t *str, uint8_t length);
-    char* strcpy_custom(char* destination, const char* source);
     
 /* USER CODE END SWC_LOGGING_USERDEFINITIONS */
 
@@ -33,7 +32,7 @@
  * component: swc_logging
  * cycletime: 0
  * description: Runnable
- * events: 
+ * events: ev_joystick_onData
  * name: LOGGING_logging_run
  * shortname: logging
  * signalIN: so_joystick

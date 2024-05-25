@@ -18,6 +18,7 @@
 
 
 /* USER CODE START SWC_CONTROL_INCLUDE */
+#include "watchdog.h"
 
 /* USER CODE END SWC_CONTROL_INCLUDE */
 
@@ -62,8 +63,9 @@ void CONTROL_calcControl_run(RTE_event ev){
 //    UART_Logs_PutString("In control\n");
 
     /* USER CODE END CONTROL_calcControl_run */
+    
+    WD_Alive(WATCHDOG_RUN_CALCCONTROL);
 }
-
 
 /* USER CODE START SWC_CONTROL_FUNCTIONS */
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 1
 
 
    1              		.syntax unified
@@ -47,34 +47,33 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
   17:source\rte/sc_brakelight_type.c **** 
   18:source\rte/sc_brakelight_type.c **** 
   19:source\rte/sc_brakelight_type.c **** 
-  20:source\rte/sc_brakelight_type.c **** 
-  21:source\rte/sc_brakelight_type.c **** /* USER CODE START SC_BRAKELIGHT_INCLUDE */
-  22:source\rte/sc_brakelight_type.c **** #include "led.h"
-  23:source\rte/sc_brakelight_type.c **** 
-  24:source\rte/sc_brakelight_type.c **** /* USER CODE END SC_BRAKELIGHT_INCLUDE */
+  20:source\rte/sc_brakelight_type.c **** /* USER CODE START SC_BRAKELIGHT_INCLUDE */
+  21:source\rte/sc_brakelight_type.c **** #include "led.h"
+  22:source\rte/sc_brakelight_type.c **** 
+  23:source\rte/sc_brakelight_type.c **** /* USER CODE END SC_BRAKELIGHT_INCLUDE */
+  24:source\rte/sc_brakelight_type.c **** 
   25:source\rte/sc_brakelight_type.c **** 
   26:source\rte/sc_brakelight_type.c **** 
   27:source\rte/sc_brakelight_type.c **** 
-  28:source\rte/sc_brakelight_type.c **** 
-  29:source\rte/sc_brakelight_type.c **** /* USER CODE START SC_BRAKELIGHT_USERDEFINITIONS */
-  30:source\rte/sc_brakelight_type.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 2
+  28:source\rte/sc_brakelight_type.c **** /* USER CODE START SC_BRAKELIGHT_USERDEFINITIONS */
+  29:source\rte/sc_brakelight_type.c **** 
+  30:source\rte/sc_brakelight_type.c **** /* USER CODE END SC_BRAKELIGHT_USERDEFINITIONS */
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 2
 
 
-  31:source\rte/sc_brakelight_type.c **** /* USER CODE END SC_BRAKELIGHT_USERDEFINITIONS */
+  31:source\rte/sc_brakelight_type.c **** 
   32:source\rte/sc_brakelight_type.c **** 
-  33:source\rte/sc_brakelight_type.c **** 
-  34:source\rte/sc_brakelight_type.c **** /*****************************************************************************************
-  35:source\rte/sc_brakelight_type.c ****  *************** Port Wrapper Implementation for SC_BRAKELIGHT signal  ****************
-  36:source\rte/sc_brakelight_type.c ****  *****************************************************************************************/
+  33:source\rte/sc_brakelight_type.c **** /*****************************************************************************************
+  34:source\rte/sc_brakelight_type.c ****  *************** Port Wrapper Implementation for SC_BRAKELIGHT signal  ****************
+  35:source\rte/sc_brakelight_type.c ****  *****************************************************************************************/
+  36:source\rte/sc_brakelight_type.c ****  
   37:source\rte/sc_brakelight_type.c ****  
-  38:source\rte/sc_brakelight_type.c ****  
-  39:source\rte/sc_brakelight_type.c **** /**
-  40:source\rte/sc_brakelight_type.c ****  * Default OUT driver API
-  41:source\rte/sc_brakelight_type.c ****  */
-  42:source\rte/sc_brakelight_type.c **** inline RC_t SC_BRAKELIGHT_driverOut(const SC_BRAKELIGHT_data_t  *const data)
-  43:source\rte/sc_brakelight_type.c **** {
-  28              		.loc 1 43 0
+  38:source\rte/sc_brakelight_type.c **** /**
+  39:source\rte/sc_brakelight_type.c ****  * Default OUT driver API
+  40:source\rte/sc_brakelight_type.c ****  */
+  41:source\rte/sc_brakelight_type.c **** inline RC_t SC_BRAKELIGHT_driverOut(const SC_BRAKELIGHT_data_t  *const data)
+  42:source\rte/sc_brakelight_type.c **** {
+  28              		.loc 1 42 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -83,19 +82,19 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
   34              		.cfi_def_cfa_offset 8
   35              		.cfi_offset 3, -8
   36              		.cfi_offset 14, -4
-  44:source\rte/sc_brakelight_type.c **** 	/* USER CODE START driverOutSC_BRAKELIGHT */
-  45:source\rte/sc_brakelight_type.c ****     
-  46:source\rte/sc_brakelight_type.c **** 
-  47:source\rte/sc_brakelight_type.c **** 	//Scale application data to drive format
-  48:source\rte/sc_brakelight_type.c **** //    UART_Logs_PutString("Brakelight here");
-  49:source\rte/sc_brakelight_type.c **** 	//Write scaled data to driver
-  50:source\rte/sc_brakelight_type.c ****     
-  51:source\rte/sc_brakelight_type.c ****     if (data -> m_brakeValue == FALSE){
-  37              		.loc 1 51 0
+  43:source\rte/sc_brakelight_type.c **** 	/* USER CODE START driverOutSC_BRAKELIGHT */
+  44:source\rte/sc_brakelight_type.c ****     
+  45:source\rte/sc_brakelight_type.c **** 
+  46:source\rte/sc_brakelight_type.c **** 	//Scale application data to drive format
+  47:source\rte/sc_brakelight_type.c **** //    UART_Logs_PutString("Brakelight here");
+  48:source\rte/sc_brakelight_type.c **** 	//Write scaled data to driver
+  49:source\rte/sc_brakelight_type.c ****     
+  50:source\rte/sc_brakelight_type.c ****     if (data -> m_brakeValue == FALSE){
+  37              		.loc 1 50 0
   38 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
   39 0004 23B9     		cbnz	r3, .L2
-  52:source\rte/sc_brakelight_type.c ****         LED_Set(LED_RED, LED_OFF);
-  40              		.loc 1 52 0
+  51:source\rte/sc_brakelight_type.c ****         LED_Set(LED_RED, LED_OFF);
+  40              		.loc 1 51 0
   41 0006 0021     		movs	r1, #0
   42 0008 0846     		mov	r0, r1
   43              	.LVL1:
@@ -104,24 +103,24 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
   46 000e 03E0     		b	.L3
   47              	.LVL3:
   48              	.L2:
-  53:source\rte/sc_brakelight_type.c ****     } else {
-  54:source\rte/sc_brakelight_type.c ****         LED_Set(LED_RED, LED_ON);
-  49              		.loc 1 54 0
+  52:source\rte/sc_brakelight_type.c ****     } else {
+  53:source\rte/sc_brakelight_type.c ****         LED_Set(LED_RED, LED_ON);
+  49              		.loc 1 53 0
   50 0010 0121     		movs	r1, #1
   51 0012 0020     		movs	r0, #0
   52              	.LVL4:
   53 0014 FFF7FEFF 		bl	LED_Set
   54              	.LVL5:
   55              	.L3:
-  55:source\rte/sc_brakelight_type.c ****     }
-  56:source\rte/sc_brakelight_type.c **** 
-  57:source\rte/sc_brakelight_type.c **** 	return RC_SUCCESS;
-  58:source\rte/sc_brakelight_type.c **** 	/* USER CODE END driverOutSC_BRAKELIGHT */
-  59:source\rte/sc_brakelight_type.c **** }
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 3
+  54:source\rte/sc_brakelight_type.c ****     }
+  55:source\rte/sc_brakelight_type.c **** 
+  56:source\rte/sc_brakelight_type.c **** 	return RC_SUCCESS;
+  57:source\rte/sc_brakelight_type.c **** 	/* USER CODE END driverOutSC_BRAKELIGHT */
+  58:source\rte/sc_brakelight_type.c **** }
+  56              		.loc 1 58 0
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 3
 
 
-  56              		.loc 1 59 0
   57 0018 0020     		movs	r0, #0
   58 001a 08BD     		pop	{r3, pc}
   59              		.cfi_endproc
@@ -178,10 +177,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  110 004c 02       		.uleb128 0x2
  111 004d 04       		.byte	0x4
  112 004e 05       		.byte	0x5
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 4
-
-
  113 004f 97010000 		.4byte	.LASF4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 4
+
+
  114 0053 02       		.uleb128 0x2
  115 0054 04       		.byte	0x4
  116 0055 07       		.byte	0x7
@@ -238,10 +237,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  167 00b8 05       		.byte	0x5
  168 00b9 4D       		.byte	0x4d
  169 00ba A8000000 		.4byte	0xa8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 5
-
-
  170 00be 03       		.uleb128 0x3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 5
+
+
  171 00bf 99000000 		.4byte	.LASF18
  172 00c3 05       		.byte	0x5
  173 00c4 4F       		.byte	0x4f
@@ -298,10 +297,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  224 012d 77       		.sleb128 -9
  225 012e 07       		.uleb128 0x7
  226 012f B2010000 		.4byte	.LASF32
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 6
-
-
  227 0133 76       		.sleb128 -10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 6
+
+
  228 0134 07       		.uleb128 0x7
  229 0135 BA040000 		.4byte	.LASF33
  230 0139 75       		.sleb128 -11
@@ -358,10 +357,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  281 019c 07       		.byte	0x7
  282 019d 21       		.byte	0x21
  283 019e AF010000 		.4byte	0x1af
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 7
-
-
  284 01a2 09       		.uleb128 0x9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 7
+
+
  285 01a3 62040000 		.4byte	.LASF67
  286 01a7 07       		.byte	0x7
  287 01a8 23       		.byte	0x23
@@ -410,7 +409,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  330 0200 0B       		.uleb128 0xb
  331 0201 59020000 		.4byte	.LASF68
  332 0205 01       		.byte	0x1
- 333 0206 2A       		.byte	0x2a
+ 333 0206 29       		.byte	0x29
  334 0207 8F010000 		.4byte	0x18f
  335 020b 00000000 		.4byte	.LFB110
  336 020f 1C000000 		.4byte	.LFE110-.LFB110
@@ -418,12 +417,12 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  338 0214 9C       		.byte	0x9c
  339 0215 55020000 		.4byte	0x255
  340 0219 0C       		.uleb128 0xc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 8
-
-
  341 021a F3030000 		.4byte	.LASF69
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 8
+
+
  342 021e 01       		.byte	0x1
- 343 021f 2A       		.byte	0x2a
+ 343 021f 29       		.byte	0x29
  344 0220 60020000 		.4byte	0x260
  345 0224 00000000 		.4byte	.LLST0
  346 0228 0D       		.uleb128 0xd
@@ -478,10 +477,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  395 0280 09       		.byte	0x9
  396 0281 4A       		.byte	0x4a
  397 0282 B3000000 		.4byte	0xb3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 9
-
-
  398 0286 12       		.uleb128 0x12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 9
+
+
  399 0287 FD000000 		.4byte	.LASF61
  400 028b 0A       		.byte	0xa
  401 028c 48       		.byte	0x48
@@ -538,10 +537,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  452 001d 00       		.byte	0
  453 001e 03       		.uleb128 0x3
  454 001f 16       		.uleb128 0x16
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 10
-
-
  455 0020 00       		.byte	0
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 10
+
+
  456 0021 03       		.uleb128 0x3
  457 0022 0E       		.uleb128 0xe
  458 0023 3A       		.uleb128 0x3a
@@ -598,10 +597,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  509 0056 00       		.byte	0
  510 0057 08       		.uleb128 0x8
  511 0058 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 11
-
-
  512 0059 01       		.byte	0x1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 11
+
+
  513 005a 0B       		.uleb128 0xb
  514 005b 0B       		.uleb128 0xb
  515 005c 3A       		.uleb128 0x3a
@@ -658,10 +657,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  566 008f 27       		.uleb128 0x27
  567 0090 19       		.uleb128 0x19
  568 0091 49       		.uleb128 0x49
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 12
-
-
  569 0092 13       		.uleb128 0x13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 12
+
+
  570 0093 11       		.uleb128 0x11
  571 0094 01       		.uleb128 0x1
  572 0095 12       		.uleb128 0x12
@@ -718,10 +717,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  623 00d0 13       		.uleb128 0x13
  624 00d1 00       		.byte	0
  625 00d2 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 13
-
-
  626 00d3 10       		.uleb128 0x10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 13
+
+
  627 00d4 0F       		.uleb128 0xf
  628 00d5 00       		.byte	0
  629 00d6 0B       		.uleb128 0xb
@@ -778,10 +777,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  680 0109 13       		.uleb128 0x13
  681 010a 00       		.byte	0
  682 010b 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 14
-
-
  683 010c 15       		.uleb128 0x15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 14
+
+
  684 010d 2E       		.uleb128 0x2e
  685 010e 00       		.byte	0
  686 010f 3F       		.uleb128 0x3f
@@ -838,10 +837,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  737 0014 1C000000 		.4byte	.LFE110-.LFB110
  738 0018 00000000 		.4byte	0
  739 001c 00000000 		.4byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 15
-
-
  740              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 15
+
+
  741              	.Ldebug_ranges0:
  742 0000 00000000 		.4byte	.LFB110
  743 0004 1C000000 		.4byte	.LFE110
@@ -898,10 +897,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  764      00
  765              	.LASF25:
  766 008b 52435F45 		.ascii	"RC_ERROR_ZERO\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 16
-
-
  766      52524F52 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 16
+
+
  766      5F5A4552 
  766      4F00
  767              	.LASF18:
@@ -958,10 +957,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  788      4C454D45 
  789              	.LASF6:
  790 0144 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 17
-
-
  790      206C6F6E 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 17
+
+
  790      6720696E 
  790      7400
  791              	.LASF54:
@@ -1018,10 +1017,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  810      7400
  811              	.LASF14:
  812 01ed 6C6F6E67 		.ascii	"long double\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 18
-
-
  812      20646F75 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 18
+
+
  812      626C6500 
  813              	.LASF66:
  814 01f9 433A5C55 		.ascii	"C:\\Users\\zakis\\Documents\\EAA\\RTE_Gaspedal_Watc"
@@ -1078,10 +1077,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  835 02c6 4C45445F 		.ascii	"LED_YELLOW\000"
  835      59454C4C 
  835      4F5700
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 19
-
-
  836              	.LASF24:
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 19
+
+
  837 02d1 52435F45 		.ascii	"RC_ERROR_NULL\000"
  837      52524F52 
  837      5F4E554C 
@@ -1138,10 +1137,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  855      325F7400 
  856              	.LASF42:
  857 03d6 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 20
-
-
  857      52524F52 
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 20
+
+
  857      5F424144 
  857      5F504152 
  857      414D00
@@ -1198,10 +1197,10 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 1
  881 046f 49544D5F 		.ascii	"ITM_RxBuffer\000"
  881      52784275 
  881      66666572 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc5xPSQA.s 			page 21
-
-
  881      00
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccgqeJg7.s 			page 21
+
+
  882              	.LASF23:
  883 047c 52435F45 		.ascii	"RC_ERROR\000"
  883      52524F52 
