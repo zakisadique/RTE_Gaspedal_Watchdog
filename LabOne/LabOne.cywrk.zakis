@@ -533,58 +533,6 @@
 <VisibleNodeIds>
 <v>LabOne</v>
 <v>LabOne\Gaspedal_Watchdog</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\button.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_1.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_2.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_3.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_4.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_JOYSTICK.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CLK_LED.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_common_ee_hal_structs.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_cortex_mx_ee_context.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_cortex_mx_ee_system_timer.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_cortex_mx_ee_utils.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_activate.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alcancel.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alget.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_algetbase.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alsetabs.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_alsetrel.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_altick.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_chaintas.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evclear.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evget.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evset.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_evwait.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_force_schedule.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_getcountervalue.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_getelapsedvalue.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_gettaskid.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_gettaskstate.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_gnu_change_context_isr.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_gnu_irq_stack.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_gnu_multi_context.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_gnu_oo.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_iparam.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_irqendin.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_lockres.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_lookup.lst</v>
-<v>LabOne\Gaspedal_Watchdog\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_ee_rq_exchg.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -653,17 +601,16 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\watchdog.h" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\watchdog.c" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\asw\main.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" />
 <name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_speed.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.c" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_engine.h" />
-<name v=".\Gaspedal_Watchdog.cydsn\source\rte\sc_brakelight_type.c" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_logging.c" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" />
 <name v=".\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Gaspedal_Watchdog.cydsn\source\asw\swc_system.c" />
+<name v=".\Gaspedal_Watchdog.cydsn\Generated_Source\PSoC5\ErikaOS_eecfg.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -671,7 +618,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1198, 892" SelectedTabbedMdiWindow="52d9f07a-a346-4ca6-b24c-45d4066b5c55"><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\main.c" Guid="d330fe05-be0f-48e5-8a80-dc03e61a056e" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" Guid="f6f37c9f-4bdb-4730-9e12-0f760c7e0413" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" Guid="d8d3ba78-c9ef-4053-baec-4a79549b6314" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" Guid="fa057fb9-1113-419c-98bd-3d1ec8263129" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_joystick_type.c" Guid="91db3723-accc-4abf-9f03-102f52d71d03" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_speed.h" Guid="b2c7898d-a6c5-4099-ad7c-f60c74e729c2" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.c" Guid="30c60769-a215-498a-8442-1f96cde6257f" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine_type.h" Guid="12a1afac-6094-49a6-bbac-6d97f97da890" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_engine.h" Guid="9139f457-7c5a-4833-bcc0-90719e58f992" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\rte\sc_brakelight_type.c" Guid="9f27f6bd-d687-49bf-aba3-c2eb116336b0" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" Guid="52d9f07a-a346-4ca6-b24c-45d4066b5c55" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1196, 741" SelectedTabbedMdiWindow="fd0c78bb-f8f1-4500-83dc-ec4632222d3d"><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\watchdog.h" Guid="35359da0-a555-4a68-8396-56f2e209b9a4" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\watchdog.c" Guid="2cf64cb2-a01a-40ab-ae0c-2be544f4b85b" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\main.c" Guid="a5888ed5-3d34-42cf-8603-9a4d8c800255" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_control.c" Guid="ff6c76cd-32e8-4c12-9848-7ed2096587d8" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_input.c" Guid="fd0c78bb-f8f1-4500-83dc-ec4632222d3d" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_logging.c" Guid="b6885c9c-ceb6-4a30-a4f6-976e0234cef3" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_output.c" Guid="dfe836eb-5099-45ae-a337-cbc3655c3691" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\TopDesign\TopDesign.cysch" Guid="cda32e2f-7e7c-48cd-8cc8-53f0768a8b49" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\source\asw\swc_system.c" Guid="85d29d21-f0c1-4a59-aff3-df2d65cf076c" /><DocumentWindow Key="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\Generated_Source\PSoC5\ErikaOS_eecfg.c" Guid="2e4cf663-beee-453d-bc32-3277e2b047d1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

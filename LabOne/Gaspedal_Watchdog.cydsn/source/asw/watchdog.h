@@ -38,6 +38,8 @@
 /* Global pre-processor symbols/macros and type declarations                 */
 /*****************************************************************************/
     
+
+    
 typedef enum {
     WATCHDOG_RUN_READJOYSTICK,
     WATCHDOG_RUN_CALCCONTROL,
@@ -65,7 +67,7 @@ typedef enum {
     PERIOD_Y_SEC
 } WDT_TimeOut_t;
 
-
+extern WDT_Bitfields wdtBitfields;
 
 //####################### Structures
 

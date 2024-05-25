@@ -116,7 +116,15 @@ TASK(tsk_background)
         ) {
         WD_Trigger();
         }
+        
+        wdtBitfields.m_Bit_CalcControl = 0;
+        wdtBitfields.m_Bit_Logging = 0;
+        wdtBitfields.m_Bit_SetBrakelight = 0;
+        wdtBitfields.m_Bit_SetEngine = 0;
+        wdtBitfields.m_Bit_System = 0;
+        wdtBitfields.m_BitReadJoystick = 0;
     }
+    
 }
 
 

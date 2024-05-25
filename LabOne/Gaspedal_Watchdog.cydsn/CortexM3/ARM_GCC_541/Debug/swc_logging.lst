@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
   28:source\asw/swc_logging.c **** 
   29:source\asw/swc_logging.c **** #include "sp_common.h"
   30:source\asw/swc_logging.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 2
 
 
   31:source\asw/swc_logging.c **** /* USER CODE START SWC_LOGGING_USERDEFINITIONS */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
   36              		.cfi_offset 4, -4
   37              	.LVL1:
   77:source\asw/swc_logging.c ****     int start = 0;
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 3
 
 
   78:source\asw/swc_logging.c ****     int end = length - 1;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
   76              		.size	reverseString, .-reverseString
   77 001e 00BF     		.section	.text.convertToString,"ax",%progbits
   78              		.align	2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 4
 
 
   79              		.global	convertToString
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
   47:source\asw/swc_logging.c ****     } else if (number > 0){
  123              		.loc 1 47 0
  124 0022 2D22     		movs	r2, #45
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 5
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 5
 
 
  125 0024 CA70     		strb	r2, [r1, #3]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  170 0056 0025     		movs	r5, #0
  171 0058 2571     		strb	r5, [r4, #4]
   69:source\asw/swc_logging.c ****     buffer[4] = '\0';
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 6
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 6
 
 
  172              		.loc 1 69 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  204              	.LVL21:
  205 0000 30B5     		push	{r4, r5, lr}
  206              		.cfi_def_cfa_offset 12
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 7
 
 
  207              		.cfi_offset 4, -12
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
   46:.\source\rte/sc_joystick.h **** 
   47:.\source\rte/sc_joystick.h **** /**************************************************************************************************
   48:.\source\rte/sc_joystick.h **** /* The signal configuration API block																				*/
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 8
 
 
   49:.\source\rte/sc_joystick.h **** /**************************************************************************************************
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  103:.\source\rte/sc_joystick.h **** 	/**
  104:.\source\rte/sc_joystick.h **** 	 * Ressourse 
  105:.\source\rte/sc_joystick.h **** 	 */
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 9
 
 
  106:.\source\rte/sc_joystick.h **** 	 ResourceType const resource;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  160:.\source\rte/sc_joystick.h **** inline RC_t RTE_SC_JOYSTICK_init( SC_JOYSTICK_t * const signal )
  161:.\source\rte/sc_joystick.h **** {                                                                                                  
  162:.\source\rte/sc_joystick.h **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 10
 
 
  163:.\source\rte/sc_joystick.h ****    RC_t ret = RC_SUCCESS;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  217:.\source\rte/sc_joystick.h ****    return RC_SUCCESS;
  218:.\source\rte/sc_joystick.h **** }
  219:.\source\rte/sc_joystick.h **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 11
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 11
 
 
  220:.\source\rte/sc_joystick.h **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  274:.\source\rte/sc_joystick.h **** inline SC_JOYSTICK_data_t RTE_SC_JOYSTICK_get( const SC_JOYSTICK_t * const signal )
  275:.\source\rte/sc_joystick.h **** {               
  276:.\source\rte/sc_joystick.h ****    //Todo: Critical region cannot be protected using return values																						
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 12
 
 
  277:.\source\rte/sc_joystick.h ****    return signal->value;                                                                           
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
    3:.\source\rte/sc_logging.h **** /**
    4:.\source\rte/sc_logging.h ****  *  file    SC_LOGGING_signal.h
    5:.\source\rte/sc_logging.h ****  *
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 13
 
 
    6:.\source\rte/sc_logging.h ****  *  brief   signal base class for signal sc_logging
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
   60:.\source\rte/sc_logging.h **** 
   61:.\source\rte/sc_logging.h ****     /**
   62:.\source\rte/sc_logging.h ****      * Function pointer to the output driver table
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 14
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 14
 
 
   63:.\source\rte/sc_logging.h ****      */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  117:.\source\rte/sc_logging.h **** /**
  118:.\source\rte/sc_logging.h ****  * Instances of the struct SC_LOGGING_t represent the signal objects.
  119:.\source\rte/sc_logging.h ****  * A signal object contains the current application value 'value' as well as relevant meta data.
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 15
 
 
  120:.\source\rte/sc_logging.h ****  */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  174:.\source\rte/sc_logging.h **** /* Status and timeout control																						*/
  175:.\source\rte/sc_logging.h **** /**************************************************************************************************
  176:.\source\rte/sc_logging.h **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 16
 
 
  177:.\source\rte/sc_logging.h **** /**
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  231:.\source\rte/sc_logging.h **** }
  232:.\source\rte/sc_logging.h **** 
  233:.\source\rte/sc_logging.h **** /**
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 17
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 17
 
 
  234:.\source\rte/sc_logging.h ****  * Should be called by application or driver if no new value can be provided.
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  288:.\source\rte/sc_logging.h **** inline RC_t RTE_SC_LOGGING_getThreadSafe( const SC_LOGGING_t * const signal, SC_LOGGING_data_t * co
  289:.\source\rte/sc_logging.h **** {    
  290:.\source\rte/sc_logging.h ****    if (TRUE == signal->pSigCfg->resourceActive) GetResource(signal->pSigCfg->resource);
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 18
 
 
  291:.\source\rte/sc_logging.h ****    *data = signal->value;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  274 0060 02D1     		bne	.L17
  275 0062 586A     		ldr	r0, [r3, #36]
  276 0064 FFF7FEFF 		bl	EE_oo_ReleaseResource
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 19
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 19
 
 
  277              	.LVL29:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  319              	.LBB17:
  330:.\source\rte/sc_logging.h ****       }
  331:.\source\rte/sc_logging.h ****    }
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 20
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 20
 
 
  332:.\source\rte/sc_logging.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  386:.\source\rte/sc_logging.h ****    if (RTE_SIGNALSTATUS_VALID == signal->status)
  320              		.loc 3 386 0
  321 0090 084B     		ldr	r3, .L24+8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 21
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 21
 
 
  322 0092 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  356              		.text
  357              	.Letext0:
  358              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 22
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 22
 
 
  359              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  413 0051 04       		.byte	0x4
  414 0052 3F       		.byte	0x3f
  415 0053 57000000 		.4byte	0x57
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 23
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 23
 
 
  416 0057 02       		.uleb128 0x2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  470 00bd 08       		.byte	0x8
  471 00be 15030000 		.4byte	.LASF17
  472 00c2 03       		.uleb128 0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 24
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 24
 
 
  473 00c3 9B020000 		.4byte	.LASF18
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  527 013b 0A       		.byte	0xa
  528 013c 90       		.byte	0x90
  529 013d 25000000 		.4byte	0x25
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 25
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 25
 
 
  530 0141 03       		.uleb128 0x3
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  584 01b0 74       		.sleb128 -12
  585 01b1 08       		.uleb128 0x8
  586 01b2 90070000 		.4byte	.LASF45
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 26
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 26
 
 
  587 01b6 73       		.sleb128 -13
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  641 0222 BC010000 		.4byte	.LASF60
  642 0226 0B       		.byte	0xb
  643 0227 21       		.byte	0x21
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 27
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 27
 
 
  644 0228 23010000 		.4byte	0x123
@@ -1590,7 +1590,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  670 025d 01       		.byte	0x1
  671 025e 37000000 		.4byte	0x37
  672 0262 0D       		.byte	0xd
- 673 0263 29       		.byte	0x29
+ 673 0263 2B       		.byte	0x2b
  674 0264 8D020000 		.4byte	0x28d
  675 0268 07       		.uleb128 0x7
  676 0269 6C050000 		.4byte	.LASF66
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  698 0291 A2020000 		.4byte	0x2a2
  699 0295 0C       		.uleb128 0xc
  700 0296 68030000 		.4byte	.LASF75
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 28
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 28
 
 
  701 029a 0E       		.byte	0xe
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  755 030f 36       		.byte	0x36
  756 0310 8D030000 		.4byte	0x38d
  757 0314 0C       		.uleb128 0xc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 29
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 29
 
 
  758 0315 A8030000 		.4byte	.LASF76
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  812 0381 F5020000 		.4byte	.LASF85
  813 0385 02       		.byte	0x2
  814 0386 6A       		.byte	0x6a
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 30
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 30
 
 
  815 0387 B1030000 		.4byte	0x3b1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  869 03fc 8E       		.byte	0x8e
  870 03fd 09040000 		.4byte	0x409
  871 0401 08       		.byte	0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 31
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 31
 
 
  872 0402 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  926 0471 0F       		.uleb128 0xf
  927 0472 7D040000 		.4byte	0x47d
  928 0476 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 32
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 32
 
 
  929 0477 0D       		.uleb128 0xd
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  983 04e9 97030000 		.4byte	0x397
  984 04ed 0C       		.byte	0xc
  985 04ee 0C       		.uleb128 0xc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 33
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 33
 
 
  986 04ef EF000000 		.4byte	.LASF80
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1040 055e C6010000 		.4byte	.LASF89
  1041 0562 03       		.byte	0x3
  1042 0563 7F       		.byte	0x7f
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 34
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 34
 
 
  1043 0564 4C040000 		.4byte	0x44c
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1097 05d9 10       		.uleb128 0x10
  1098 05da CE050000 		.4byte	0x5ce
  1099 05de 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 35
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 35
 
 
  1100 05df 11050000 		.4byte	.LASF104
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1154 065c 1201     		.2byte	0x112
  1155 065e 6E060000 		.4byte	0x66e
  1156 0662 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 36
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 36
 
 
  1157 0663 0D       		.uleb128 0xd
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1211 06e1 DE050000 		.4byte	.LASF114
  1212 06e5 01       		.byte	0x1
  1213 06e6 21       		.byte	0x21
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 37
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 37
 
 
  1214 06e7 00020000 		.4byte	0x200
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1268 075d 6F       		.byte	0x6f
  1269 075e 00000000 		.4byte	.LFB167
  1270 0762 B8000000 		.4byte	.LFE167-.LFB167
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 38
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 38
 
 
  1271 0766 01       		.uleb128 0x1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1325 07d7 25       		.uleb128 0x25
  1326 07d8 DE050000 		.4byte	0x5de
  1327 07dc 34000000 		.4byte	.LBB13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 39
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 39
 
 
  1328 07e0 5C000000 		.4byte	.LBE13-.LBB13
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1382 086d 29       		.uleb128 0x29
  1383 086e C1050000 		.4byte	0x5c1
  1384 0872 CA010000 		.4byte	.LLST13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 40
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 40
 
 
  1385 0876 00       		.byte	0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1439 08e2 12       		.byte	0x12
  1440 08e3 44       		.byte	0x44
  1441 08e4 EA000000 		.4byte	0xea
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 41
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 41
 
 
  1442 08e8 2F       		.uleb128 0x2f
@@ -2437,7 +2437,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1475 0934 F2040000 		.4byte	.LASF133
  1476 0938 F2040000 		.4byte	.LASF133
  1477 093c 0D       		.byte	0xd
- 1478 093d 5B       		.byte	0x5b
+ 1478 093d 5D       		.byte	0x5d
  1479 093e 00       		.byte	0
  1480              		.section	.debug_abbrev,"",%progbits
  1481              	.Ldebug_abbrev0:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1496 000e 01       		.uleb128 0x1
  1497 000f 10       		.uleb128 0x10
  1498 0010 17       		.uleb128 0x17
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 42
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 42
 
 
  1499 0011 00       		.byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1553 0047 0B       		.uleb128 0xb
  1554 0048 49       		.uleb128 0x49
  1555 0049 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 43
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 43
 
 
  1556 004a 3A       		.uleb128 0x3a
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1610 0080 0D       		.uleb128 0xd
  1611 0081 00       		.byte	0
  1612 0082 03       		.uleb128 0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 44
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 44
 
 
  1613 0083 0E       		.uleb128 0xe
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1667 00b9 3B       		.uleb128 0x3b
  1668 00ba 0B       		.uleb128 0xb
  1669 00bb 01       		.uleb128 0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 45
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 45
 
 
  1670 00bc 13       		.uleb128 0x13
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1724 00f2 00       		.byte	0
  1725 00f3 03       		.uleb128 0x3
  1726 00f4 08       		.uleb128 0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 46
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 46
 
 
  1727 00f5 3A       		.uleb128 0x3a
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1781 012c 05       		.uleb128 0x5
  1782 012d 00       		.byte	0
  1783 012e 03       		.uleb128 0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 47
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 47
 
 
  1784 012f 08       		.uleb128 0x8
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1838 0165 00       		.byte	0
  1839 0166 00       		.byte	0
  1840 0167 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 48
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 48
 
 
  1841 0168 0B       		.uleb128 0xb
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1895 01a3 01       		.byte	0x1
  1896 01a4 3F       		.uleb128 0x3f
  1897 01a5 19       		.uleb128 0x19
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 49
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 49
 
 
  1898 01a6 03       		.uleb128 0x3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  1952 01dd 01       		.uleb128 0x1
  1953 01de 12       		.uleb128 0x12
  1954 01df 06       		.uleb128 0x6
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 50
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 50
 
 
  1955 01e0 58       		.uleb128 0x58
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2009 021a 11       		.uleb128 0x11
  2010 021b 01       		.uleb128 0x1
  2011 021c 31       		.uleb128 0x31
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 51
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 51
 
 
  2012 021d 13       		.uleb128 0x13
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2066 0253 00       		.byte	0
  2067 0254 30       		.uleb128 0x30
  2068 0255 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 52
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 52
 
 
  2069 0256 00       		.byte	0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2123 002c 04000000 		.4byte	.LVL2
  2124 0030 1E000000 		.4byte	.LFE166
  2125 0034 0400     		.2byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 53
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 53
 
 
  2126 0036 F3       		.byte	0xf3
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2180 00c2 68000000 		.4byte	.LVL20
  2181 00c6 0100     		.2byte	0x1
  2182 00c8 54       		.byte	0x54
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 54
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 54
 
 
  2183 00c9 68000000 		.4byte	.LVL20
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2237 013f 1C000000 		.4byte	.LVL24
  2238 0143 B8000000 		.4byte	.LFE167
  2239 0147 0400     		.2byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 55
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 55
 
 
  2240 0149 F3       		.byte	0xf3
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2294              	.LLST13:
  2295 01ca 90000000 		.4byte	.LVL36
  2296 01ce A0000000 		.4byte	.LVL37
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 56
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 56
 
 
  2297 01d2 0300     		.2byte	0x3
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2337      49434B5F 
  2337      7369676E 
  2337      616C00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 57
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 57
 
 
  2338              	.LASF27:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2361      52524F52 
  2361      5F494E56 
  2361      414C4944 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 58
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 58
 
 
  2361      5F535441 
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2387      6C657261 
  2387      746F7256 
  2387      616C7565 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 59
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 59
 
 
  2387      00
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2407      47494E47 
  2408              	.LASF135:
  2409 0282 736F7572 		.ascii	"source\\asw\\swc_logging.c\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 60
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 60
 
 
  2409      63655C61 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2432              	.LASF32:
  2433 0327 52435F53 		.ascii	"RC_SUCCESS\000"
  2433      55434345 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 61
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 61
 
 
  2433      535300
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2457      61736B43 
  2457      6F756E74 
  2457      00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 62
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 62
 
 
  2458              	.LASF54:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2479      5C7A616B 
  2479      69735C44 
  2479      6F63756D 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 63
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 63
 
 
  2480 04a9 68646F67 		.ascii	"hdog\\LabOne\\Gaspedal_Watchdog.cydsn\000"
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2500      7420696E 
  2500      7400
  2501              	.LASF66:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 64
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 64
 
 
  2502 056c 57415443 		.ascii	"WATCHDOG_RUN_READJOYSTICK\000"
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2524      6E74385F 
  2524      7400
  2525              	.LASF115:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 65
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 65
 
 
  2526 061d 6E756D62 		.ascii	"number\000"
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2550      5F4F5645 
  2550      5252554E 
  2550      00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 66
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 66
 
 
  2551              	.LASF1:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2572      52524F52 
  2572      5F554E4B 
  2572      4E4F574E 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 67
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 67
 
 
  2572      00
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 1
  2592      69676E61 
  2592      6C00
  2593              	.LASF62:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\cc8coaEC.s 			page 68
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccyWwaFr.s 			page 68
 
 
  2594 0827 5254455F 		.ascii	"RTE_SIGNALSTATUS_INITIALIZED\000"

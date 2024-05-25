@@ -42,7 +42,7 @@
 /* Cyclic Table */
 
 const RTE_cyclicTable_t RTE_cyclicActivationTable_tsk_system[] = {
-	{ SYSTEM_system_run, 1 },	//Runnable
+	{ SYSTEM_system_run, 5 },	//Runnable
 };
 const uint16_t RTE_cyclicActivation_tsk_system_size = sizeof (RTE_cyclicActivationTable_tsk_system) / sizeof(RTE_cyclicTable_t); 
 
@@ -61,7 +61,7 @@ const uint16_t RTE_cyclicActivation_tsk_system_size = sizeof (RTE_cyclicActivati
  * signalpoolsRO: sp_common
  * signalpoolsRW: sp_common
  * tickEvent: 0
- * timertickperiod: 1
+ * timertickperiod: 5
  */
 TASK(tsk_system)
 {
@@ -79,7 +79,7 @@ TASK(tsk_system)
 
 	/* USER CODE END TSK_SYSTEM_TASKBODY_POST */
 
-	ticktime += 1;
+	ticktime += 5;
 	if (ticktime > 0xFFFFFF00) ticktime = 0;
 	
 	TerminateTask();
