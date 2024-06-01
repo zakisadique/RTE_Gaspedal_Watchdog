@@ -1,0 +1,182 @@
+signalclasses:
+    sc_joystick:
+        datatrigger: 
+    sc_speed:
+        datatrigger: 
+    sc_brakelight:
+        datatrigger: 
+    sc_engine:
+        datatrigger: 
+    sc_logging:
+        datatrigger:
+
+signalpools:
+    sp_common:
+        start: ADR_SP_COMMON_START
+        end: ADR_SP_COMMON_END
+        signals:
+            so_joystick:
+                    class: sc_joystick
+                    inDriver: default
+                    outDriver: 0
+                    onDataUpdate: ev_joystick_onData
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_speed:
+                    class: sc_speed
+                    inDriver: 0
+                    outDriver: 0
+                    onDataUpdate: ev_speed_onData
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_engine:
+                    class: sc_engine
+                    inDriver: 0
+                    outDriver: default
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_brakelight:
+                    class: sc_brakelight
+                    inDriver: 0
+                    outDriver: default
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask: 
+            so_logging:
+                    class: sc_logging
+                    inDriver: 0
+                    outDriver: default
+                    onDataUpdate: 0
+                    onDataUpdateTask: 
+                    onDataError: 0
+                    onDataErrorTask:
+
+tasks:
+    tsk_io:
+        timertickperiod: 20
+        mode: Cyclic and Event
+        signalpoolsRO: sp_common
+        signalpoolsRW: sp_common
+        events: ev_speed_onData|ev_tick_10ms
+        runnables:
+                INPUT_readJoystick_run:
+                    task: tsk_io
+                    cycletime: 20
+                    events: 
+                    signalIN: 
+                    signalOUT: so_joystick
+            
+                OUTPUT_setEngine_run:
+                    task: tsk_io
+                    cycletime: 100
+                    events: 
+                    signalIN: so_speed
+                    signalOUT: so_engine
+            
+                OUTPUT_setBrakeLight_run:
+                    task: tsk_io
+                    cycletime: 0
+                    events: ev_speed_onData
+                    signalIN: so_speed
+                    signalOUT: so_brakelight
+            
+    tsk_logging:
+        timertickperiod: 1
+        mode: Event
+        signalpoolsRO: sp_common
+        signalpoolsRW: sp_common
+        events: ev_joystick_onData
+        runnables:
+                LOGGING_logging_run:
+                    task: tsk_logging
+                    cycletime: 0
+                    events: ev_joystick_onData
+                    signalIN: so_joystick
+                    signalOUT: so_logging
+            
+    tsk_control:
+        timertickperiod: 1
+        mode: Event
+        signalpoolsRO: sp_common
+        signalpoolsRW: sp_common
+        events: ev_joystick_onData
+        runnables:
+                CONTROL_calcControl_run:
+                    task: tsk_control
+                    cycletime: 0
+                    events: ev_joystick_onData
+                    signalIN: so_joystick
+                    signalOUT: so_speed
+            
+    tsk_system:
+        timertickperiod: 1
+        mode: Cyclic
+        signalpoolsRO: sp_common
+        signalpoolsRW: sp_common
+        events: 
+        runnables:
+                SYSTEM_system_run:
+                    task: tsk_system
+                    cycletime: 1
+                    events: 
+                    signalIN: 
+                    signalOUT:
+
+swc:
+    swc_input:
+        runnables:
+                INPUT_readJoystick_run:
+                    task: tsk_io
+                    cycletime: 20
+                    events: 
+                    signalIN: 
+                    signalOUT: so_joystick
+            
+    swc_control:
+        runnables:
+                CONTROL_calcControl_run:
+                    task: tsk_control
+                    cycletime: 0
+                    events: ev_joystick_onData
+                    signalIN: so_joystick
+                    signalOUT: so_speed
+            
+    swc_output:
+        runnables:
+                OUTPUT_setEngine_run:
+                    task: tsk_io
+                    cycletime: 100
+                    events: 
+                    signalIN: so_speed
+                    signalOUT: so_engine
+            
+                OUTPUT_setBrakeLight_run:
+                    task: tsk_io
+                    cycletime: 0
+                    events: ev_speed_onData
+                    signalIN: so_speed
+                    signalOUT: so_brakelight
+            
+    swc_logging:
+        runnables:
+                LOGGING_logging_run:
+                    task: tsk_logging
+                    cycletime: 0
+                    events: ev_joystick_onData
+                    signalIN: so_joystick
+                    signalOUT: so_logging
+            
+    swc_system:
+        runnables:
+                SYSTEM_system_run:
+                    task: tsk_system
+                    cycletime: 1
+                    events: 
+                    signalIN: 
+                    signalOUT:
+

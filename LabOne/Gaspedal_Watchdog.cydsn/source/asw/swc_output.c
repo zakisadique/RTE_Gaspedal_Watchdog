@@ -19,6 +19,7 @@
 
 /* USER CODE START SWC_OUTPUT_INCLUDE */
 #include "watchdog.h"
+#include "error.h"
 
 /* USER CODE END SWC_OUTPUT_INCLUDE */
 
@@ -45,12 +46,20 @@
 void OUTPUT_setEngine_run(RTE_event ev){
 	
 	/* USER CODE START OUTPUT_setEngine_run */
+        WD_Alive(WATCHDOG_RUN_SETENGINE);
+    if (ERROR_isRunnableActive(ERROR_SET_ENGINE) == FALSE){
+        return;
     
-//    UART_Logs_PutString("In Engine\n");
-//    UART_Logs_PutChar(SO_SPEED_signal.age);
-//    UART_Logs_PutString("\n"); 
+    }
+
+    if (RTE_SC_SPEED_getStatus(&SO_SPEED_signal) != RTE_SIGNALSTATUS_VALID) {
+        return;
+    }
     
-    SC_SPEED_data_t speed = RTE_SC_SPEED_get(&SO_SPEED_signal);
+    SC_SPEED_data_t speed = SC_SPEED_INIT_DATA;
+  
+    RTE_SC_SPEED_getThreadSafe(&SO_SPEED_signal, &speed);
+    
     SC_ENGINE_data_t engine = SC_ENGINE_INIT_DATA;
     
     if (RTE_SC_SPEED_getAge(&SO_SPEED_signal) < 50){
@@ -60,9 +69,9 @@ void OUTPUT_setEngine_run(RTE_event ev){
     }
     
     RTE_SC_ENGINE_set(&SO_ENGINE_signal, engine);
-    RC_t error = RTE_SC_ENGINE_pushPort(&SO_ENGINE_signal);
+    RTE_SC_ENGINE_pushPort(&SO_ENGINE_signal);
     
-    WD_Alive(WATCHDOG_RUN_SETENGINE);
+
 
     /* USER CODE END OUTPUT_setEngine_run */
 }
@@ -81,18 +90,31 @@ void OUTPUT_setEngine_run(RTE_event ev){
 void OUTPUT_setBrakeLight_run(RTE_event ev){
 	
 	/* USER CODE START OUTPUT_setBrakeLight_run */
+        WD_Alive(WATCHDOG_RUN_SETBRAKELIGHT);
+    if (ERROR_isRunnableActive(ERROR_SET_BRAKELIGHT) == FALSE){
+        return;
     
-//    UART_Logs_PutString("In Brakelight\n");
+    }
+
+    if (RTE_SC_SPEED_getStatus(&SO_SPEED_signal) != RTE_SIGNALSTATUS_VALID) {
+        return;
+    }
     
+    SC_SPEED_data_t speed = SC_SPEED_INIT_DATA;
+  
+    RTE_SC_SPEED_getThreadSafe(&SO_SPEED_signal, &speed);
     
-    volatile SC_SPEED_data_t speed = RTE_SC_SPEED_get(&SO_SPEED_signal);
+
     SC_BRAKELIGHT_data_t brake = SC_BRAKELIGHT_INIT_DATA;
+    
     if (speed.m_speedValue <= 0){
         brake.m_brakeValue = TRUE;
     }
+    
     RTE_SC_BRAKELIGHT_set(&SO_BRAKELIGHT_signal, brake);
+    
     RC_t error = RTE_SC_BRAKELIGHT_pushPort(&SO_BRAKELIGHT_signal);
-    WD_Alive(WATCHDOG_RUN_SETBRAKELIGHT);
+
 
     /* USER CODE END OUTPUT_setBrakeLight_run */
 }

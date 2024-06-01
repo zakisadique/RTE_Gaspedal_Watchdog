@@ -44,14 +44,11 @@ inline RC_t SC_ENGINE_driverOut(const SC_ENGINE_data_t  *const data)
     
 
 	//Scale application data to drive format
-    //PWM Here
-    
-//    UART_Logs_PutString("Engine Value");
+
 	//Write scaled data to driver
     
-    LED_RGB_Set(0, data -> m_engineValue, 0);
+    return LED_RGB_Set(0, data -> m_engineValue, 0);
 
-	return RC_SUCCESS;
 	/* USER CODE END driverOutSC_ENGINE */
 }
 

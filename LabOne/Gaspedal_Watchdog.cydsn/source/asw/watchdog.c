@@ -38,7 +38,9 @@
 /* Local type definitions ('typedef')                                        */
 /*****************************************************************************/
 
-WDT_Bitfields wdtBitfields = {0};
+//WDT_Bitfields wdtBitfields = {0};
+
+uint8_t wdtBitfields[NUMBER_OF_WATCHDOGS] = {0};
 
 /*****************************************************************************/
 /* Local variable definitions ('static')                                     */
@@ -90,26 +92,51 @@ boolean_t WD_CheckResetBit() {
 
 RC_t WD_Alive(WDT_Bits bit){
     
-    switch (bit){
-        case WATCHDOG_RUN_CALCCONTROL:
-            wdtBitfields.m_Bit_CalcControl = 1;
-            break;
-        case WATCHDOG_RUN_LOGGING:
-            wdtBitfields.m_Bit_Logging = 1;
-            break;
-        case WATCHDOG_RUN_READJOYSTICK:
-            wdtBitfields.m_BitReadJoystick = 1;
-            break;
-        case WATCHDOG_RUN_SETBRAKELIGHT:
-            wdtBitfields.m_Bit_SetBrakelight = 1;
-            break;
-        case WATCHDOG_RUN_SETENGINE:
-            wdtBitfields.m_Bit_SetEngine = 1;
-            break;
-        case WATCHDOG_RUN_SYSTEM:
-            wdtBitfields.m_Bit_System = 1;
-            break;
+//    switch (bit){
+//        case WATCHDOG_RUN_CALCCONTROL:
+//            wdtBitfields.m_Bit_CalcControl = 1;
+//            break;
+//        case WATCHDOG_RUN_LOGGING:
+//            wdtBitfields.m_Bit_Logging = 1;
+//            break;
+//        case WATCHDOG_RUN_READJOYSTICK:
+//            wdtBitfields.m_BitReadJoystick = 1;
+//            break;
+//        case WATCHDOG_RUN_SETBRAKELIGHT:
+//            wdtBitfields.m_Bit_SetBrakelight = 1;
+//            break;
+//        case WATCHDOG_RUN_SETENGINE:
+//            wdtBitfields.m_Bit_SetEngine = 1;
+//            break;
+//        case WATCHDOG_RUN_SYSTEM:
+//            wdtBitfields.m_Bit_System = 1;
+//            break;
+//    }
+    
+    
+    wdtBitfields[bit] = 1;
+    return RC_SUCCESS;
+    
+    
+}
+
+boolean_t WD_IsError(){
+    
+    for (uint8_t i = 0; i < NUMBER_OF_WATCHDOGS; ++i){
+        if (wdtBitfields[i] == 0){
+            return TRUE;
+        
+        }
+    
+    }
+    return FALSE;
+
+}
+
+RC_t WD_resetState(){
+    for (uint8_t i = 0; i < NUMBER_OF_WATCHDOGS; ++i){
+        wdtBitfields[i] = 0;
     }
     
-    
+    return RC_SUCCESS;
 }

@@ -2,7 +2,7 @@
 <rte>
  <configset>
   <config name="version" value="Erika 2"/>
-  <config name="path_out" value="{PROJECT_PATH}\source"/>
+  <config name="path_out" value="{PROJECT_PATH}\outError"/>
   <config name="templateDir" value="{GEN_PATH}\templates\Erika"/>
   <config name="userCodeStart" value="/\* USER CODE START {TAG} \*/"/>
   <config name="userCodeEnd" value="/\* USER CODE END {TAG} \*/"/>
@@ -37,6 +37,7 @@
   <task description="Task to log data on UART/TFT" events="" mode="Event" name="tsk_logging" shortname="logging" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="ev_joystick_onData" timertickperiod="1"/>
   <task description="Task doing work" events="" mode="Event" name="tsk_control" shortname="control" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="ev_joystick_onData" timertickperiod="1"/>
   <task description="Task managing the system" events="" mode="Cyclic" name="tsk_system" shortname="system" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="0" timertickperiod="1"/>
+  <task description="Task doing work" events="" mode="System" name="tsk_errorHandling" shortname="errorHandling" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="0" timertickperiod="1"/>
  </tasks>
  <signalclasses>
   <signalclass description="Signal for Joystick " name="sc_joystick" shortname="joystick"/>
@@ -58,6 +59,7 @@
   <swc description="engine and brakelights" name="swc_output" shortname="output"/>
   <swc description="Logging data on UART/TFT" name="swc_logging" shortname="logging"/>
   <swc description="Software component" name="swc_system" shortname="system"/>
+  <swc description="Software component" name="swc_errorHandler" shortname="errorHandler"/>
  </swcs>
  <runnables>
   <runnable component="swc_input" cycletime="20" description="takes input from joystick" events="" name="INPUT_readJoystick_run" shortname="readJoystick" signalIN="" signalOUT="so_joystick" task="tsk_io"/>
@@ -66,11 +68,13 @@
   <runnable component="swc_output" cycletime="0" description="Sets LED according to brake condition" events="ev_speed_onData" name="OUTPUT_setBrakeLight_run" shortname="setBrakeLight" signalIN="so_speed" signalOUT="so_brakelight" task="tsk_io"/>
   <runnable component="swc_logging" cycletime="0" description="Runnable" events="ev_joystick_onData" name="LOGGING_logging_run" shortname="logging" signalIN="so_joystick" signalOUT="so_logging" task="tsk_logging"/>
   <runnable component="swc_system" cycletime="1" description="Runnable" events="" name="SYSTEM_system_run" shortname="system" signalIN="" signalOUT="" task="tsk_system"/>
+  <runnable component="swc_errorHandler" cycletime="0" description="Runnable" events="ev_ev_errorHandler" name="ERRORHANDLER_errorHandler_run" shortname="errorHandler" signalIN="" signalOUT="" task="tsk_errorHandling"/>
  </runnables>
  <events>
   <event description="Triggers when joystick data is updated" name="ev_joystick_onData" shortname="joystick_onData"/>
   <event description="Triggers when speed sends data" name="ev_speed_onData" shortname="speed_onData"/>
   <event description="Triggers every 10ms" name="ev_tick_10ms" shortname="tick_10ms"/>
+  <event description="A Event" name="ev_ev_errorHandler" shortname="ev_errorHandler"/>
  </events>
  <resources>
   <resource description="A Resource for the joystick signal" name="res_joystick" restype="semaphore" shortname="joystick"/>

@@ -38,7 +38,7 @@ struct
     
 	char_t* m_loggingEntity;
     char_t* loggingValue;
-    uint8_t dataSize;
+    uint8_t loggingDisabled;
 } 
 /* USER CODE END SC_LOGGING_SIGNALDATADEFINITION */
 SC_LOGGING_data_t;

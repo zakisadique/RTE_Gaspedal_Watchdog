@@ -1,5 +1,5 @@
 -- Project:   C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn\Gaspedal_Watchdog.cyprj
--- Generated: 05/25/2024 21:40:52
+-- Generated: 05/31/2024 22:30:31
 -- PSoC Creator  4.4
 
 ENTITY Gaspedal_Watchdog IS

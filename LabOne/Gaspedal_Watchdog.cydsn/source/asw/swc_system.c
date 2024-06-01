@@ -49,42 +49,17 @@
 void SYSTEM_system_run(RTE_event ev){
 	
 	/* USER CODE START SYSTEM_system_run */
-    
-    uint32_t speedAge = RTE_SC_SPEED_getAge(&SO_SPEED_signal);
+
     
     #if TEST_AGE == 0
-    RTE_SC_SPEED_incAge(&SO_SPEED_signal, 1);
+        RTE_timertick_sp_common_tick(1);
     #endif
     
     #if TEST_AGE == 1
-        RTE_SC_SPEED_incAge(&SO_SPEED_signal, 500);
+        RTE_timertick_sp_common_tick(500);
     #endif
     WD_Alive(WATCHDOG_RUN_SYSTEM);
     
-//    if (
-//            wdtBitfields.m_Bit_CalcControl == 1 &&
-//            wdtBitfields.m_Bit_Logging == 1 &&
-//            wdtBitfields.m_Bit_SetBrakelight == 1 &&
-//            wdtBitfields.m_Bit_SetEngine == 1 &&
-//            wdtBitfields.m_Bit_System == 1 &&
-//            wdtBitfields.m_BitReadJoystick == 1
-//        ) {
-//        WD_Trigger();
-//        
-//        wdtBitfields.m_Bit_CalcControl = 0;
-//        wdtBitfields.m_Bit_Logging = 0;
-//        wdtBitfields.m_Bit_SetBrakelight = 0;
-//        wdtBitfields.m_Bit_SetEngine = 0;
-//        wdtBitfields.m_Bit_System = 0;
-//        wdtBitfields.m_BitReadJoystick = 0;
-//    }
-    
-    
-    
-    
-//    
-//    UART_Logs_PutString("a ");
-//    UART_Logs_PutChar(speedAge);
     
     /* USER CODE END SYSTEM_system_run */
 }

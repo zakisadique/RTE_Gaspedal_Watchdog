@@ -67,6 +67,7 @@ TASK(tsk_control)
     
 	/* USER CODE START TSK_CONTROL_INIT */
 
+
 	/* USER CODE END TSK_CONTROL_INIT */
 	
     while(1)
@@ -77,6 +78,7 @@ TASK(tsk_control)
         ClearEvent(ev);
 		
 		/* USER CODE START TSK_CONTROL_TASKBOBY_PRE */
+        SetRelAlarm(alrm_error_control, 10, 0);
 
 		/* USER CODE END TSK_CONTROL_TASKBODY_PRE */
     
@@ -85,6 +87,7 @@ TASK(tsk_control)
         RTE_ProcessEventTable(RTE_eventActivationTable_tsk_control, RTE_eventActivation_tsk_control_size, ev);
 		
 		/* USER CODE START TSK_CONTROL_TASKBODY_POST */
+        CancelAlarm(alrm_error_control);
 
 		/* USER CODE END TSK_CONTROL_TASKBODY_POST */
 

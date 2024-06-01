@@ -58,6 +58,10 @@
           <File BuildType="BUILD" Toolchain="">source\asw\tsk_system.h</File>
           <File BuildType="BUILD" Toolchain="">source\asw\watchdog.c</File>
           <File BuildType="BUILD" Toolchain="">source\asw\watchdog.h</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\swc_errorhandler.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\swc_errorhandler.h</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\tsk_errorhandler.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\tsk_errorhandler.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn">
@@ -70,6 +74,8 @@
           <File BuildType="BUILD" Toolchain="">source\bsw\joystick.h</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\led.c</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\led.h</File>
+          <File BuildType="BUILD" Toolchain="">source\bsw\error.c</File>
+          <File BuildType="BUILD" Toolchain="">source\bsw\error.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\zakis\Documents\EAA\RTE_Gaspedal_Watchdog\LabOne\Gaspedal_Watchdog.cydsn">

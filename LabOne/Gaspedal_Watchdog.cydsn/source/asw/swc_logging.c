@@ -21,6 +21,7 @@
 
 #include <string.h>
 #include "watchdog.h"
+#include "error.h"
 
 
 /* USER CODE END SWC_LOGGING_INCLUDE */
@@ -61,9 +62,6 @@ RC_t convertToString(sint8_t number, char_t *buffer) {
     /* Add null terminator to the end of the string. */
     buffer[4] = '\0';
 
-//    while (i < 3) {
-//        buffer[i++] = '0';
-//    }
 
     /* Reverse the string to get the correct order. */
     reverseString(buffer, 4);
@@ -111,35 +109,34 @@ RC_t reverseString(char_t *str, uint8_t length) {
 void LOGGING_logging_run(RTE_event ev){
 	
 	/* USER CODE START LOGGING_logging_run */
-//    UART_Logs_PutString("In Logging swc\n");
     
-    volatile SC_JOYSTICK_data_t joystick = RTE_SC_JOYSTICK_get(&SO_JOYSTICK_signal);
+        WD_Alive(WATCHDOG_RUN_LOGGING);
+    if (ERROR_isRunnableActive(ERROR_LOGGING) == FALSE){
+        return;
+    
+    }
+
+    if (RTE_SC_JOYSTICK_getStatus(&SO_JOYSTICK_signal) != RTE_SIGNALSTATUS_VALID) {
+        return;
+    }
+    
+    SC_JOYSTICK_data_t joystickData = SC_JOYSTICK_INIT_DATA;
+    RTE_SC_JOYSTICK_getThreadSafe(&SO_JOYSTICK_signal, &joystickData);
+    
+
     SC_LOGGING_data_t log = SC_LOGGING_INIT_DATA;
     
-    sint8_t acceleratorValue = joystick.m_joystickValue;
+    sint8_t acceleratorValue = joystickData.m_joystickValue;
 
     char_t intBuffer[10];
     intBuffer[0] = '\0';
-    convertToString(acceleratorValue, intBuffer);
-//    strncpy(log.loggingValues[0], intBuffer, sizeof(intBuffer));
-   // strcpy_custom(log.loggingValues[0], intBuffer);
-    
-    
+    convertToString(acceleratorValue, intBuffer); 
     log.loggingValue = intBuffer;
-    
-    
-//    log.loggingValues[0] = intBuffer;
-//    log.dataSize = sizeof(buffer);
-    
     RTE_SC_LOGGING_set(&SO_LOGGING_signal, log);
-    
-    
-    
-    RC_t error = RTE_SC_LOGGING_pushPort(&SO_LOGGING_signal);
-    
-//    RTE_SC_LOGGING_set(SC_
-    
-    WD_Alive(WATCHDOG_RUN_LOGGING);
+
+    RTE_SC_LOGGING_pushPort(&SO_LOGGING_signal);
+
+
     
     /* USER CODE END LOGGING_logging_run */
 }

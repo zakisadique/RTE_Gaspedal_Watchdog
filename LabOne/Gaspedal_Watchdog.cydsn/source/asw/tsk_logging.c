@@ -66,6 +66,8 @@ TASK(tsk_logging)
     EventMaskType ev = 0;
     
 	/* USER CODE START TSK_LOGGING_INIT */
+    
+
 
 	/* USER CODE END TSK_LOGGING_INIT */
 	
@@ -77,7 +79,7 @@ TASK(tsk_logging)
         ClearEvent(ev);
 		
 		/* USER CODE START TSK_LOGGING_TASKBOBY_PRE */
-
+        SetRelAlarm(alrm_error_logging, 80, 0);
 		/* USER CODE END TSK_LOGGING_TASKBODY_PRE */
     
 
@@ -86,6 +88,8 @@ TASK(tsk_logging)
 		
 		/* USER CODE START TSK_LOGGING_TASKBODY_POST */
 
+        CancelAlarm(alrm_error_logging);
+        
 		/* USER CODE END TSK_LOGGING_TASKBODY_POST */
 
         

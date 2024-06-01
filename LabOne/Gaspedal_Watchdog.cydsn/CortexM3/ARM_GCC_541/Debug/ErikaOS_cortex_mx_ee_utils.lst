@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
   28:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * exception statement from your version.
   29:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  *
   30:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * ERIKA Enterprise is distributed in the hope that it will be
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 2
 
 
   31:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
   35              		.cfi_offset 14, -4
   36              	.LBB14:
   37              	.LBB15:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 3
 
 
   38              	.LBB16:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
   53:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
   54:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
   55:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef __INCLUDE_CORTEX_MX_EE_CPU_H__
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 4
 
 
   56:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define __INCLUDE_CORTEX_MX_EE_CPU_H__
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  110:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
  111:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Set a breakpoint */
  112:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define __breakpoint(value)	__ASM ("bkpt "#value)
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 5
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 5
 
 
  113:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  167:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_std_thread_tos EE_pic30_thread_tos */
  168:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif /* __MULTI__ */
  169:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 6
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 6
 
 
  170:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*********************************************************************
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  224:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __IAR__ */
  225:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __CCS__
  226:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("    msr    primask, r0\n");
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 7
 
 
  227:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __CCS__ */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
   83:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****   flags = EE_hal_suspendIRQ();
   84:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 
   85:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	/* 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 8
 
 
   86:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	 * Set the priority of PendSV to the minimum one
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
   97 000b 01       		.uleb128 0x1
   98 000c 74040000 		.4byte	.LASF69
   99 0010 0C       		.byte	0xc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 9
 
 
  100 0011 EA030000 		.4byte	.LASF70
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  154 007d 04       		.uleb128 0x4
  155 007e 5C030000 		.4byte	.LASF11
  156 0082 03       		.byte	0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 10
 
 
  157 0083 52       		.byte	0x52
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  211 00fc 04       		.byte	0x4
  212 00fd 7202     		.2byte	0x272
  213 00ff 2B010000 		.4byte	0x12b
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 11
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 11
 
 
  214 0103 07       		.uleb128 0x7
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  268 0175 D0030000 		.4byte	.LASF29
  269 0179 00       		.byte	0
  270 017a 09       		.uleb128 0x9
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 12
 
 
  271 017b 67010000 		.4byte	.LASF30
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  325 01eb 02050000 		.4byte	.LASF37
  326 01ef 04       		.byte	0x4
  327 01f0 A102     		.2byte	0x2a1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 13
 
 
  328 01f2 D6000000 		.4byte	0xd6
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  382 025c 6C020000 		.4byte	0x26c
  383 0260 0E       		.uleb128 0xe
  384 0261 3E030000 		.4byte	.LASF47
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 14
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 14
 
 
  385 0265 02       		.byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  439 02e2 00       		.byte	0
  440 02e3 00       		.byte	0
  441 02e4 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 15
 
 
  442 02e5 17       		.uleb128 0x17
@@ -879,7 +879,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  477 033a 45030000 		.4byte	0x345
  478 033e 1C       		.uleb128 0x1c
  479 033f 1E020000 		.4byte	0x21e
- 480 0343 05       		.byte	0x5
+ 480 0343 06       		.byte	0x6
  481 0344 00       		.byte	0
  482 0345 1D       		.uleb128 0x1d
  483 0346 9E000000 		.4byte	0x9e
@@ -898,14 +898,14 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  496 0365 1D       		.uleb128 0x1d
  497 0366 35030000 		.4byte	0x335
  498 036a 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 16
 
 
  499 036b 9E000000 		.4byte	0x9e
  500 036f 7A030000 		.4byte	0x37a
  501 0373 1C       		.uleb128 0x1c
  502 0374 1E020000 		.4byte	0x21e
- 503 0378 05       		.byte	0x5
+ 503 0378 06       		.byte	0x6
  504 0379 00       		.byte	0
  505 037a 1A       		.uleb128 0x1a
  506 037b FD020000 		.4byte	.LASF53
@@ -917,7 +917,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  512 038a 95030000 		.4byte	0x395
  513 038e 1C       		.uleb128 0x1c
  514 038f 1E020000 		.4byte	0x21e
- 515 0393 05       		.byte	0x5
+ 515 0393 06       		.byte	0x6
  516 0394 00       		.byte	0
  517 0395 1A       		.uleb128 0x1a
  518 0396 69040000 		.4byte	.LASF54
@@ -954,11 +954,11 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  549 03de E9030000 		.4byte	0x3e9
  550 03e2 1C       		.uleb128 0x1c
  551 03e3 1E020000 		.4byte	0x21e
- 552 03e7 05       		.byte	0x5
+ 552 03e7 06       		.byte	0x6
  553 03e8 00       		.byte	0
  554 03e9 1E       		.uleb128 0x1e
  555 03ea 4A000000 		.4byte	.LASF60
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 17
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 17
 
 
  556 03ee 04       		.byte	0x4
@@ -985,7 +985,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  577 0420 2B040000 		.4byte	0x42b
  578 0424 1C       		.uleb128 0x1c
  579 0425 1E020000 		.4byte	0x21e
- 580 0429 01       		.byte	0x1
+ 580 0429 04       		.byte	0x4
  581 042a 00       		.byte	0
  582 042b 1D       		.uleb128 0x1d
  583 042c C8010000 		.4byte	0x1c8
@@ -1013,12 +1013,12 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  605 0462 6D040000 		.4byte	0x46d
  606 0466 1C       		.uleb128 0x1c
  607 0467 1E020000 		.4byte	0x21e
- 608 046b 01       		.byte	0x1
+ 608 046b 04       		.byte	0x4
  609 046c 00       		.byte	0
  610 046d 1E       		.uleb128 0x1e
  611 046e 97020000 		.4byte	.LASF64
  612 0472 04       		.byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 18
 
 
  613 0473 0403     		.2byte	0x304
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  667 000d 11       		.uleb128 0x11
  668 000e 01       		.uleb128 0x1
  669 000f 10       		.uleb128 0x10
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 19
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 19
 
 
  670 0010 17       		.uleb128 0x17
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  724 0046 0B       		.uleb128 0xb
  725 0047 0B       		.uleb128 0xb
  726 0048 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 20
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 20
 
 
  727 0049 0B       		.uleb128 0xb
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  781 007f 05       		.uleb128 0x5
  782 0080 49       		.uleb128 0x49
  783 0081 13       		.uleb128 0x13
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 21
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 21
 
 
  784 0082 38       		.uleb128 0x38
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  838 00b8 34       		.uleb128 0x34
  839 00b9 00       		.byte	0
  840 00ba 03       		.uleb128 0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 22
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 22
 
 
  841 00bb 0E       		.uleb128 0xe
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  895 00f1 00       		.byte	0
  896 00f2 00       		.byte	0
  897 00f3 12       		.uleb128 0x12
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 23
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 23
 
 
  898 00f4 2E       		.uleb128 0x2e
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  952 012b 00       		.byte	0
  953 012c 00       		.byte	0
  954 012d 15       		.uleb128 0x15
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 24
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 24
 
 
  955 012e 0B       		.uleb128 0xb
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1009 0166 0B       		.uleb128 0xb
  1010 0167 3B       		.uleb128 0x3b
  1011 0168 0B       		.uleb128 0xb
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 25
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 25
 
 
  1012 0169 49       		.uleb128 0x49
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1066 019f 19       		.uleb128 0x19
  1067 01a0 3C       		.uleb128 0x3c
  1068 01a1 19       		.uleb128 0x19
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 26
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 26
 
 
  1069 01a2 6E       		.uleb128 0x6e
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1110      73706572 
  1110      62617365 
  1110      00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 27
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 27
 
 
  1111              	.LASF59:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1136      6500
  1137              	.LASF62:
  1138 00cb 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 28
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 28
 
 
  1138      6F5F636F 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1159              	.LASF22:
  1160 0189 6D617861 		.ascii	"maxallowedvalue\000"
  1160      6C6C6F77 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 29
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 29
 
 
  1160      65647661 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1180              	.LASF72:
  1181 027f 45455F63 		.ascii	"EE_cortex_mx_suspendIRQ\000"
  1181      6F727465 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 30
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 30
 
 
  1181      785F6D78 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1202              	.LASF47:
  1203 033e 69737461 		.ascii	"istat\000"
  1203      7400
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 31
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 31
 
 
  1204              	.LASF3:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1228              	.LASF21:
  1229 03de 436F756E 		.ascii	"CounterType\000"
  1229      74657254 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 32
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 32
 
 
  1229      79706500 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 1
  1249              	.LASF65:
  1250 050b 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
  1250      6F5F4952 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccRMEIQl.s 			page 33
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccbeVahd.s 			page 33
 
 
  1250      515F6469 

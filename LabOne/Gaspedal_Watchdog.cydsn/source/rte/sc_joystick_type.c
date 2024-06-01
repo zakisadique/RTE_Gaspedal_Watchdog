@@ -14,6 +14,7 @@
 #include "rte.h"
 #include "rte_types.h"
 #include "sc_joystick_type.h"
+#include "joystick.h"
 
 
 
@@ -43,17 +44,21 @@ inline RC_t SC_JOYSTICK_driverIn(SC_JOYSTICK_data_t *const data)
 	/* USER CODE START driverInSC_JOYSTICK */
 //    UART_Logs_PutString("JoystickIN\n");
 	//Read data from the MCAL driver
+    RC_t ret = RC_SUCCESS;
     sint8_t x = 0;
     sint8_t y = 0; 
     
     sint8_t* x_ptr = &x;
     sint8_t* y_ptr = &y;
     
-    JOYSTICK_ReadPosition(x_ptr, y_ptr);
+    ret = JOYSTICK_ReadPosition(x_ptr, y_ptr);
+    if (ret != RC_SUCCESS) {
+        return ret;
+    }
     data -> m_joystickValue = y;
 	//Scale it to the application type
 
-	return RC_SUCCESS;
+	return ret;
 	/* USER CODE END driverInSC_JOYSTICK */
 }
 

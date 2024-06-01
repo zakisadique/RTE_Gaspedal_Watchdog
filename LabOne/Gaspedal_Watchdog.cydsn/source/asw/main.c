@@ -20,9 +20,9 @@
 #include "tft.h"
 #include "watchdog.h"
 
-extern WDT_Bitfields wdtBitfields;
+//extern WDT_Bitfields wdtBitfields;
 
-#define TEST_WATCHDOG 1
+#define TEST_WATCHDOG 0
 
 //ISR which will increment the systick counter every ms
 ISR(systick_handler)
@@ -90,6 +90,7 @@ TASK(tsk_init)
     SetRelAlarm(alrm_10_ms,1,20);
     SetRelAlarm(alrm_1_ms,1,1);
     
+    ActivateTask(tsk_errorhandler);
     ActivateTask(tsk_io);
     ActivateTask(tsk_control);
     ActivateTask(tsk_logging);
@@ -107,25 +108,33 @@ TASK(tsk_background)
     while(1)
     {
         //do something with low prioroty
-        #if TEST_WATCHDOG == 1 
-        
-        if (
-            wdtBitfields.m_Bit_CalcControl == 1 &&
-            wdtBitfields.m_Bit_Logging == 1 &&
-            wdtBitfields.m_Bit_SetBrakelight == 1 &&
-            wdtBitfields.m_Bit_SetEngine == 1 &&
-            wdtBitfields.m_Bit_System == 1 &&
-            wdtBitfields.m_BitReadJoystick == 1
-        ) {
-        WD_Trigger();
-        }
-        
-        wdtBitfields.m_Bit_CalcControl = 0;
-        wdtBitfields.m_Bit_Logging = 0;
-        wdtBitfields.m_Bit_SetBrakelight = 0;
-        wdtBitfields.m_Bit_SetEngine = 0;
-        wdtBitfields.m_Bit_System = 0;
-        wdtBitfields.m_BitReadJoystick = 0;
+        #if TEST_WATCHDOG == 0 
+//        
+//        if (
+////            wdtBitfields.m_Bit_CalcControl == 1 &&
+////            wdtBitfields.m_Bit_Logging == 1 &&
+////            wdtBitfields.m_Bit_SetBrakelight == 1 &&
+////            wdtBitfields.m_Bit_SetEngine == 1 &&
+////            wdtBitfields.m_Bit_System == 1 &&
+////            wdtBitfields.m_BitReadJoystick == 1
+//        ) {
+//        WD_Trigger();
+//        }
+//        
+//        wdtBitfields.m_Bit_CalcControl = 0;
+//        wdtBitfields.m_Bit_Logging = 0;
+//        wdtBitfields.m_Bit_SetBrakelight = 0;
+//        wdtBitfields.m_Bit_SetEngine = 0;
+//        wdtBitfields.m_Bit_System = 0;
+//        wdtBitfields.m_BitReadJoystick = 0;
+            
+            
+            if (WD_IsError() == FALSE){
+                WD_Trigger();
+                WD_resetState();
+            }
+            
+            
         
         #endif
     }

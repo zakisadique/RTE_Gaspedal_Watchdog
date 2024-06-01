@@ -17,8 +17,10 @@
 
 
 
+
 /* USER CODE START SWC_CONTROL_INCLUDE */
 #include "watchdog.h"
+#include "error.h"
 
 /* USER CODE END SWC_CONTROL_INCLUDE */
 
@@ -45,26 +47,31 @@
 void CONTROL_calcControl_run(RTE_event ev){
 	
 	/* USER CODE START CONTROL_calcControl_run */
-//    UART_Logs_PutString("In Control swc\n");
-    SC_JOYSTICK_data_t joystickData = RTE_SC_JOYSTICK_get(&SO_JOYSTICK_signal);
+    WD_Alive(WATCHDOG_RUN_CALCCONTROL);
+    if (ERROR_isRunnableActive(ERROR_CONTROL) == FALSE){
+        return;
+    
+    }
+        
+    if (RTE_SC_JOYSTICK_getStatus(&SO_JOYSTICK_signal) != RTE_SIGNALSTATUS_VALID) {
+        return;
+    }
+    
+    SC_JOYSTICK_data_t joystickData = SC_JOYSTICK_INIT_DATA;
+
+    RTE_SC_JOYSTICK_getThreadSafe(&SO_JOYSTICK_signal, &joystickData);
     SC_SPEED_data_t speed = SC_SPEED_INIT_DATA;
     
     if (joystickData.m_joystickValue > 0){
         speed.m_speedValue = 2 * joystickData.m_joystickValue;
     }
 
-    //UART_Logs_PutChar(joystickData.m_joystickValueX);
     RTE_SC_SPEED_set(&SO_SPEED_signal, speed);
-//    UART_Logs_PutChar(SO_SPEED_signal.value.m_speedValue);
-//    UART_Logs_PutString("\n"); 
-    
-//    SC_SPEED_data_t data = {60};
-//    RC_t error = RTE_SC_SPEED_set(&SO_SPEED_signal, data);
-//    UART_Logs_PutString("In control\n");
+
 
     /* USER CODE END CONTROL_calcControl_run */
     
-    WD_Alive(WATCHDOG_RUN_CALCCONTROL);
+    
 }
 
 /* USER CODE START SWC_CONTROL_FUNCTIONS */

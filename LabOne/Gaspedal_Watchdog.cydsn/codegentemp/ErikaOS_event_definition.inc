@@ -9,98 +9,98 @@
  *
  * ========================================
 */
-    #define EE_MAX_EVENT 3
-    #if 3 > 0
+    #define EE_MAX_EVENT 4
+    #if 4 > 0
     #define ev_joystick_onData 0x1U
     #endif
-    #if 3 > 1
+    #if 4 > 1
     #define ev_speed_onData 0x2U
     #endif
-    #if 3 > 2
+    #if 4 > 2
     #define ev_tick_10ms 0x4U
     #endif
-    #if 3 > 3
-    #define Event_4 0x8U
+    #if 4 > 3
+    #define ev_error 0x8U
     #endif
-    #if 3 > 4
+    #if 4 > 4
     #define Event_5 0x10U
     #endif
-    #if 3 > 5
+    #if 4 > 5
     #define Event_6 0x20U
     #endif
-    #if 3 > 6
+    #if 4 > 6
     #define Event_7 0x40U
     #endif
-    #if 3 > 7
+    #if 4 > 7
     #define Event_8 0x80U
     #endif
-    #if 3 > 8
+    #if 4 > 8
     #define Event_9 0x100U
     #endif
-    #if 3 > 9
+    #if 4 > 9
     #define Event_10 0x200U
     #endif
-    #if 3 > 10
+    #if 4 > 10
     #define Event_11 0x400U
     #endif
-    #if 3 > 11
+    #if 4 > 11
     #define Event_12 0x800U
     #endif
-    #if 3 > 12
+    #if 4 > 12
     #define Event_13 0x1000U
     #endif
-    #if 3 > 13
+    #if 4 > 13
     #define Event_14 0x2000U
     #endif
-    #if 3 > 14
+    #if 4 > 14
     #define Event_15 0x4000U
     #endif
-    #if 3 > 15
+    #if 4 > 15
     #define Event_16 0x8000U
     #endif
-    #if 3 > 16
+    #if 4 > 16
     #define Event_17 0x10000U
     #endif
-    #if 3 > 17
+    #if 4 > 17
     #define Event_18 0x20000U
     #endif
-    #if 3 > 18
+    #if 4 > 18
     #define Event_19 0x40000U
     #endif
-    #if 3 > 19
+    #if 4 > 19
     #define Event_20 0x80000U
     #endif
-    #if 3 > 20
+    #if 4 > 20
     #define Event_21 0x100000U
     #endif
-    #if 3 > 21
+    #if 4 > 21
     #define Event_22 0x200000U
     #endif
-    #if 3 > 22
+    #if 4 > 22
     #define Event_23 0x400000U
     #endif
-    #if 3 > 23
+    #if 4 > 23
     #define Event_24 0x800000U
     #endif
-    #if 3 > 24
+    #if 4 > 24
     #define Event_25 0x1000000U
     #endif
-    #if 3 > 25
+    #if 4 > 25
     #define Event_26 0x2000000U
     #endif
-    #if 3 > 26
+    #if 4 > 26
     #define Event_27 0x4000000U
     #endif
-    #if 3 > 27
+    #if 4 > 27
     #define Event_28 0x8000000U
     #endif
-    #if 3 > 28
+    #if 4 > 28
     #define Event_29 0x10000000U
     #endif
-    #if 3 > 29
+    #if 4 > 29
     #define Event_30 0x20000000U
     #endif
-    #if 3 > 30
+    #if 4 > 30
     #define Event_31 0x40000000U
     #endif
 

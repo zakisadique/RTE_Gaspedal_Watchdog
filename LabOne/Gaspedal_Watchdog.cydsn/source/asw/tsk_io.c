@@ -34,6 +34,8 @@
 
 /* USER CODE START TSK_IO_USERDEFINITIONS */
 
+
+
 /* USER CODE END TSK_IO_USERDEFINITIONS */
 
 /*******************************************************************************
@@ -78,6 +80,8 @@ TASK(tsk_io)
     EventMaskType ev = 0;
 	
 	/* USER CODE START TSK_IO_INIT */
+    
+
 
 	/* USER CODE END TSK_IO_INIT */
     
@@ -89,7 +93,7 @@ TASK(tsk_io)
         ClearEvent(ev);
     
 		/* USER CODE START TSK_IO_TASKBOBY_PRE */
-
+        SetRelAlarm(alrm_error_io, 10, 0);
 		/* USER CODE END TSK_IO_TASKBODY_PRE */
         
         if (ev & ev_tick_10ms){
@@ -105,7 +109,7 @@ TASK(tsk_io)
 		RTE_ProcessEventTable(RTE_eventActivationTable_tsk_io, RTE_eventActivation_tsk_io_size, ev);
 		
 		/* USER CODE START TSK_IO_TASKBODY_POST */
-
+        CancelAlarm(alrm_error_io);
 		/* USER CODE END TSK_IO_TASKBODY_POST */
         
     }

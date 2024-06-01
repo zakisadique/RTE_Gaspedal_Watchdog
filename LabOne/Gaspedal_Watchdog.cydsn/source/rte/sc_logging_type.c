@@ -50,6 +50,13 @@ inline RC_t SC_LOGGING_driverOut(const SC_LOGGING_data_t  *const data)
         TFT_setCursor(0, 30);
         TFT_print(data->m_loggingEntity);
         firstUse = 0;
+    } 
+    
+    if (data ->loggingDisabled == 1){
+        TFT_setCursor(0, 0);
+        TFT_clearScreen();
+        TFT_print("Logging Disabled to enhance performance");
+        return RC_SUCCESS;
     }
     
     UART_Logs_PutString(data->m_loggingEntity);
