@@ -47,20 +47,10 @@ typedef enum {
     WATCHDOG_RUN_SETBRAKELIGHT,
     WATCHDOG_RUN_LOGGING,
     WATCHDOG_RUN_SYSTEM
-} WDT_Bits;
-    
-//typedef uint8_t WDT_Bits;
+} WDT_Bits_t;
 
-//typedef struct{
-//    uint8_t    m_BitReadJoystick;	
-//    uint8_t    m_Bit_CalcControl;    
-//    uint8_t    m_Bit_SetEngine;     
-//    uint8_t    m_Bit_SetBrakelight;          
-//    uint8_t    m_Bit_Logging;            
-//    uint8_t    m_Bit_System;     
-//}WDT_Bitfields;
 
-extern uint8_t wdtBitfields[NUMBER_OF_WATCHDOGS];
+extern boolean_t wdtBitfields[NUMBER_OF_WATCHDOGS];
     
 typedef enum {
     PERIOD_1024_TICK,
@@ -92,9 +82,10 @@ public:
 RC_t WD_Start(WDT_TimeOut_t timeout);
 RC_t WD_Trigger();
 boolean_t WD_CheckResetBit();
-RC_t WD_Alive(WDT_Bits bit);
+RC_t WD_Alive(WDT_Bits_t bit);
 boolean_t WD_IsError();
 RC_t WD_resetState();
+RC_t WD_displayInitialMessage();
 
 
 

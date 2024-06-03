@@ -51,9 +51,9 @@ void ERRORHANDLER_errorHandler_run(RTE_event ev){
     ERROR_disableRunnable(ERROR_LOGGING);
     SC_LOGGING_data_t log = SC_LOGGING_INIT_DATA;
     
-    log.loggingDisabled = 1;
+    log.m_loggingDisabled = 1;
     log.m_loggingEntity = "";
-    log.loggingValue = "";
+    log.m_loggingValue = "";
     RTE_SC_LOGGING_set(&SO_LOGGING_signal, log);
     RTE_SC_LOGGING_pushPort(&SO_LOGGING_signal);
 

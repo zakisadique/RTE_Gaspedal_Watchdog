@@ -131,7 +131,7 @@ void LOGGING_logging_run(RTE_event ev){
     char_t intBuffer[10];
     intBuffer[0] = '\0';
     convertToString(acceleratorValue, intBuffer); 
-    log.loggingValue = intBuffer;
+    log.m_loggingValue = intBuffer;
     RTE_SC_LOGGING_set(&SO_LOGGING_signal, log);
 
     RTE_SC_LOGGING_pushPort(&SO_LOGGING_signal);

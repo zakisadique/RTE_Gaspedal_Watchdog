@@ -66,15 +66,7 @@ TASK(tsk_init)
     TFT_init();
     TFT_setCursor(0, 0);
     
-    UART_Logs_PutString("\nSytem Online\n");
-    if (WD_CheckResetBit() == TRUE){
-        UART_Logs_PutString("Rebooted after watchdog reset\n");
-        
-        TFT_print((char_t*)"Rebooted after watchdog reset");
-    } else {
-        UART_Logs_PutString("Rebooted after power on reset\n");
-        TFT_print((char_t*)"Rebooted after power on reset");
-    }
+    WD_displayInitialMessage();
     
     //Reconfigure ISRs with OS parameters.
     //This line MUST be called after the hardware driver initialisation!
@@ -109,26 +101,7 @@ TASK(tsk_background)
     {
         //do something with low prioroty
         #if TEST_WATCHDOG == 0 
-//        
-//        if (
-////            wdtBitfields.m_Bit_CalcControl == 1 &&
-////            wdtBitfields.m_Bit_Logging == 1 &&
-////            wdtBitfields.m_Bit_SetBrakelight == 1 &&
-////            wdtBitfields.m_Bit_SetEngine == 1 &&
-////            wdtBitfields.m_Bit_System == 1 &&
-////            wdtBitfields.m_BitReadJoystick == 1
-//        ) {
-//        WD_Trigger();
-//        }
-//        
-//        wdtBitfields.m_Bit_CalcControl = 0;
-//        wdtBitfields.m_Bit_Logging = 0;
-//        wdtBitfields.m_Bit_SetBrakelight = 0;
-//        wdtBitfields.m_Bit_SetEngine = 0;
-//        wdtBitfields.m_Bit_System = 0;
-//        wdtBitfields.m_BitReadJoystick = 0;
-            
-            
+  
             if (WD_IsError() == FALSE){
                 WD_Trigger();
                 WD_resetState();
@@ -142,7 +115,10 @@ TASK(tsk_background)
     
 }
 
+ISR2(isr_Button_Joystick){
+    ShutdownOS(1);
 
+}
 
 
 

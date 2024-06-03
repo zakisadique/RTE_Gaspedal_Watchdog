@@ -142,7 +142,7 @@
 
     /* Number of isr */
     #include "ErikaOS_ISR_definition.inc"
-    #define EE_MAX_ISR_ID 0    
+    #define EE_MAX_ISR_ID 1    
     #define EE_MAX_ISR2   Number_ISR2
     #define EE_MAX_ISR2_WITH_RESOURCES Number_ISR2_Resources
     
@@ -243,7 +243,7 @@ extern void systick_handler(void);
 #endif
 
 #if EE_MAX_ISR_ID > 0
-extern void ISR_1(void);
+extern void isr_Button_Joystick(void);
 #endif
 #if EE_MAX_ISR_ID > 1
 extern void ISR_2(void);

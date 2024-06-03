@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
   28:source\asw/tsk_logging.c **** /* USER CODE END TSK_LOGGING_INCLUDE */
   29:source\asw/tsk_logging.c **** 
   30:source\asw/tsk_logging.c **** #include "swc_logging.h"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 2
 
 
   31:source\asw/tsk_logging.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
   72:source\asw/tsk_logging.c **** 	/* USER CODE END TSK_LOGGING_INIT */
   73:source\asw/tsk_logging.c **** 	
   74:source\asw/tsk_logging.c ****     while(1)
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 3
 
 
   75:source\asw/tsk_logging.c ****     {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
   78              		.global	RTE_eventActivation_tsk_logging_size
   79              		.global	RTE_eventActivationTable_tsk_logging
   80              		.section	.rodata
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 4
 
 
   81              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  135 0040 2B       		.byte	0x2b
  136 0041 45000000 		.4byte	0x45
  137 0045 02       		.uleb128 0x2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 5
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 5
 
 
  138 0046 02       		.byte	0x2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  192 00ac 02       		.uleb128 0x2
  193 00ad 08       		.byte	0x8
  194 00ae 04       		.byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 6
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 6
 
 
  195 00af 3F030000 		.4byte	.LASF16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  249 0125 08       		.byte	0x8
  250 0126 08       		.byte	0x8
  251 0127 74       		.byte	0x74
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 7
 
 
  252 0128 45010000 		.4byte	0x145
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  306 0196 34       		.byte	0x34
  307 0197 0F       		.uleb128 0xf
  308 0198 01       		.uleb128 0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 8
 
 
  309 0199 51       		.byte	0x51
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  363 01f0 00       		.byte	0
  364 01f1 12       		.uleb128 0x12
  365 01f2 8E010000 		.4byte	.LASF28
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 9
 
 
  366 01f6 09       		.byte	0x9
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  420 026f 05       		.uleb128 0x5
  421 0270 03       		.byte	0x3
  422 0271 00000000 		.4byte	RTE_eventActivation_tsk_logging_size
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 10
 
 
  423 0275 17       		.uleb128 0x17
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  477 0013 02       		.uleb128 0x2
  478 0014 24       		.uleb128 0x24
  479 0015 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 11
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 11
 
 
  480 0016 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  534 004c 07       		.uleb128 0x7
  535 004d 15       		.uleb128 0x15
  536 004e 01       		.byte	0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 12
 
 
  537 004f 27       		.uleb128 0x27
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  591 0085 00       		.byte	0
  592 0086 00       		.byte	0
  593 0087 0C       		.uleb128 0xc
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 13
 
 
  594 0088 2E       		.uleb128 0x2e
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  648 00c4 00       		.byte	0
  649 00c5 02       		.uleb128 0x2
  650 00c6 18       		.uleb128 0x18
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 14
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 14
 
 
  651 00c7 9142     		.uleb128 0x2111
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  705 0102 00       		.byte	0
  706 0103 00       		.byte	0
  707 0104 14       		.uleb128 0x14
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 15
 
 
  708 0105 35       		.uleb128 0x35
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  762 013b 19       		.uleb128 0x19
  763 013c 6E       		.uleb128 0x6e
  764 013d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 16
 
 
  765 013e 03       		.uleb128 0x3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  813      74416374 
  813      69766174 
  813      696F6E5F 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 17
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 17
 
 
  814              	.LASF36:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  835      6E203233 
  835      37373135 
  836 0138 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 18
 
 
  836      66756E63 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  857              	.LASF31:
  858 01f8 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
  858      74645F65 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 19
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 19
 
 
  858      6E646379 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  880      74797065 
  880      00
  881              	.LASF45:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 20
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 20
 
 
  882 02b5 46756E63 		.ascii	"Functsk_logging\000"
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 1
  905              	.LASF37:
  906 0365 45455F6F 		.ascii	"EE_oo_GetEvent\000"
  906      6F5F4765 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccedW4Ik.s 			page 21
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccHatwNI.s 			page 21
 
 
  906      74457665 

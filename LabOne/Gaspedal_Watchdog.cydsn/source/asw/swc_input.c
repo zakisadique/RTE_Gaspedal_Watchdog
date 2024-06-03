@@ -48,7 +48,7 @@
 void INPUT_readJoystick_run(RTE_event ev){
 	
 	/* USER CODE START INPUT_readJoystick_run */
-        WD_Alive(WATCHDOG_RUN_READJOYSTICK);
+    WD_Alive(WATCHDOG_RUN_READJOYSTICK);
     if (ERROR_isRunnableActive(ERROR_INPUT_JOYSTICK) == FALSE){
         return;
     }

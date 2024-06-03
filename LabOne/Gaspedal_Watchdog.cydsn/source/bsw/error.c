@@ -32,7 +32,7 @@
 /* Global variable definitions (declared in header file with 'extern')       */
 /*****************************************************************************/
 
-uint8_t runnablesStatus[numberOfRunnables] = {1, 1, 1, 1, 1};
+boolean_t runnablesStatus[numberOfRunnables] = {TRUE, TRUE, TRUE, TRUE, TRUE};
 
 /*****************************************************************************/
 /* Local type definitions ('typedef')                                        */
@@ -56,13 +56,13 @@ uint8_t runnablesStatus[numberOfRunnables] = {1, 1, 1, 1, 1};
 /*****************************************************************************/
 RC_t ERROR_disableRunnable(ERROR_Runnable_t runnable){
     
-    runnablesStatus[runnable] = 0;
+    runnablesStatus[runnable] = FALSE;
     return RC_SUCCESS;
 }
 
 RC_t ERROR_enableRunnable(ERROR_Runnable_t runnable){
     
-    runnablesStatus[runnable] = 1;
+    runnablesStatus[runnable] = TRUE;
     return RC_SUCCESS;
 
 }
@@ -71,7 +71,7 @@ boolean_t ERROR_isRunnableActive(ERROR_Runnable_t runnable){
     
     boolean_t status = FALSE;
     
-    if (runnablesStatus[runnable] == 1){
+    if (runnablesStatus[runnable] == TRUE){
         status = TRUE;
     
     } else {

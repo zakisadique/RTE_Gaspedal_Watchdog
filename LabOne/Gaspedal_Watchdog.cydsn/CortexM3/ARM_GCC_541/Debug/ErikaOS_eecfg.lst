@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
   55              		.global	EE_RESOURCE_ID
   56              		.global	EE_RESOURCE_NAME
   57              		.global	EE_TASK_NAME
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 2
 
 
   58              		.global	EE_th_ready_prio
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  112 0064 08000000 		.word	8
  113 0068 00000000 		.word	0
  114 006c FFFFFFFF 		.word	-1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 3
 
 
  115              		.type	EE_oo_counter_object_ROM, %object
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  165              		.size	EE_th_is_extended, 28
  166              	EE_th_is_extended:
  167 00f4 00000000 		.word	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 4
 
 
  168 00f8 00000000 		.word	0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  222 0188 00000000 		.word	Functsk_init
  223 018c 00000000 		.word	Functsk_background
  224 0190 00000000 		.word	Functsk_io
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 5
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 5
 
 
  225 0194 00000000 		.word	Functsk_control
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  279 003c FFFFFFFF 		.word	-1
  280 0040 FFFFFFFF 		.word	-1
  281 0044 FFFFFFFF 		.word	-1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 6
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 6
 
 
  282 0048 FFFFFFFF 		.word	-1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  336 00e4 FFFFFFFF 		.word	-1
  337 00e8 FFFFFFFF 		.word	-1
  338 00ec FFFFFFFF 		.word	-1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 7
 
 
  339 00f0 FFFFFFFF 		.word	-1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  393              		.size	EE_RESOURCE_NAME, 20
  394              	EE_RESOURCE_NAME:
  395 0188 90000000 		.word	.LC9
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 8
 
 
  396 018c 9C000000 		.word	.LC10
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  437      6F725F6C 
  437      6F676769 
  437      6E6700
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 9
 
 
  438 004f 00       		.space	1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  466 00dd 000000   		.space	3
  467              	.LC15:
  468 00e0 74736B5F 		.ascii	"tsk_background\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 10
 
 
  468      6261636B 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  497              		.size	EE_th_event_active, 28
  498              	EE_th_event_active:
  499 004c 00000000 		.space	28
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 11
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 11
 
 
  499      00000000 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  550 002e 2E050000 		.4byte	.LASF2
  551 0032 02       		.uleb128 0x2
  552 0033 02       		.byte	0x2
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 12
 
 
  553 0034 07       		.byte	0x7
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  607 009a 9E000000 		.4byte	0x9e
  608 009e 07       		.uleb128 0x7
  609 009f 04       		.uleb128 0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 13
 
 
  610 00a0 BA030000 		.4byte	.LASF14
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  664 0116 03       		.byte	0x3
  665 0117 F701     		.2byte	0x1f7
  666 0119 E1000000 		.4byte	0xe1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 14
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 14
 
 
  667 011d 0A       		.uleb128 0xa
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  721 0196 0B       		.uleb128 0xb
  722 0197 08       		.byte	0x8
  723 0198 03       		.byte	0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 15
 
 
  724 0199 7D02     		.2byte	0x27d
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  778 020c 0C       		.uleb128 0xc
  779 020d 3C070000 		.4byte	.LASF40
  780 0211 03       		.byte	0x3
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 16
 
 
  781 0212 9802     		.2byte	0x298
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  835 0284 A702     		.2byte	0x2a7
  836 0286 A3020000 		.4byte	0x2a3
  837 028a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 17
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 17
 
 
  838 028b FC060000 		.4byte	.LASF48
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  892 02fc BA02     		.2byte	0x2ba
  893 02fe 4D010000 		.4byte	0x14d
  894 0302 10       		.byte	0x10
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 18
 
 
  895 0303 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  949 0375 80030000 		.4byte	0x380
  950 0379 14       		.uleb128 0x14
  951 037a 80030000 		.4byte	0x380
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 19
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 19
 
 
  952 037e 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1006 03f4 11       		.uleb128 0x11
  1007 03f5 80000000 		.4byte	0x80
  1008 03f9 04040000 		.4byte	0x404
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 20
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 20
 
 
  1009 03fd 14       		.uleb128 0x14
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1063 0472 05       		.byte	0x5
  1064 0473 E202     		.2byte	0x2e2
  1065 0475 7F040000 		.4byte	0x47f
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 21
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 21
 
 
  1066 0479 05       		.uleb128 0x5
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1120 04f4 03       		.byte	0x3
  1121 04f5 00       		.byte	0
  1122 04f6 17       		.uleb128 0x17
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 22
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 22
 
 
  1123 04f7 9B010000 		.4byte	.LASF76
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1177 0576 03       		.byte	0x3
  1178 0577 00       		.byte	0
  1179 0578 17       		.uleb128 0x17
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 23
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 23
 
 
  1180 0579 FC010000 		.4byte	.LASF80
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1234 05f6 05       		.uleb128 0x5
  1235 05f7 03       		.byte	0x3
  1236 05f8 00000000 		.4byte	EE_th_rnact
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 24
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 24
 
 
  1237 05fc 17       		.uleb128 0x17
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1291 0674 00000000 		.4byte	EE_rq_queues_tail
  1292 0678 11       		.uleb128 0x11
  1293 0679 C0000000 		.4byte	0xc0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 25
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 25
 
 
  1294 067d 88060000 		.4byte	0x688
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1348 06f5 D6000000 		.4byte	0xd6
  1349 06f9 04070000 		.4byte	0x704
  1350 06fd 14       		.uleb128 0x14
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 26
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 26
 
 
  1351 06fe 80030000 		.4byte	0x380
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1405 0777 D6000000 		.4byte	0xd6
  1406 077b 86070000 		.4byte	0x786
  1407 077f 14       		.uleb128 0x14
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 27
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 27
 
 
  1408 0780 80030000 		.4byte	0x380
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1462 07f9 27020000 		.4byte	0x227
  1463 07fd 17       		.uleb128 0x17
  1464 07fe D7030000 		.4byte	.LASF105
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 28
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 28
 
 
  1465 0802 05       		.byte	0x5
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1519 087d 2D070000 		.4byte	.LASF108
  1520 0881 05       		.byte	0x5
  1521 0882 0C06     		.2byte	0x60c
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 29
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 29
 
 
  1522 0884 6C080000 		.4byte	0x86c
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1576 08ff 03       		.byte	0x3
  1577 0900 00000000 		.4byte	EE_ApplicationMode
  1578 0904 18       		.uleb128 0x18
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 30
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 30
 
 
  1579 0905 3C020000 		.4byte	.LASF114
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1633 097d 00       		.byte	0
  1634 097e 16       		.uleb128 0x16
  1635 097f 90030000 		.4byte	.LASF120
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 31
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 31
 
 
  1636 0983 05       		.byte	0x5
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1690 001e 0B       		.uleb128 0xb
  1691 001f 3E       		.uleb128 0x3e
  1692 0020 0B       		.uleb128 0xb
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 32
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 32
 
 
  1693 0021 03       		.uleb128 0x3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1747 0057 00       		.byte	0
  1748 0058 09       		.uleb128 0x9
  1749 0059 0D       		.uleb128 0xd
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 33
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 33
 
 
  1750 005a 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1804 0090 0D       		.uleb128 0xd
  1805 0091 04       		.uleb128 0x4
  1806 0092 01       		.byte	0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 34
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 34
 
 
  1807 0093 0B       		.uleb128 0xb
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1861 00c9 49       		.uleb128 0x49
  1862 00ca 13       		.uleb128 0x13
  1863 00cb 01       		.uleb128 0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 35
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 35
 
 
  1864 00cc 13       		.uleb128 0x13
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1918 0102 00       		.byte	0
  1919 0103 00       		.byte	0
  1920 0104 17       		.uleb128 0x17
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 36
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 36
 
 
  1921 0105 34       		.uleb128 0x34
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1969      5243455F 
  1969      4E414D45 
  1969      00
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 37
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 37
 
 
  1970              	.LASF102:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  1993      645F536F 
  1993      75726365 
  1993      5C50536F 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 38
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 38
 
 
  1994              	.LASF42:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2016              	.LASF76:
  2017 019b 45455F45 		.ascii	"EE_EVENT_NAME\000"
  2017      56454E54 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 39
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 39
 
 
  2017      5F4E414D 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2037      00
  2038              	.LASF20:
  2039 025e 45455F54 		.ascii	"EE_TID\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 40
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 40
 
 
  2039      494400
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2061      7361626C 
  2061      655F636F 
  2062              	.LASF38:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 41
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 41
 
 
  2063 0310 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2081      74657254 
  2081      79706500 
  2082              	.LASF105:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 42
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 42
 
 
  2083 03d7 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2107 0473 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
  2107      6F5F636F 
  2107      756E7465 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 43
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 43
 
 
  2107      725F6F62 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2129      7420696E 
  2129      7400
  2130              	.LASF96:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 44
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 44
 
 
  2131 0538 45455F74 		.ascii	"EE_th_event_waitmask\000"
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2149 0648 45455F72 		.ascii	"EE_rq_queues_tail\000"
  2149      715F7175 
  2149      65756573 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 45
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 45
 
 
  2149      5F746169 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2170      4354494F 
  2170      4E5F434F 
  2170      554E5445 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 46
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 46
 
 
  2170      5200
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2194 07cc 45455F72 		.ascii	"EE_rq_pairs_tid\000"
  2194      715F7061 
  2194      6972735F 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 47
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 47
 
 
  2194      74696400 
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 1
  2218 0873 45455F74 		.ascii	"EE_th_is_extended\000"
  2218      685F6973 
  2218      5F657874 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvRjoGV.s 			page 48
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccLd6Otd.s 			page 48
 
 
  2218      656E6465 

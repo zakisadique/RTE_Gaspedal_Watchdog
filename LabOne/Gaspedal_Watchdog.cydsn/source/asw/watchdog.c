@@ -23,6 +23,7 @@
 
 #include "project.h"
 #include "watchdog.h"
+#include "tft.h"
 
 /*****************************************************************************/
 /* Local pre-processor symbols/macros ('#define')                            */
@@ -40,7 +41,7 @@
 
 //WDT_Bitfields wdtBitfields = {0};
 
-uint8_t wdtBitfields[NUMBER_OF_WATCHDOGS] = {0};
+boolean_t wdtBitfields[NUMBER_OF_WATCHDOGS] = {0};
 
 /*****************************************************************************/
 /* Local variable definitions ('static')                                     */
@@ -90,31 +91,10 @@ boolean_t WD_CheckResetBit() {
     }
 }
 
-RC_t WD_Alive(WDT_Bits bit){
+RC_t WD_Alive(WDT_Bits_t bit){
     
-//    switch (bit){
-//        case WATCHDOG_RUN_CALCCONTROL:
-//            wdtBitfields.m_Bit_CalcControl = 1;
-//            break;
-//        case WATCHDOG_RUN_LOGGING:
-//            wdtBitfields.m_Bit_Logging = 1;
-//            break;
-//        case WATCHDOG_RUN_READJOYSTICK:
-//            wdtBitfields.m_BitReadJoystick = 1;
-//            break;
-//        case WATCHDOG_RUN_SETBRAKELIGHT:
-//            wdtBitfields.m_Bit_SetBrakelight = 1;
-//            break;
-//        case WATCHDOG_RUN_SETENGINE:
-//            wdtBitfields.m_Bit_SetEngine = 1;
-//            break;
-//        case WATCHDOG_RUN_SYSTEM:
-//            wdtBitfields.m_Bit_System = 1;
-//            break;
-//    }
-    
-    
-    wdtBitfields[bit] = 1;
+
+    wdtBitfields[bit] = TRUE;
     return RC_SUCCESS;
     
     
@@ -123,7 +103,7 @@ RC_t WD_Alive(WDT_Bits bit){
 boolean_t WD_IsError(){
     
     for (uint8_t i = 0; i < NUMBER_OF_WATCHDOGS; ++i){
-        if (wdtBitfields[i] == 0){
+        if (wdtBitfields[i] == FALSE){
             return TRUE;
         
         }
@@ -135,8 +115,19 @@ boolean_t WD_IsError(){
 
 RC_t WD_resetState(){
     for (uint8_t i = 0; i < NUMBER_OF_WATCHDOGS; ++i){
-        wdtBitfields[i] = 0;
+        wdtBitfields[i] = FALSE;
     }
     
     return RC_SUCCESS;
+}
+
+RC_t WD_displayInitialMessage(){
+    if (WD_CheckResetBit() == TRUE){
+        UART_Logs_PutString("Rebooted after watchdog reset\n");
+        
+        TFT_print((char_t*)"Rebooted after watchdog reset");
+    } else {
+        UART_Logs_PutString("Rebooted after power on reset\n");
+        TFT_print((char_t*)"Rebooted after power on reset");
+    }
 }

@@ -68,7 +68,7 @@
 //i.e. the value can be takes as it is
 #define ISR_SCALE(prio) (prio)
 
-#define Number_of_ISRs  0
+#define Number_of_ISRs  1
 
 extern void EE_set_switch_context_pri(void);
 
@@ -100,16 +100,16 @@ void EE_system_init(void)
 
 #define ISR_MIN_PRI 48
 
-#if (Number_of_ISRs > 0) && defined ISR_1__INTC_NUMBER
-    ramVectorTable[CY_INT_IRQ_BASE + (ISR_1__INTC_NUMBER & CY_INT_NUMBER_MASK)] = ISR_1;
+#if (Number_of_ISRs > 0) && defined isr_Button_Joystick__INTC_NUMBER
+    ramVectorTable[CY_INT_IRQ_BASE + (isr_Button_Joystick__INTC_NUMBER & CY_INT_NUMBER_MASK)] = isr_Button_Joystick;
 	//PF v2.5.3
-    //NVIC_SET_PRI(ISR_1__INTC_NUMBER, (ISR_MIN_PRI - 0));
-    CyIntSetPriority(ISR_1__INTC_NUMBER, ISR_SCALE(0));
+    //NVIC_SET_PRI(isr_Button_Joystick__INTC_NUMBER, (ISR_MIN_PRI - 1));
+    CyIntSetPriority(isr_Button_Joystick__INTC_NUMBER, ISR_SCALE(1));
     //\PF
-	NVIC_INT_ENABLE(ISR_1__INTC_NUMBER);
+	NVIC_INT_ENABLE(isr_Button_Joystick__INTC_NUMBER);
 #elif Number_of_ISRs > 0
-#error  The Interrupt ISR_1 could not be found. Make sure the name in the OS config exactly matches the name of the interrupt in the interrupt tab.
-#endif	/* ISR_1 */
+#error  The Interrupt isr_Button_Joystick could not be found. Make sure the name in the OS config exactly matches the name of the interrupt in the interrupt tab.
+#endif	/* isr_Button_Joystick */
 
 #if (Number_of_ISRs > 1) && defined ISR_2__INTC_NUMBER
     ramVectorTable[CY_INT_IRQ_BASE + (ISR_2__INTC_NUMBER & CY_INT_NUMBER_MASK)] = ISR_2;

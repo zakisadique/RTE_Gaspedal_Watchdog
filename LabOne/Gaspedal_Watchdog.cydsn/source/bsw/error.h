@@ -51,7 +51,7 @@ typedef enum {
 //typedef uint8_t WDT_Bits;
 
 
-extern uint8_t runnablesStatus[numberOfRunnables];
+extern boolean_t runnablesStatus[numberOfRunnables];
 
 //####################### Structures
 
