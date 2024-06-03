@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   28:source\asw/swc_output.c **** 
   29:source\asw/swc_output.c **** /* USER CODE START SWC_OUTPUT_USERDEFINITIONS */
   30:source\asw/swc_output.c **** 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 2
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 2
 
 
   31:source\asw/swc_output.c **** /* USER CODE END SWC_OUTPUT_USERDEFINITIONS */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
    9:.\source\rte/sc_speed.h ****  *
   10:.\source\rte/sc_speed.h ****  * description: Signal for Speed
   11:.\source\rte/sc_speed.h ****  * name: sc_speed
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 3
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 3
 
 
   12:.\source\rte/sc_speed.h ****  * shortname: speed
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   66:.\source\rte/sc_speed.h ****     /**
   67:.\source\rte/sc_speed.h ****      * Event onUpdate
   68:.\source\rte/sc_speed.h ****      */
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 4
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 4
 
 
   69:.\source\rte/sc_speed.h ****     EventMaskType const evOnUpdate;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  123:.\source\rte/sc_speed.h **** 
  124:.\source\rte/sc_speed.h **** 	/**
  125:.\source\rte/sc_speed.h **** 	 * Data buffer for the application value
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 5
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 5
 
 
  126:.\source\rte/sc_speed.h **** 	 */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  180:.\source\rte/sc_speed.h ****  * @param  SC_SPEED_t * const signal: Pointer to the signal object
  181:.\source\rte/sc_speed.h ****  * @return  sig_status_t: The current signal status
  182:.\source\rte/sc_speed.h ****  *
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 6
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 6
 
 
  183:.\source\rte/sc_speed.h ****  **/
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  220:.\source\rte/sc_speed.h **** 
  221:.\source\rte/sc_speed.h **** /**
  222:.\source\rte/sc_speed.h ****  * Returns the count of refreshing trials (refresh, set or set_raw) that failed.
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 7
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 7
 
 
  223:.\source\rte/sc_speed.h ****  * Prerquisite: The signal is refreshed cyclically
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  277:.\source\rte/sc_speed.h ****    return signal->value;                                                                           
  278:.\source\rte/sc_speed.h **** }                                                                                                  
  279:.\source\rte/sc_speed.h ****                                                                                                    
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 8
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 8
 
 
  280:.\source\rte/sc_speed.h **** /**
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   98              	.LVL10:
   99              	.LBE27:
  100              	.LBE26:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 9
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 9
 
 
   64:source\asw/swc_output.c ****     
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   40:.\source\rte/sc_engine.h **** /**
   41:.\source\rte/sc_engine.h ****  *  Definition of function types for driver interfaces.
   42:.\source\rte/sc_engine.h ****  *  O-Port
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 10
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 10
 
 
   43:.\source\rte/sc_engine.h ****  */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   97:.\source\rte/sc_engine.h **** 	
   98:.\source\rte/sc_engine.h **** 	/**
   99:.\source\rte/sc_engine.h **** 	 * Ressourse is active? We need an additional boolean as a ressource value 0 is valid.
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 11
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 11
 
 
  100:.\source\rte/sc_engine.h **** 	 */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  154:.\source\rte/sc_engine.h ****  * Signal status will change from RTE_SIGNALSTATUS_STARTUP to RTE_SIGNALSTATUS_INITIALIZED.
  155:.\source\rte/sc_engine.h ****  *
  156:.\source\rte/sc_engine.h ****  * @param  SC_ENGINE_t * const signal: Pointer to the signal object which will be initialised
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 12
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 12
 
 
  157:.\source\rte/sc_engine.h ****  * @return RC_t: standard return code, currently only RC_SUCCESS
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  211:.\source\rte/sc_engine.h **** 				TaskType task = (*pTaskArray)[taskNum];
  212:.\source\rte/sc_engine.h **** 				SetEvent( task, signal->pSigCfg->evOnError);
  213:.\source\rte/sc_engine.h **** 			}
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 13
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 13
 
 
  214:.\source\rte/sc_engine.h **** 		}
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  268:.\source\rte/sc_engine.h ****  * Returns the current application value of the passed signal instance.
  269:.\source\rte/sc_engine.h ****  *
  270:.\source\rte/sc_engine.h ****  * @param  SC_ENGINE_t * const signal: Pointer to the signal object
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 14
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 14
 
 
  271:.\source\rte/sc_engine.h ****  * @return sc_engine_data_t: current value of the application data buffer
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  121 005e FFF7FEFF 		bl	EE_oo_GetResource
  122              	.LVL14:
  123              	.L6:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 15
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 15
 
 
  317:.\source\rte/sc_engine.h ****    signal->value  = value;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  164              	.LVL20:
  165 0098 00E0     		b	.L9
  166              	.LVL21:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 16
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 16
 
 
  167              	.L13:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  365:.\source\rte/sc_engine.h ****       {
  366:.\source\rte/sc_engine.h **** 		  //Signal is invalid. Error event (if present) will be fired
  367:.\source\rte/sc_engine.h **** 		  RTE_SC_ENGINE_setStatus(signal, RTE_SIGNALSTATUS_INVALID);
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 17
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 17
 
 
  368:.\source\rte/sc_engine.h ****       }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   68:source\asw/swc_output.c ****         engine.m_engineValue = 0;
   69:source\asw/swc_output.c ****     }
   70:source\asw/swc_output.c ****     
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 18
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 18
 
 
   71:source\asw/swc_output.c ****     RTE_SC_ENGINE_set(&SO_ENGINE_signal, engine);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  245              	.LBE34:
  246              	.LBE33:
   95:source\asw/swc_output.c ****         return;
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 19
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 19
 
 
   96:source\asw/swc_output.c ****     
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  283              		.loc 1 111 0
  284 004a 4FF00103 		mov	r3, #1
  285              	.L21:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 20
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 20
 
 
  286              	.LVL36:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
   49:.\source\rte/sc_brakelight.h **** /**************************************************************************************************
   50:.\source\rte/sc_brakelight.h **** 
   51:.\source\rte/sc_brakelight.h **** /**
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 21
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 21
 
 
   52:.\source\rte/sc_brakelight.h ****  * Instances of the struct SC_BRAKELIGHT_cfg_t represent the signal object configuration.
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  106:.\source\rte/sc_brakelight.h **** 	 ResourceType const resource;
  107:.\source\rte/sc_brakelight.h **** 
  108:.\source\rte/sc_brakelight.h **** };                                                                                                 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 22
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 22
 
 
  109:.\source\rte/sc_brakelight.h **** typedef const struct SC_BRAKELIGHT_cfg_s SC_BRAKELIGHT_cfg_t;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  163:.\source\rte/sc_brakelight.h ****    RC_t ret = RC_SUCCESS;
  164:.\source\rte/sc_brakelight.h **** 
  165:.\source\rte/sc_brakelight.h ****    //Set value and raw value
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 23
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 23
 
 
  166:.\source\rte/sc_brakelight.h ****    signal->value  = SC_BRAKELIGHT_INIT_DATA;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  220:.\source\rte/sc_brakelight.h **** 
  221:.\source\rte/sc_brakelight.h **** /**
  222:.\source\rte/sc_brakelight.h ****  * Returns the count of refreshing trials (refresh, set or set_raw) that failed.
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 24
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 24
 
 
  223:.\source\rte/sc_brakelight.h ****  * Prerquisite: The signal is refreshed cyclically
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  277:.\source\rte/sc_brakelight.h ****    return signal->value;                                                                           
  278:.\source\rte/sc_brakelight.h **** }                                                                                                  
  279:.\source\rte/sc_brakelight.h ****                                                                                                    
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 25
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 25
 
 
  280:.\source\rte/sc_brakelight.h **** /**
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  307              		.loc 4 318 0
  308 0066 0022     		movs	r2, #0
  309 0068 5A60     		str	r2, [r3, #4]
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 26
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 26
 
 
  319:.\source\rte/sc_brakelight.h ****    signal->status = RTE_SIGNALSTATUS_VALID;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  326:.\source\rte/sc_brakelight.h ****       for( taskNum=0 ; taskNum < signal->pSigCfg->onUpdateTaskCount ;taskNum++){
  351              		.loc 4 326 0
  352 009c 074B     		ldr	r3, .L31+4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 27
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 27
 
 
  353 009e 9B68     		ldr	r3, [r3, #8]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  374:.\source\rte/sc_brakelight.h ****                                                                                                    
  375:.\source\rte/sc_brakelight.h **** /**
  376:.\source\rte/sc_brakelight.h ****  *  Calls the connected driver interfaces to send a value. Value will not be sent if it is INVALID.
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 28
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 28
 
 
  377:.\source\rte/sc_brakelight.h ****  *
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  405              		.file 21 "Generated_Source\\PSoC5/ErikaOS_common_ee_primitives.inc"
  406              		.file 22 "Generated_Source\\PSoC5/core_cm3.h"
  407              		.file 23 ".\\source\\rte/sp_common.h"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 29
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 29
 
 
  408              		.file 24 "Generated_Source\\PSoC5/ErikaOS_ee_oo_kernel.inc"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  462 0070 02       		.uleb128 0x2
  463 0071 08       		.byte	0x8
  464 0072 05       		.byte	0x5
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 30
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 30
 
 
  465 0073 7B040000 		.4byte	.LASF9
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  519 00df 03       		.uleb128 0x3
  520 00e0 0E060000 		.4byte	.LASF21
  521 00e4 08       		.byte	0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 31
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 31
 
 
  522 00e5 54       		.byte	0x54
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  576 015a C7000000 		.4byte	.LASF32
  577 015e 7E       		.sleb128 -2
  578 015f 08       		.uleb128 0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 32
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 32
 
 
  579 0160 96000000 		.4byte	.LASF33
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  633 01cc 01040000 		.4byte	.LASF51
  634 01d0 6B       		.sleb128 -21
  635 01d1 08       		.uleb128 0x8
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 33
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 33
 
 
  636 01d2 A3040000 		.4byte	.LASF52
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  690 0241 5E       		.byte	0x5e
  691 0242 16020000 		.4byte	0x216
  692 0246 06       		.uleb128 0x6
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 34
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 34
 
 
  693 0247 01       		.byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  747 02b3 AC020000 		.4byte	0x2ac
  748 02b7 0B       		.uleb128 0xb
  749 02b8 36010000 		.4byte	0x136
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 35
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 35
 
 
  750 02bc 0B       		.uleb128 0xb
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  804 032e 32030000 		.4byte	0x332
  805 0332 0B       		.uleb128 0xb
  806 0333 D6020000 		.4byte	0x2d6
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 36
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 36
 
 
  807 0337 0B       		.uleb128 0xb
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  861 03a3 B2020000 		.4byte	0x2b2
  862 03a7 1C       		.byte	0x1c
  863 03a8 0E       		.uleb128 0xe
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 37
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 37
 
 
  864 03a9 57030000 		.4byte	.LASF87
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  918 0418 0C       		.uleb128 0xc
  919 0419 04       		.byte	0x4
  920 041a CB030000 		.4byte	0x3cb
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 38
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 38
 
 
  921 041e 0B       		.uleb128 0xb
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  975 0493 10       		.uleb128 0x10
  976 0494 A4040000 		.4byte	0x4a4
  977 0498 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 39
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 39
 
 
  978 0499 0C       		.uleb128 0xc
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1032 0508 18       		.byte	0x18
  1033 0509 0E       		.uleb128 0xe
  1034 050a D9080000 		.4byte	.LASF86
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 40
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 40
 
 
  1035 050e 03       		.byte	0x3
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1089 057d 03       		.byte	0x3
  1090 057e 8E       		.byte	0x8e
  1091 057f 8B050000 		.4byte	0x58b
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 41
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 41
 
 
  1092 0583 08       		.byte	0x8
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1146 05f2 04       		.byte	0x4
  1147 05f3 F7050000 		.4byte	0x5f7
  1148 05f7 0F       		.uleb128 0xf
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 42
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 42
 
 
  1149 05f8 EA010000 		.4byte	0x1ea
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1203 066a 0E       		.uleb128 0xe
  1204 066b 92040000 		.4byte	.LASF85
  1205 066f 04       		.byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 43
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 43
 
 
  1206 0670 5A       		.byte	0x5a
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1260 06df 89       		.byte	0x89
  1261 06e0 A2000000 		.4byte	0xa2
  1262 06e4 04       		.byte	0x4
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 44
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 44
 
 
  1263 06e5 0E       		.uleb128 0xe
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1317 0758 EA010000 		.4byte	0x1ea
  1318 075c 03       		.byte	0x3
  1319 075d 7A070000 		.4byte	0x77a
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 45
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 45
 
 
  1320 0761 16       		.uleb128 0x16
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1374 07de 72657400 		.ascii	"ret\000"
  1375 07e2 03       		.byte	0x3
  1376 07e3 3801     		.2byte	0x138
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 46
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 46
 
 
  1377 07e5 EA010000 		.4byte	0x1ea
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1431 0861 03       		.byte	0x3
  1432 0862 B1080000 		.4byte	0x8b1
  1433 0866 16       		.uleb128 0x16
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 47
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 47
 
 
  1434 0867 73000000 		.4byte	.LASF114
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1488 08e4 01       		.byte	0x1
  1489 08e5 3B       		.byte	0x3b
  1490 08e6 D6020000 		.4byte	0x2d6
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 48
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 48
 
 
  1491 08ea 1D       		.uleb128 0x1d
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1545 0977 4C000000 		.4byte	.LLST3
  1546 097b 1F       		.uleb128 0x1f
  1547 097c C5070000 		.4byte	0x7c5
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 49
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 49
 
 
  1548 0980 22       		.uleb128 0x22
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1602 0a13 50       		.byte	0x50
  1603 0a14 01       		.uleb128 0x1
  1604 0a15 32       		.byte	0x32
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 50
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 50
 
 
  1605 0a16 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1659 0a8d 1A000000 		.4byte	.LBB35
  1660 0a91 26000000 		.4byte	.LBE35-.LBB35
  1661 0a95 01       		.byte	0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 51
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 51
 
 
  1662 0a96 69       		.byte	0x69
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1716 0b2f F90B0000 		.4byte	0xbf9
  1717 0b33 00       		.byte	0
  1718 0b34 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 52
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 52
 
 
  1719 0b35 1E       		.uleb128 0x1e
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1773 0baa 14       		.byte	0x14
  1774 0bab 48       		.byte	0x48
  1775 0bac 00010000 		.4byte	0x100
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 53
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 53
 
 
  1776 0bb0 28       		.uleb128 0x28
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1830              	.Ldebug_abbrev0:
  1831 0000 01       		.uleb128 0x1
  1832 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 54
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 54
 
 
  1833 0002 01       		.byte	0x1
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1887 0038 00       		.byte	0
  1888 0039 03       		.uleb128 0x3
  1889 003a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 55
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 55
 
 
  1890 003b 3A       		.uleb128 0x3a
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  1944 0071 00       		.byte	0
  1945 0072 0B       		.uleb128 0xb
  1946 0073 26       		.uleb128 0x26
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 56
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 56
 
 
  1947 0074 00       		.byte	0
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2001 00aa 05       		.uleb128 0x5
  2002 00ab 00       		.byte	0
  2003 00ac 49       		.uleb128 0x49
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 57
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 57
 
 
  2004 00ad 13       		.uleb128 0x13
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2058 00e3 14       		.uleb128 0x14
  2059 00e4 05       		.uleb128 0x5
  2060 00e5 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 58
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 58
 
 
  2061 00e6 03       		.uleb128 0x3
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2115 011c 13       		.uleb128 0x13
  2116 011d 00       		.byte	0
  2117 011e 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 59
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 59
 
 
  2118 011f 18       		.uleb128 0x18
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2172 0156 02       		.uleb128 0x2
  2173 0157 17       		.uleb128 0x17
  2174 0158 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 60
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 60
 
 
  2175 0159 00       		.byte	0
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2229 018f 05       		.uleb128 0x5
  2230 0190 00       		.byte	0
  2231 0191 31       		.uleb128 0x31
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 61
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 61
 
 
  2232 0192 13       		.uleb128 0x13
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2286 01cc 26       		.uleb128 0x26
  2287 01cd 8A8201   		.uleb128 0x410a
  2288 01d0 00       		.byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 62
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 62
 
 
  2289 01d1 02       		.uleb128 0x2
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2343 020a 00       		.byte	0
  2344 020b 00       		.byte	0
  2345 020c 2B       		.uleb128 0x2b
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 63
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 63
 
 
  2346 020d 2E       		.uleb128 0x2e
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2400 002b 53       		.byte	0x53
  2401 002c 00000000 		.4byte	0
  2402 0030 00000000 		.4byte	0
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 64
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 64
 
 
  2403              	.LLST2:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2457 00bf 84000000 		.4byte	.LVL17
  2458 00c3 A6000000 		.4byte	.LVL23
  2459 00c7 0100     		.2byte	0x1
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 65
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 65
 
 
  2460 00c9 55       		.byte	0x55
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2514 0148 00000000 		.4byte	0
  2515              	.LLST12:
  2516 014c 64000000 		.4byte	.LVL40
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 66
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 66
 
 
  2517 0150 8C000000 		.4byte	.LVL43
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2571 01dd 00       		.sleb128 0
  2572 01de 32       		.byte	0x32
  2573 01df 24       		.byte	0x24
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 67
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 67
 
 
  2574 01e0 75       		.byte	0x75
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2618      5F4E4F54 
  2618      5F4D4154 
  2618      434800
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 68
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 68
 
 
  2619              	.LASF73:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2640      5F4E554C 
  2640      4C00
  2641              	.LASF41:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 69
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 69
 
 
  2642 00d5 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2664      4C494748 
  2664      545F7365 
  2665              	.LASF112:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 70
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 70
 
 
  2666 0183 5254455F 		.ascii	"RTE_SC_SPEED_getStatus\000"
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2689              	.LASF58:
  2690 0225 5254455F 		.ascii	"RTE_event\000"
  2690      6576656E 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 71
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 71
 
 
  2690      7400
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2710 032a 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
  2710      52524F52 
  2710      5F425546 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 72
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 72
 
 
  2710      4645525F 
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2734      5F7400
  2735              	.LASF116:
  2736 03e0 64617461 		.ascii	"data\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 73
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 73
 
 
  2736      00
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2758      00
  2759              	.LASF85:
  2760 0492 6F6E4572 		.ascii	"onErrorTaskCount\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 74
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 74
 
 
  2760      726F7254 
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2780 054d 6D5F6272 		.ascii	"m_brakeValue\000"
  2780      616B6556 
  2780      616C7565 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 75
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 75
 
 
  2780      00
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2802              	.LASF40:
  2803 062b 52435F45 		.ascii	"RC_ERROR_BUSY\000"
  2803      52524F52 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 76
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 76
 
 
  2803      5F425553 
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2823      675F7400 
  2824              	.LASF61:
  2825 06e4 5254455F 		.ascii	"RTE_SIGNALSTATUS_VALID\000"
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 77
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 77
 
 
  2825      5349474E 
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2847 078d 52435F74 		.ascii	"RC_t\000"
  2847      00
  2848              	.LASF13:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 78
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 78
 
 
  2849 0792 696E7433 		.ascii	"int32_t\000"
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2870              	.LASF66:
  2871 083e 57415443 		.ascii	"WATCHDOG_RUN_SETENGINE\000"
  2871      48444F47 
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 79
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 79
 
 
  2871      5F52554E 
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 1
  2889      7665724F 
  2889      75745F74 
  2890              	.LASF0:
-ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccsH9XdZ.s 			page 80
+ARM GAS  C:\Users\zakis\AppData\Local\Temp\ccvv5HB2.s 			page 80
 
 
  2891 090f 7369676E 		.ascii	"signed char\000"

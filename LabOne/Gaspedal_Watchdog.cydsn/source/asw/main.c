@@ -96,7 +96,7 @@ TASK(tsk_init)
     ActivateTask(tsk_logging);
     ActivateTask(tsk_system);
     ActivateTask(tsk_background);
-    WD_Start(PERIOD_2_SEC);
+    WD_Start(PERIOD_1024_TICK);
     TerminateTask();
     
 }

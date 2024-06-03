@@ -59,16 +59,16 @@ uint8_t wdtBitfields[NUMBER_OF_WATCHDOGS] = {0};
 RC_t WD_Start(WDT_TimeOut_t timeout){
     
     switch (timeout){
-        case PERIOD_1_SEC:
-            CyWdtStart(CYWDT_128_TICKS, 0);
-            break;
-        case PERIOD_2_SEC:
+        case PERIOD_1024_TICK:
             CyWdtStart(CYWDT_1024_TICKS, 0);
             break;
-        case PERIOD_X_SEC:
+        case PERIOD_128_TICK:
+            CyWdtStart(CYWDT_128_TICKS, 0);
+            break;
+        case PERIOD_16_TICK:
             CyWdtStart(CYWDT_16_TICKS, 0);
             break;
-        case PERIOD_Y_SEC:
+        case PERIOD_2_TICK:
             CyWdtStart(CYWDT_2_TICKS, 0);
             break;
     }

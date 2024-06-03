@@ -63,10 +63,10 @@ typedef enum {
 extern uint8_t wdtBitfields[NUMBER_OF_WATCHDOGS];
     
 typedef enum {
-    PERIOD_1_SEC,
-    PERIOD_2_SEC,
-    PERIOD_X_SEC,
-    PERIOD_Y_SEC
+    PERIOD_1024_TICK,
+    PERIOD_128_TICK,
+    PERIOD_16_TICK,
+    PERIOD_2_TICK,
 } WDT_TimeOut_t;
 
 //extern WDT_Bitfields wdtBitfields;

@@ -2762,183 +2762,183 @@ END GROUP
  .debug_frame   0x00003620       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
  .debug_frame   0x00003648       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x6c20
+.debug_str      0x00000000     0x6c2a
  *(.debug_str)
- .debug_str     0x00000000      0x583 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x5e7 (size before relaxing)
- .debug_str     0x00000583      0x638 .\CortexM3\ARM_GCC_541\Debug\swc_control.o
+ .debug_str     0x00000000      0x58d .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x5f1 (size before relaxing)
+ .debug_str     0x0000058d      0x638 .\CortexM3\ARM_GCC_541\Debug\swc_control.o
                                 0x8b7 (size before relaxing)
- .debug_str     0x00000bbb      0x238 .\CortexM3\ARM_GCC_541\Debug\swc_output.o
+ .debug_str     0x00000bc5      0x238 .\CortexM3\ARM_GCC_541\Debug\swc_output.o
                                 0x9c1 (size before relaxing)
- .debug_str     0x00000df3       0xf5 .\CortexM3\ARM_GCC_541\Debug\tsk_control.o
+ .debug_str     0x00000dfd       0xf5 .\CortexM3\ARM_GCC_541\Debug\tsk_control.o
                                 0x374 (size before relaxing)
- .debug_str     0x00000ee8       0x75 .\CortexM3\ARM_GCC_541\Debug\swc_input.o
+ .debug_str     0x00000ef2       0x75 .\CortexM3\ARM_GCC_541\Debug\swc_input.o
                                 0x7fe (size before relaxing)
- .debug_str     0x00000f5d      0x165 .\CortexM3\ARM_GCC_541\Debug\swc_logging.o
+ .debug_str     0x00000f67      0x165 .\CortexM3\ARM_GCC_541\Debug\swc_logging.o
                                 0x95d (size before relaxing)
- .debug_str     0x000010c2       0xdd .\CortexM3\ARM_GCC_541\Debug\tsk_io.o
+ .debug_str     0x000010cc       0xdd .\CortexM3\ARM_GCC_541\Debug\tsk_io.o
                                 0x3f2 (size before relaxing)
- .debug_str     0x0000119f       0x73 .\CortexM3\ARM_GCC_541\Debug\tsk_logging.o
+ .debug_str     0x000011a9       0x73 .\CortexM3\ARM_GCC_541\Debug\tsk_logging.o
                                 0x374 (size before relaxing)
- .debug_str     0x00001212       0x47 .\CortexM3\ARM_GCC_541\Debug\swc_system.o
+ .debug_str     0x0000121c       0x47 .\CortexM3\ARM_GCC_541\Debug\swc_system.o
                                 0x33c (size before relaxing)
- .debug_str     0x00001259       0x71 .\CortexM3\ARM_GCC_541\Debug\tsk_system.o
+ .debug_str     0x00001263       0x71 .\CortexM3\ARM_GCC_541\Debug\tsk_system.o
                                 0x355 (size before relaxing)
- .debug_str     0x000012ca       0x6c .\CortexM3\ARM_GCC_541\Debug\watchdog.o
-                                0x5a5 (size before relaxing)
- .debug_str     0x00001336       0x52 .\CortexM3\ARM_GCC_541\Debug\swc_errorhandler.o
+ .debug_str     0x000012d4       0x6c .\CortexM3\ARM_GCC_541\Debug\watchdog.o
+                                0x5af (size before relaxing)
+ .debug_str     0x00001340       0x52 .\CortexM3\ARM_GCC_541\Debug\swc_errorhandler.o
                                 0x77e (size before relaxing)
- .debug_str     0x00001388       0x87 .\CortexM3\ARM_GCC_541\Debug\tsk_errorhandler.o
+ .debug_str     0x00001392       0x87 .\CortexM3\ARM_GCC_541\Debug\tsk_errorhandler.o
                                 0x364 (size before relaxing)
- .debug_str     0x0000140f      0x84f .\CortexM3\ARM_GCC_541\Debug\tft.o
+ .debug_str     0x00001419      0x84f .\CortexM3\ARM_GCC_541\Debug\tft.o
                                 0xd28 (size before relaxing)
- .debug_str     0x00001c5e       0x3d .\CortexM3\ARM_GCC_541\Debug\logging.o
+ .debug_str     0x00001c68       0x3d .\CortexM3\ARM_GCC_541\Debug\logging.o
                                 0x4f1 (size before relaxing)
- .debug_str     0x00001c9b       0xc8 .\CortexM3\ARM_GCC_541\Debug\button.o
+ .debug_str     0x00001ca5       0xc8 .\CortexM3\ARM_GCC_541\Debug\button.o
                                 0x4f5 (size before relaxing)
- .debug_str     0x00001d63       0xa5 .\CortexM3\ARM_GCC_541\Debug\joystick.o
+ .debug_str     0x00001d6d       0xa5 .\CortexM3\ARM_GCC_541\Debug\joystick.o
                                 0x4e3 (size before relaxing)
- .debug_str     0x00001e08      0x19c .\CortexM3\ARM_GCC_541\Debug\led.o
+ .debug_str     0x00001e12      0x19c .\CortexM3\ARM_GCC_541\Debug\led.o
                                 0x5d2 (size before relaxing)
- .debug_str     0x00001fa4       0x52 .\CortexM3\ARM_GCC_541\Debug\error.o
+ .debug_str     0x00001fae       0x52 .\CortexM3\ARM_GCC_541\Debug\error.o
                                 0x50d (size before relaxing)
- .debug_str     0x00001ff6       0x1b .\CortexM3\ARM_GCC_541\Debug\rte.o
+ .debug_str     0x00002000       0x1b .\CortexM3\ARM_GCC_541\Debug\rte.o
                                 0x4d2 (size before relaxing)
- .debug_str     0x00002011       0x1b .\CortexM3\ARM_GCC_541\Debug\sc_brakelight.o
+ .debug_str     0x0000201b       0x1b .\CortexM3\ARM_GCC_541\Debug\sc_brakelight.o
                                  0xfb (size before relaxing)
- .debug_str     0x0000202c       0x19 .\CortexM3\ARM_GCC_541\Debug\sc_joystick.o
+ .debug_str     0x00002036       0x19 .\CortexM3\ARM_GCC_541\Debug\sc_joystick.o
                                  0xf9 (size before relaxing)
- .debug_str     0x00002045       0x16 .\CortexM3\ARM_GCC_541\Debug\sc_speed.o
+ .debug_str     0x0000204f       0x16 .\CortexM3\ARM_GCC_541\Debug\sc_speed.o
                                  0xf6 (size before relaxing)
- .debug_str     0x0000205b      0x17c .\CortexM3\ARM_GCC_541\Debug\sp_common.o
+ .debug_str     0x00002065      0x17c .\CortexM3\ARM_GCC_541\Debug\sp_common.o
                                 0xa6b (size before relaxing)
- .debug_str     0x000021d7       0x41 .\CortexM3\ARM_GCC_541\Debug\sc_brakelight_type.o
+ .debug_str     0x000021e1       0x41 .\CortexM3\ARM_GCC_541\Debug\sc_brakelight_type.o
                                 0x4e1 (size before relaxing)
- .debug_str     0x00002218       0x17 .\CortexM3\ARM_GCC_541\Debug\sc_engine.o
+ .debug_str     0x00002222       0x17 .\CortexM3\ARM_GCC_541\Debug\sc_engine.o
                                  0xf7 (size before relaxing)
- .debug_str     0x0000222f       0x30 .\CortexM3\ARM_GCC_541\Debug\sc_engine_type.o
+ .debug_str     0x00002239       0x30 .\CortexM3\ARM_GCC_541\Debug\sc_engine_type.o
                                 0x486 (size before relaxing)
- .debug_str     0x0000225f       0x3f .\CortexM3\ARM_GCC_541\Debug\sc_joystick_type.o
+ .debug_str     0x00002269       0x3f .\CortexM3\ARM_GCC_541\Debug\sc_joystick_type.o
                                 0x499 (size before relaxing)
- .debug_str     0x0000229e       0x18 .\CortexM3\ARM_GCC_541\Debug\sc_logging.o
+ .debug_str     0x000022a8       0x18 .\CortexM3\ARM_GCC_541\Debug\sc_logging.o
                                  0xf8 (size before relaxing)
- .debug_str     0x000022b6       0x3b .\CortexM3\ARM_GCC_541\Debug\sc_logging_type.o
+ .debug_str     0x000022c0       0x3b .\CortexM3\ARM_GCC_541\Debug\sc_logging_type.o
                                 0x4f2 (size before relaxing)
- .debug_str     0x000022f1      0x197 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x000022fb      0x197 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x35e (size before relaxing)
- .debug_str     0x00002488       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00002492       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                                 0x1f4 (size before relaxing)
- .debug_str     0x000024fd      0x134 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_str     0x00002507      0x134 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
                                 0x32a (size before relaxing)
- .debug_str     0x00002631      0x36f .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CyDmac.o)
+ .debug_str     0x0000263b      0x36f .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CyDmac.o)
                                 0x55a (size before relaxing)
- .debug_str     0x000029a0      0x7c5 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CyLib.o)
+ .debug_str     0x000029aa      0x7c5 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CyLib.o)
                                 0xa57 (size before relaxing)
- .debug_str     0x00003165      0x365 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(cyPm.o)
+ .debug_str     0x0000316f      0x365 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(cyPm.o)
                                 0x743 (size before relaxing)
- .debug_str     0x000034ca      0x5af .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_activate.o)
+ .debug_str     0x000034d4      0x5af .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_activate.o)
                                 0x815 (size before relaxing)
- .debug_str     0x00003a79       0x7a .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_alcancel.o)
+ .debug_str     0x00003a83       0x7a .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_alcancel.o)
                                 0x5e8 (size before relaxing)
- .debug_str     0x00003af3       0x7c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_alsetrel.o)
+ .debug_str     0x00003afd       0x7c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_alsetrel.o)
                                 0x60d (size before relaxing)
- .debug_str     0x00003b6f      0x227 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_altick.o)
+ .debug_str     0x00003b79      0x227 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_altick.o)
                                 0xa70 (size before relaxing)
- .debug_str     0x00003d96       0x2c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evclear.o)
+ .debug_str     0x00003da0       0x2c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evclear.o)
                                 0x5ed (size before relaxing)
- .debug_str     0x00003dc2       0x5b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evget.o)
+ .debug_str     0x00003dcc       0x5b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evget.o)
                                 0x55d (size before relaxing)
- .debug_str     0x00003e1d       0x2a .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evset.o)
+ .debug_str     0x00003e27       0x2a .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evset.o)
                                 0x7ed (size before relaxing)
- .debug_str     0x00003e47       0xa1 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evwait.o)
+ .debug_str     0x00003e51       0xa1 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_evwait.o)
                                 0x845 (size before relaxing)
- .debug_str     0x00003ee8       0xc8 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_irqendin.o)
+ .debug_str     0x00003ef2       0xc8 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_irqendin.o)
                                 0x6ca (size before relaxing)
- .debug_str     0x00003fb0       0x8e .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_lockres.o)
+ .debug_str     0x00003fba       0x8e .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_lockres.o)
                                 0x655 (size before relaxing)
- .debug_str     0x0000403e       0x2b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_lookup.o)
+ .debug_str     0x00004048       0x2b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_lookup.o)
                                 0x499 (size before relaxing)
- .debug_str     0x00004069       0x85 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_rq_exchg.o)
+ .debug_str     0x00004073       0x85 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_rq_exchg.o)
                                 0x50b (size before relaxing)
- .debug_str     0x000040ee       0x2d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_rq_first.o)
+ .debug_str     0x000040f8       0x2d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_rq_first.o)
                                 0x4d6 (size before relaxing)
- .debug_str     0x0000411b       0x38 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_rq_inser.o)
+ .debug_str     0x00004125       0x38 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_rq_inser.o)
                                 0x510 (size before relaxing)
- .debug_str     0x00004153      0x899 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_startos.o)
+ .debug_str     0x0000415d      0x899 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_startos.o)
                                0x173c (size before relaxing)
- .debug_str     0x000049ec       0x5b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_terminat.o)
+ .debug_str     0x000049f6       0x5b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_terminat.o)
                                 0x60e (size before relaxing)
- .debug_str     0x00004a47       0x2d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_ulockres.o)
+ .debug_str     0x00004a51       0x2d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_ulockres.o)
                                 0x82c (size before relaxing)
- .debug_str     0x00004a74       0x71 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_cortex_mx_ee_utils.o)
+ .debug_str     0x00004a7e       0x71 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_cortex_mx_ee_utils.o)
                                 0x53b (size before relaxing)
- .debug_str     0x00004ae5       0x37 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_common_ee_hal_structs.o)
+ .debug_str     0x00004aef       0x37 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_common_ee_hal_structs.o)
                                 0x4a5 (size before relaxing)
- .debug_str     0x00004b1c      0x1e7 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_eecfg.o)
+ .debug_str     0x00004b26      0x1e7 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_eecfg.o)
                                 0x8a1 (size before relaxing)
- .debug_str     0x00004d03      0x439 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(UART_Logs.o)
+ .debug_str     0x00004d0d      0x439 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(UART_Logs.o)
                                 0x670 (size before relaxing)
- .debug_str     0x0000513c       0x6d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(UART_Logs_INT.o)
+ .debug_str     0x00005146       0x6d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(UART_Logs_INT.o)
                                 0x2d5 (size before relaxing)
- .debug_str     0x000051a9      0x1b5 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(UART_Logs_IntClock.o)
+ .debug_str     0x000051b3      0x1b5 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(UART_Logs_IntClock.o)
                                 0x382 (size before relaxing)
- .debug_str     0x0000535e       0x67 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_1.o)
+ .debug_str     0x00005368       0x67 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_1.o)
                                 0x201 (size before relaxing)
- .debug_str     0x000053c5      0x119 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(isr_Button.o)
+ .debug_str     0x000053cf      0x119 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(isr_Button.o)
                                 0x2fc (size before relaxing)
- .debug_str     0x000054de       0x5c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_2.o)
+ .debug_str     0x000054e8       0x5c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_2.o)
                                 0x201 (size before relaxing)
- .debug_str     0x0000553a       0x5c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_3.o)
+ .debug_str     0x00005544       0x5c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_3.o)
                                 0x201 (size before relaxing)
- .debug_str     0x00005596       0x5c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_4.o)
+ .debug_str     0x000055a0       0x5c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(BUTTON_4.o)
                                 0x201 (size before relaxing)
- .debug_str     0x000055f2       0x57 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(LED_red.o)
+ .debug_str     0x000055fc       0x57 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(LED_red.o)
                                 0x1fc (size before relaxing)
- .debug_str     0x00005649       0x63 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(LED_yellow.o)
+ .debug_str     0x00005653       0x63 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(LED_yellow.o)
                                 0x20b (size before relaxing)
- .debug_str     0x000056ac       0x5f .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(LED_green.o)
+ .debug_str     0x000056b6       0x5f .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(LED_green.o)
                                 0x206 (size before relaxing)
- .debug_str     0x0000570b      0x154 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(RGB_PWM_red.o)
+ .debug_str     0x00005715      0x154 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(RGB_PWM_red.o)
                                 0x338 (size before relaxing)
- .debug_str     0x0000585f      0x159 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(RGB_PWM_green.o)
+ .debug_str     0x00005869      0x159 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(RGB_PWM_green.o)
                                 0x356 (size before relaxing)
- .debug_str     0x000059b8      0x14c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(RGB_PWM_blue.o)
+ .debug_str     0x000059c2      0x14c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(RGB_PWM_blue.o)
                                 0x347 (size before relaxing)
- .debug_str     0x00005b04      0x483 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY.o)
+ .debug_str     0x00005b0e      0x483 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY.o)
                                 0x788 (size before relaxing)
- .debug_str     0x00005f87       0x41 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_INT.o)
+ .debug_str     0x00005f91       0x41 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_INT.o)
                                 0x1cc (size before relaxing)
- .debug_str     0x00005fc8      0x17b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_SAR.o)
+ .debug_str     0x00005fd2      0x17b .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_SAR.o)
                                 0x56e (size before relaxing)
- .debug_str     0x00006143       0xb5 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_TempBuf_dma.o)
+ .debug_str     0x0000614d       0xb5 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_TempBuf_dma.o)
                                 0x2c4 (size before relaxing)
- .debug_str     0x000061f8       0x7d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_FinalBuf_dma.o)
+ .debug_str     0x00006202       0x7d .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_FinalBuf_dma.o)
                                 0x2c8 (size before relaxing)
- .debug_str     0x00006275      0x16c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_IRQ.o)
+ .debug_str     0x0000627f      0x16c .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(JOYSTICK_ADC_XY_IRQ.o)
                                 0x37a (size before relaxing)
- .debug_str     0x000063e1      0x249 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_SPI.o)
+ .debug_str     0x000063eb      0x249 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_SPI.o)
                                 0x476 (size before relaxing)
- .debug_str     0x0000662a       0x53 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_DC.o)
+ .debug_str     0x00006634       0x53 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_DC.o)
                                 0x1f7 (size before relaxing)
- .debug_str     0x0000667d       0x57 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_RES.o)
+ .debug_str     0x00006687       0x57 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_RES.o)
                                 0x1fc (size before relaxing)
- .debug_str     0x000066d4      0x13e .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_BackLight.o)
+ .debug_str     0x000066de      0x13e .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_BackLight.o)
                                 0x34d (size before relaxing)
- .debug_str     0x00006812      0x156 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_SPI_IntClock.o)
+ .debug_str     0x0000681c      0x156 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(TFT_SPI_IntClock.o)
                                 0x36a (size before relaxing)
- .debug_str     0x00006968       0x65 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CyFlash.o)
+ .debug_str     0x00006972       0x65 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CyFlash.o)
                                 0x3d0 (size before relaxing)
- .debug_str     0x000069cd       0x64 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CySpc.o)
+ .debug_str     0x000069d7       0x64 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(CySpc.o)
                                 0x348 (size before relaxing)
- .debug_str     0x00006a31       0x72 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_tnterm.o)
+ .debug_str     0x00006a3b       0x72 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_tnterm.o)
                                 0x528 (size before relaxing)
- .debug_str     0x00006aa3       0x55 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_tstub.o)
+ .debug_str     0x00006aad       0x55 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_tstub.o)
                                 0x5e3 (size before relaxing)
- .debug_str     0x00006af8       0x37 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_ulockallres.o)
+ .debug_str     0x00006b02       0x37 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_ulockallres.o)
                                 0x517 (size before relaxing)
- .debug_str     0x00006b2f       0x8a .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_cortex_mx_ee_context.o)
+ .debug_str     0x00006b39       0x8a .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_cortex_mx_ee_context.o)
                                 0x59a (size before relaxing)
- .debug_str     0x00006bb9       0x67 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_thendin.o)
+ .debug_str     0x00006bc3       0x67 .\CortexM3\ARM_GCC_541\Debug\Gaspedal_Watchdog.a(ErikaOS_ee_thendin.o)
                                 0x760 (size before relaxing)
 
 .debug_loc      0x00000000     0x7491
