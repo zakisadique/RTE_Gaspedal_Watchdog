@@ -99,7 +99,7 @@ TASK(tsk_background)
 {
     while(1)
     {
-        //do something with low prioroty
+        //Check if all runnables are alive. If not, trigger the watchdog
         #if TEST_WATCHDOG == 0 
   
             if (WD_IsError() == FALSE){

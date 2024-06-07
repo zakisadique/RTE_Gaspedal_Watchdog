@@ -42,7 +42,7 @@
 inline RC_t SC_JOYSTICK_driverIn(SC_JOYSTICK_data_t *const data)
 {
 	/* USER CODE START driverInSC_JOYSTICK */
-//    UART_Logs_PutString("JoystickIN\n");
+
 	//Read data from the MCAL driver
     RC_t ret = RC_SUCCESS;
     sint8_t x = 0;

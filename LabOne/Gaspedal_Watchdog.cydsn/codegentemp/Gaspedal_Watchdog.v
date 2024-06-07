@@ -1,6 +1,6 @@
 // ======================================================================
 // Gaspedal_Watchdog.v generated from TopDesign.cysch
-// 06/03/2024 at 21:19
+// 06/05/2024 at 14:40
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1701,15 +1701,15 @@ module top ;
           wire  wTFT_LED;
           wire  Net_11;
           wire  Net_10;
-          wire  Net_9;
           wire  Net_8;
           wire  Net_7;
           wire  Net_6;
-          wire  Net_5;
           wire  Net_4;
           wire  Net_3;
           wire  Net_2;
           wire  Net_1;
+          wire  Net_5;
+          wire  Net_9;
     electrical  Net_29;
     electrical  Net_31;
     electrical  Net_27;
